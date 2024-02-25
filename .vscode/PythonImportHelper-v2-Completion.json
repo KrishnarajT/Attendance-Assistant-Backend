@@ -49,6 +49,30 @@
         "documentation": {}
     },
     {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -62,6 +86,150 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "AddFaceModel",
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "app.models.FaceRecognitionModels",
         "documentation": {}
     },
     {
@@ -90,6 +258,14 @@
     },
     {
         "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -150,6 +326,54 @@
         "description": "models.AttendanceModels",
         "isExtraImport": true,
         "detail": "models.AttendanceModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddFaceModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddFaceResponseModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddClassPhotoModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddClassPhotoResponseModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEncodingModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEncodingResponseModel",
+        "importPath": "models.FaceRecognitionModels",
+        "description": "models.FaceRecognitionModels",
+        "isExtraImport": true,
+        "detail": "models.FaceRecognitionModels",
         "documentation": {}
     },
     {
@@ -219,6 +443,14 @@
         "documentation": {}
     },
     {
+        "label": "face_rec",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
         "label": "annotations",
         "importPath": "__future__",
         "description": "__future__",
@@ -260,102 +492,6 @@
         "importPath": "pathlib",
         "description": "pathlib",
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Callable",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Tuple",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Callable",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Tuple",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
         "documentation": {}
     },
     {
@@ -498,11 +634,101 @@
         "documentation": {}
     },
     {
+        "label": "AddFaceModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class AddFaceModel(BaseModel):\n    student_id: str\n    face_image: bytes # the image of the face to be added. from fastapi uploads. \nclass AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str # from the place face image is stored. \nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddFaceResponseModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str # from the place face image is stored. \nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddClassPhotoModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "AddClassPhotoResponseModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class AddClassPhotoResponseModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo_url: str # from the place class photo is stored.\nclass FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEncodingModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # from the place encoding is stored.",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEncodingResponseModel",
+        "kind": 6,
+        "importPath": "app.models.FaceRecognitionModels",
+        "description": "app.models.FaceRecognitionModels",
+        "peekOfCode": "class FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # from the place encoding is stored.",
+        "detail": "app.models.FaceRecognitionModels",
+        "documentation": {}
+    },
+    {
+        "label": "StudentModel",
+        "kind": 6,
+        "importPath": "app.models.StudentModels",
+        "description": "app.models.StudentModels",
+        "peekOfCode": "class StudentModel(BaseModel):\n    name: str\n    prn: str\n    panel: str\n    email: str\n    face_encoding_id: Optional[str] = None\n    panel_roll_number: Optional[int] = None\n    faces: Optional[List] = None\n    # add validators to check if the panels and stuff are actually valid, cache databases if necessary to avoid multiple router calls\n# this is what should be used to give a response when we ask to get info about a student. ",
+        "detail": "app.models.StudentModels",
+        "documentation": {}
+    },
+    {
+        "label": "StudentResponseModel",
+        "kind": 6,
+        "importPath": "app.models.StudentModels",
+        "description": "app.models.StudentModels",
+        "peekOfCode": "class StudentResponseModel(BaseModel):\n    id: str\n    name: str\n    prn: str\n    panel: str\n    panel_roll_number: Optional[int] = None\n# this is what should be called when getting an encoding for a student face. \n# used to store this encoding in firebase. The url is returned of the stored encoding, and is stored in mongodb. \nclass EncodingModel(BaseModel):\n    student_id: str",
+        "detail": "app.models.StudentModels",
+        "documentation": {}
+    },
+    {
+        "label": "EncodingModel",
+        "kind": 6,
+        "importPath": "app.models.StudentModels",
+        "description": "app.models.StudentModels",
+        "peekOfCode": "class EncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    serialized_encoding: bytes\nclass EncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
+        "detail": "app.models.StudentModels",
+        "documentation": {}
+    },
+    {
+        "label": "EncodingResponseModel",
+        "kind": 6,
+        "importPath": "app.models.StudentModels",
+        "description": "app.models.StudentModels",
+        "peekOfCode": "class EncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
+        "detail": "app.models.StudentModels",
+        "documentation": {}
+    },
+    {
         "label": "fb_storage",
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_image\")\nasync def upload_image(image: UploadFile = File(...)):\n    \"\"\"\n    Uploads an image to the server\n    :param image: Image to be uploaded, that has a face ideally.\n    :return: URL of the uploaded image.",
+        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n# add the face to the student's row in the student collection in mongodb.\nasync def add_student_face_to_db(face_url, student_id):\n    # add the face to the student's row in the student collection in mongodb.\n    # get student from the collection\n    # add the provided face url to the list of faces\n    # return true if successful, false if not.",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -511,8 +737,17 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_image\")\nasync def upload_image(image: UploadFile = File(...)):\n    \"\"\"\n    Uploads an image to the server\n    :param image: Image to be uploaded, that has a face ideally.\n    :return: URL of the uploaded image.\n    \"\"\"",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n# add the face to the student's row in the student collection in mongodb.\nasync def add_student_face_to_db(face_url, student_id):\n    # add the face to the student's row in the student collection in mongodb.\n    # get student from the collection\n    # add the provided face url to the list of faces\n    # return true if successful, false if not.\n    pass",
         "detail": "app.routers.client_uploads",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])",
+        "detail": "app.routers.face_rec",
         "documentation": {}
     },
     {
@@ -637,7 +872,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route\napp.include_router(client_uploads.router)\napp.include_router(test_route.router)",
+        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec\napp.include_router(client_uploads.router)\napp.include_router(test_route.router)\napp.include_router(face_rec.router)",
         "detail": "app.main",
         "documentation": {}
     },
