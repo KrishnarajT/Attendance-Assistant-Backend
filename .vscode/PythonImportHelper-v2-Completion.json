@@ -41,35 +41,38 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "face_recognition",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "datetime",
+        "importPath": "face_recognition",
+        "description": "face_recognition",
+        "detail": "face_recognition",
         "documentation": {}
     },
     {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "threading",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "datetime",
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
         "documentation": {}
     },
     {
-        "label": "time",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "datetime",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -97,6 +100,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "field_validator",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -110,6 +121,110 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -225,11 +340,67 @@
         "documentation": {}
     },
     {
-        "label": "AddFaceModel",
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "app.models.FaceRecognitionModels",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -266,6 +437,86 @@
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -321,59 +572,83 @@
         "documentation": {}
     },
     {
-        "label": "AttendanceModel",
-        "importPath": "models.AttendanceModels",
-        "description": "models.AttendanceModels",
-        "isExtraImport": true,
-        "detail": "models.AttendanceModels",
-        "documentation": {}
-    },
-    {
         "label": "AddFaceModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddFaceResponseModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddClassPhotoModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddClassPhotoResponseModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "FaceEncodingModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "FaceEncodingResponseModel",
-        "importPath": "models.FaceRecognitionModels",
-        "description": "models.FaceRecognitionModels",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
         "isExtraImport": true,
-        "detail": "models.FaceRecognitionModels",
+        "detail": "models.ClientUploadModels",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceModel",
+        "importPath": "models.ClientUploadModels",
+        "description": "models.ClientUploadModels",
+        "isExtraImport": true,
+        "detail": "models.ClientUploadModels",
+        "documentation": {}
+    },
+    {
+        "label": "FaceRec",
+        "importPath": "facial_recognition.FaceRec",
+        "description": "facial_recognition.FaceRec",
+        "isExtraImport": true,
+        "detail": "facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "StudentModel",
+        "importPath": "models.StudentModels",
+        "description": "models.StudentModels",
+        "isExtraImport": true,
+        "detail": "models.StudentModels",
+        "documentation": {}
+    },
+    {
+        "label": "StudentResponseModel",
+        "importPath": "models.StudentModels",
+        "description": "models.StudentModels",
+        "isExtraImport": true,
+        "detail": "models.StudentModels",
         "documentation": {}
     },
     {
@@ -418,15 +693,6 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "client_uploads",
         "importPath": "routers",
         "description": "routers",
@@ -444,6 +710,54 @@
     },
     {
         "label": "face_rec",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "college",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "subjects",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "students",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "teachers",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "panels",
         "importPath": "routers",
         "description": "routers",
         "isExtraImport": true,
@@ -540,56 +854,6 @@
         "documentation": {}
     },
     {
-        "label": "face_recognition",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "face_recognition",
-        "description": "face_recognition",
-        "detail": "face_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "threading",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "threading",
-        "description": "threading",
-        "detail": "threading",
-        "documentation": {}
-    },
-    {
-        "label": "init",
-        "importPath": "colorama",
-        "description": "colorama",
-        "isExtraImport": true,
-        "detail": "colorama",
-        "documentation": {}
-    },
-    {
-        "label": "Fore",
-        "importPath": "colorama",
-        "description": "colorama",
-        "isExtraImport": true,
-        "detail": "colorama",
-        "documentation": {}
-    },
-    {
-        "label": "Style",
-        "importPath": "colorama",
-        "description": "colorama",
-        "isExtraImport": true,
-        "detail": "colorama",
-        "documentation": {}
-    },
-    {
-        "label": "FaceRec",
-        "importPath": "FaceRec",
-        "description": "FaceRec",
-        "isExtraImport": true,
-        "detail": "FaceRec",
-        "documentation": {}
-    },
-    {
         "label": "CORSMiddleware",
         "importPath": "fastapi.middleware.cors",
         "description": "fastapi.middleware.cors",
@@ -625,66 +889,237 @@
         "documentation": {}
     },
     {
+        "label": "FaceRec",
+        "kind": 6,
+        "importPath": "app.facial_recognition.FaceRec",
+        "description": "app.facial_recognition.FaceRec",
+        "peekOfCode": "class FaceRec:\n\t\"\"\"\n\t\tContains methods for facial recognition of multiple students, being present in a single image. So basically if you wanna get the attendance of a class, you have to instantiate this class, and then call the methods to get the attendance. It contains all the methods that will actually perform the facial recognition using multithreading. After you are done you can simply delete the object, and all the data will be cleaned up.\n\t\"\"\"\n\tdef __init__(self):\n\t\t\"\"\"\n\t\t\tConstructor\n\t\t\"\"\"\n\t\tprint(\"Beginning Face Recognition!\")\n\tdef cleanup(self):",
+        "detail": "app.facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "current_file_directory",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "current_file_directory = os.path.dirname(os.path.abspath(__file__))\n# Get the parent directory\nparent_directory = os.path.dirname(current_file_directory)\n# Get the directory of images\nimages_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "parent_directory",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "parent_directory = os.path.dirname(current_file_directory)\n# Get the directory of images\nimages_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "images_directory",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "images_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "testing_images_directory",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "testing_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "image_files",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "image_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "known_face_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "known_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory\ntest_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "\timage",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory\ntest_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "test_image_files",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "test_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "unknown_face_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "unknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "\timage",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "\tunknown_face_encodings[filename]",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "image_of_person_1",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "image_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "person_1_face_encoding",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "person_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "image_of_person_2",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "image_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "person_2_face_encoding",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "person_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "known_face_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "known_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "unknown_image",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "unknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings\n    results = face_recognition.compare_faces(known_face_encodings, unknown_face_encoding)\n    name = \"Unknown\"\n    if results[0]:\n        name = \"Person 1\"\n    elif results[1]:",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
+        "label": "unknown_face_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.test",
+        "description": "app.facial_recognition.test",
+        "peekOfCode": "unknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings\n    results = face_recognition.compare_faces(known_face_encodings, unknown_face_encoding)\n    name = \"Unknown\"\n    if results[0]:\n        name = \"Person 1\"\n    elif results[1]:\n        name = \"Person 2\"",
+        "detail": "app.facial_recognition.test",
+        "documentation": {}
+    },
+    {
         "label": "AttendanceModel",
         "kind": 6,
-        "importPath": "app.models.AttendanceModels",
-        "description": "app.models.AttendanceModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
         "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: datetime\n    end_time: datetime\n    @field_validator(\"start_time\")\n    def start_time_must_be_before_end_time(cls, v, values):\n        pass",
-        "detail": "app.models.AttendanceModels",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddFaceModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class AddFaceModel(BaseModel):\n    student_id: str\n    face_image: bytes # the image of the face to be added. from fastapi uploads. \nclass AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str # from the place face image is stored. \nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class AddFaceModel(BaseModel):\n    student_id: str\n    face_image: bytes  # the image of the face to be added. from fastapi uploads.\nclass AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddFaceResponseModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str # from the place face image is stored. \nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes  # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddClassPhotoModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes  # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "AddClassPhotoResponseModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class AddClassPhotoResponseModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo_url: str # from the place class photo is stored.\nclass FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class AddClassPhotoResponseModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo_url: str  # from the place class photo is stored.\nclass FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "FaceEncodingModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # from the place encoding is stored.",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str  # from the place encoding is stored.",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
         "label": "FaceEncodingResponseModel",
         "kind": 6,
-        "importPath": "app.models.FaceRecognitionModels",
-        "description": "app.models.FaceRecognitionModels",
-        "peekOfCode": "class FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # from the place encoding is stored.",
-        "detail": "app.models.FaceRecognitionModels",
+        "importPath": "app.models.ClientUploadModels",
+        "description": "app.models.ClientUploadModels",
+        "peekOfCode": "class FaceEncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str  # from the place encoding is stored.",
+        "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
     {
@@ -724,6 +1159,24 @@
         "documentation": {}
     },
     {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.classes",
+        "description": "app.routers.classes",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.classes",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.classes",
+        "description": "app.routers.classes",
+        "peekOfCode": "router = APIRouter(prefix=\"/classes\", tags=[\"Classes and Class Images\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.classes",
+        "documentation": {}
+    },
+    {
         "label": "fb_storage",
         "kind": 5,
         "importPath": "app.routers.client_uploads",
@@ -742,12 +1195,120 @@
         "documentation": {}
     },
     {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "router = APIRouter(prefix=\"/college\", tags=[\"Rooms and Buildings\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "def index():\n    test_obj = FaceRec()\n    # so ideally objects of this class would recieve encodings of all the students, and the class image. We would get this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would call the methods of this class to get the attendance. we would then return that attendance. \n    return \"Hello, World!\"",
+        "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])",
+        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    test_obj = FaceRec()\n    # so ideally objects of this class would recieve encodings of all the students, and the class image. We would get this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would call the methods of this class to get the attendance. we would then return that attendance. \n    return \"Hello, World!\"",
         "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "router = APIRouter(prefix=\"/panels\", tags=[\"Panels, Schools and Specializations\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.students",
+        "description": "app.routers.students",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)\ndef add_student(student: StudentModel):\n    student_response = StudentResponseModel(",
+        "detail": "app.routers.students",
+        "documentation": {}
+    },
+    {
+        "label": "add_student",
+        "kind": 2,
+        "importPath": "app.routers.students",
+        "description": "app.routers.students",
+        "peekOfCode": "def add_student(student: StudentModel):\n    student_response = StudentResponseModel(\n        student_id=student.student_id,\n        student_name=student.student_name,\n        student_email=student.student_email,\n        student_phone=student.student_phone,\n        student_address=student.student_address,\n    )\n    return student_response",
+        "detail": "app.routers.students",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.students",
+        "description": "app.routers.students",
+        "peekOfCode": "router = APIRouter(prefix=\"/student\", tags=[\"Students\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)",
+        "detail": "app.routers.students",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.subjects",
+        "description": "app.routers.subjects",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.subjects",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.subjects",
+        "description": "app.routers.subjects",
+        "peekOfCode": "router = APIRouter(prefix=\"/subjects\", tags=[\"Subjects and Semesters\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.subjects",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routers.teachers",
+        "description": "app.routers.teachers",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.teachers",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.teachers",
+        "description": "app.routers.teachers",
+        "peekOfCode": "router = APIRouter(prefix=\"/teachers\", tags=[\"Teachers\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "detail": "app.routers.teachers",
         "documentation": {}
     },
     {
@@ -872,7 +1433,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec\napp.include_router(client_uploads.router)\napp.include_router(test_route.router)\napp.include_router(face_rec.router)",
+        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, classes, panels\napp.include_router(client_uploads.router)\napp.include_router(students.router)\napp.include_router(face_rec.router)\napp.include_router(panels.router)\napp.include_router(college.router)\napp.include_router(subjects.router)\napp.include_router(teachers.router)",
         "detail": "app.main",
         "documentation": {}
     },
@@ -1261,222 +1822,6 @@
         "description": "AttenEnv.Scripts.pywin32_testall",
         "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
         "detail": "AttenEnv.Scripts.pywin32_testall",
-        "documentation": {}
-    },
-    {
-        "label": "FaceRec",
-        "kind": 6,
-        "importPath": "face_rec.FaceRec",
-        "description": "face_rec.FaceRec",
-        "peekOfCode": "class FaceRec:\n\t\"\"\"\n\t\tContains methods for facial recognition\n\t\"\"\"\n\tdef __init__(self, test_image_uri, ):\n\t\t\"\"\"\n\t\t\tConstructor\n\t\t\"\"\"\n\t\tself.test_image_uri = test_image_uri\n\tdef cleanup(self):",
-        "detail": "face_rec.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.test_image_uri",
-        "kind": 5,
-        "importPath": "face_rec.FaceRec",
-        "description": "face_rec.FaceRec",
-        "peekOfCode": "\t\tself.test_image_uri = test_image_uri\n\tdef cleanup(self):\n\t\t\"\"\"\n\t\t\tCleanup all data from memory.\n\t\t\"\"\"\n\t\tpass\n\tdef create_encodings_for_test_img(self):\n\t\t\"\"\"\n\t\t\tcreate encodings for all images in the Image that we have to test for faces.\n\t\t\"\"\"",
-        "detail": "face_rec.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "user_io",
-        "kind": 2,
-        "importPath": "face_rec.run_facial_recognition",
-        "description": "face_rec.run_facial_recognition",
-        "peekOfCode": "def user_io():\n\t\"\"\"\n\tManages user input and output.\n\t\"\"\"\n\twhile True:\n\t\tuser_input = input(\n\t\t\t\"Enter \\n'1' to Play / Pause, \\n'2' to start a blank file, \\n'3' to export raw data to CSV, JSON, HTML\\n'4' Export Nicely to CSV, JSON, HTML \\n'5' to Enable/Disable Idle Detection\\n'6' to Exit: \\n\\n\\n\"\n\t\t)\n\t\ttry:\n\t\t\tif user_input == \"0\":",
-        "detail": "face_rec.run_facial_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tuser_input",
-        "kind": 5,
-        "importPath": "face_rec.run_facial_recognition",
-        "description": "face_rec.run_facial_recognition",
-        "peekOfCode": "\t\tuser_input = input(\n\t\t\t\"Enter \\n'1' to Play / Pause, \\n'2' to start a blank file, \\n'3' to export raw data to CSV, JSON, HTML\\n'4' Export Nicely to CSV, JSON, HTML \\n'5' to Enable/Disable Idle Detection\\n'6' to Exit: \\n\\n\\n\"\n\t\t)\n\t\ttry:\n\t\t\tif user_input == \"0\":\n\t\t\t\tapp.print_db()\n\t\t\telif user_input == \"1\":\n\t\t\t\tapp.pause_or_resume()\n\t\t\t\tif app.get_record() == True:\n\t\t\t\t\tprint(\"Recording ...\")",
-        "detail": "face_rec.run_facial_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\t\tapp.finish",
-        "kind": 5,
-        "importPath": "face_rec.run_facial_recognition",
-        "description": "face_rec.run_facial_recognition",
-        "peekOfCode": "\t\t\t\tapp.finish = True\n\t\t\t\tbreak\n\t\t\telse:\n\t\t\t\tprint(\"Invalid input. Please try again.\")\n\t\texcept Exception as e:\n\t\t\tprint(e)\n\t\t\tprint(e.with_traceback())\n\tapp.cleanup()\nif __name__ == \"__main__\":\n\t# initialize colorama",
-        "detail": "face_rec.run_facial_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_rec",
-        "kind": 5,
-        "importPath": "face_rec.run_facial_recognition",
-        "description": "face_rec.run_facial_recognition",
-        "peekOfCode": "\tface_rec = FaceRec()\n\t# make a simple menu for the user\n\tprint(\"Welcome to the facial recognition program (Local Edition)\")\n\tprint(Fore.BLUE\n\t      + Style.BRIGHT\n\t      + \"\"\"\n\t\t\t __    __     _                            _           __                    __           \n\t\t\t/ / /\\ \\ \\___| | ___ ___  _ __ ___   ___  | |_ ___    / _| __ _  ___ ___    /__\\ ___  ___ \n\t\t\t\\ \\/  \\/ / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | __/ _ \\  | |_ / _` |/ __/ _ \\  / \\/// _ \\/ __|\n\t\t\t \\  /\\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | |  _| (_| | (_|  __/ / _  \\  __/ (__ ",
-        "detail": "face_rec.run_facial_recognition",
-        "documentation": {}
-    },
-    {
-        "label": "current_file_directory",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "current_file_directory = os.path.dirname(os.path.abspath(__file__))\n# Get the parent directory\nparent_directory = os.path.dirname(current_file_directory)\n# Get the directory of images\nimages_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "parent_directory",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "parent_directory = os.path.dirname(current_file_directory)\n# Get the directory of images\nimages_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "images_directory",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "images_directory = os.path.join(parent_directory, \"images\")\n# get the testing images directory\ntesting_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "testing_images_directory",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "testing_images_directory = os.path.join(images_directory, \"test\")\nimage_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "image_files",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "image_files = []\n# cycle through the known_faces directory and load each image\nfor filename in os.listdir(os.path.join(images_directory, \"known_faces\")):\n\timage_files.append(filename)\nknown_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "known_face_encodings",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "known_face_encodings = []\n# Load the known images (create face encodings) for all image_files\nfor filename in image_files:\n\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory\ntest_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "\timage",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "\timage = face_recognition.load_image_file(os.path.join(images_directory, \"known_faces\", filename))\n\tknown_face_encodings.append(face_recognition.face_encodings(image)[0])\n# Load all images in the test directory\ntest_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "test_image_files",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "test_image_files = []\nfor filename in os.listdir(testing_images_directory):\n\ttest_image_files.append(filename)\nunknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "unknown_face_encodings",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "unknown_face_encodings = {}\n# create face encodings for all test images\nfor filename in test_image_files:\n\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "\timage",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "\timage = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))\n\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "\tunknown_face_encodings[filename]",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "\tunknown_face_encodings[filename] = face_recognition.face_encodings(image)\nimport face_recognition\n# Load the known images (create face encodings)\nimage_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "image_of_person_1",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "image_of_person_1 = face_recognition.load_image_file(\"person_1.jpg\")\nperson_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "person_1_face_encoding",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "person_1_face_encoding = face_recognition.face_encodings(image_of_person_1)[0]\nimage_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "image_of_person_2",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "image_of_person_2 = face_recognition.load_image_file(\"person_2.jpg\")\nperson_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "person_2_face_encoding",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "person_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]\n# Create list of known face encodings\nknown_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "known_face_encodings",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "known_face_encodings = [\n    person_1_face_encoding,\n    person_2_face_encoding\n]\n# Load the image we want to check\nunknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "unknown_image",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "unknown_image = face_recognition.load_image_file(\"unknown.jpg\")\nunknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings\n    results = face_recognition.compare_faces(known_face_encodings, unknown_face_encoding)\n    name = \"Unknown\"\n    if results[0]:\n        name = \"Person 1\"\n    elif results[1]:",
-        "detail": "face_rec.test",
-        "documentation": {}
-    },
-    {
-        "label": "unknown_face_encodings",
-        "kind": 5,
-        "importPath": "face_rec.test",
-        "description": "face_rec.test",
-        "peekOfCode": "unknown_face_encodings = face_recognition.face_encodings(unknown_image)\n# There might be more than one person in the photo, so we need to check each face encoding\nfor unknown_face_encoding in unknown_face_encodings:\n    # Test if this unknown face encoding matches any of the known face encodings\n    results = face_recognition.compare_faces(known_face_encodings, unknown_face_encoding)\n    name = \"Unknown\"\n    if results[0]:\n        name = \"Person 1\"\n    elif results[1]:\n        name = \"Person 2\"",
-        "detail": "face_rec.test",
         "documentation": {}
     },
     {

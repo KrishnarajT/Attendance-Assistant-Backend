@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 from typing import Optional, List
-from app.models.FaceRecognitionModels import AddFaceModel
 
 class StudentModel(BaseModel):
     name: str

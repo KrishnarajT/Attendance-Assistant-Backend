@@ -1,19 +1,19 @@
 """
-This file contains the routes for uploading images and attendance information from the client side. So that means any route that sends data, and doesnt expect any data other than urls, from app or phones or websites, should be here.
+This file contains the routes for uploading images and attendance information from the client side. So that means any route that sends data, and doesnt expect any data other than urls, from app or phones or websites, should be here. Not all functions are written for api use only, some can be called from the server side as well.
 """
 
 from fastapi import APIRouter, File, UploadFile, Response
 from services.assistanceFirebase import AssistanceFirebase
 
 # import models
-from models.AttendanceModels import AttendanceModel
-from models.FaceRecognitionModels import (
+from models.ClientUploadModels import (
     AddFaceModel,
     AddFaceResponseModel,
     AddClassPhotoModel,
     AddClassPhotoResponseModel,
     FaceEncodingModel, 
-    FaceEncodingResponseModel
+    FaceEncodingResponseModel, 
+    AttendanceModel,
 )
 
 fb_storage = AssistanceFirebase()
