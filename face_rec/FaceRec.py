@@ -2,6 +2,7 @@
 import face_recognition
 import threading
 
+
 class FaceRec:
 	"""
 		Contains methods for facial recognition
@@ -12,7 +13,6 @@ class FaceRec:
 			Constructor
 		"""
 		self.test_image_uri = test_image_uri
-
 
 	def cleanup(self):
 		"""
