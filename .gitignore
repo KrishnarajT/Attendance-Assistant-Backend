@@ -1,3 +1,5 @@
 BackendEnv/*
 build/
 AttendanceEnv/*
+app/.env
+app/attendance-assistant-3b3a3-firebase-adminsdk-vkifz-64ed71fe03.json
