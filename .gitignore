@@ -7,6 +7,10 @@ app/attendance-assistant-3b3a3-firebase-adminsdk-vkifz-64ed71fe03.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*/*/*/*/__pycache__/
 *.py[cod]
 *$py.class
 
