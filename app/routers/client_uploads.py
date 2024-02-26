@@ -24,7 +24,7 @@ router = APIRouter(
 
 
 # add the face to the student's row in the student collection in mongodb.
-async def add_student_face_to_db(face_url, student_id):
+async def add_student_face_to_db(student_id, face_url):
 	# add the face to the student's row in the student collection in mongodb.
 	# get student from the collection
 	# add the provided face url to the list of faces

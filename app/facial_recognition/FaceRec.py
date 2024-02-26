@@ -13,17 +13,21 @@ class FaceRec:
 	After you are done you can simply delete the object, and all the data will be cleaned up.
 	"""
 
-	def __init__(self, student_face_encodings: dict, class_images: list, panel_id: str, student_ids: list):
+	def __init__(self, student_face_encodings: dict, class_images: list, panel_id: str, student_ids: list, room_id: str):
 		"""
 		:param student_face_encodings: dictionary containing the face encodings of the students. The keys are the
 		student ids, and the values are the face encodings of the students.
+		:param class_images: list of images of the class. from pi or from the client app. 
+		:param panel_id: the id of the panel.
+		:param student_ids: list of student ids.
 
 		"""
 		if student_face_encodings is None:
 			student_face_encodings = {}
 		print("Init Face Recognition!")
 		self.student_face_encodings = student_face_encodings
-		self.class_images = []
+		self.class_images = class_images
+		self.room_id = room_id
 		self.panel_id = panel_id
 		self.students_present = []
 		self.students_absent = []
