@@ -150,9 +150,11 @@ async def add_class_photo(
 			content={"detail": f"An error occurred while uploading image: {str(e)}"},
 		)
 
-	# create a new row in the ClassImages collection in the database, with the class_id, room_id, date, time, class_photo_url
+	# create a new row in the Lecture Images collection in the database, with the class_id, room_id, date, time,
+	# class_photo_url
 
-	# to return information about the class photo that was added, we create a new object of the AddClassPhotoModel class, and return that object.
+	# to return information about the class photo that was added, we create a new object of the AddClassPhotoModel
+	# class, and return that object.
 	output_class_photo = AddClassPhotoResponseModel(
 		room_id=add_class_photo_model, class_photo_url=class_photo_url
 	)
