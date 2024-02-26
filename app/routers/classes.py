@@ -4,6 +4,7 @@ This contains routes for getting and setting data from the classes and the Class
 
 # import fastapi stuff
 from fastapi import APIRouter, Response
+#import mongodb client
 
 router = APIRouter(prefix="/classes", tags=["Classes and Class Images"])
 

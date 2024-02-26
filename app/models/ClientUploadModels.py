@@ -18,7 +18,6 @@ class AttendanceModel(BaseModel):
     def end_time_must_be_after_start_time(cls, v, values):
         pass
 
-    # date must follow the format YYYY-MM-DD HH:MM:SS
     @field_validator("start_time")
     def date_format(cls, v):
         v = "%Y-%m-%d %H:%M:%S"

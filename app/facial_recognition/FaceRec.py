@@ -1,5 +1,5 @@
 # Main Class file for FaceRecognition
-import face_recognition
+# import face_recognition
 import threading
 
 
