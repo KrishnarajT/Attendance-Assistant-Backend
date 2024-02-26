@@ -59,6 +59,23 @@
         "documentation": {}
     },
     {
+        "label": "add_face_encoding",
+        "importPath": "routers.client_uploads",
+        "description": "routers.client_uploads",
+        "isExtraImport": true,
+        "detail": "routers.client_uploads",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -893,7 +910,16 @@
         "kind": 6,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "class FaceRec:\n\t\"\"\"\n\t\tContains methods for facial recognition of multiple students, being present in a single image. So basically if you wanna get the attendance of a class, you have to instantiate this class, and then call the methods to get the attendance. It contains all the methods that will actually perform the facial recognition using multithreading. After you are done you can simply delete the object, and all the data will be cleaned up.\n\t\"\"\"\n\tdef __init__(self):\n\t\t\"\"\"\n\t\t\tConstructor\n\t\t\"\"\"\n\t\tprint(\"Beginning Face Recognition!\")\n\tdef cleanup(self):",
+        "peekOfCode": "class FaceRec:\n    \"\"\"\n    Contains methods for facial recognition of multiple students, being present in a single image. So basically if you wanna get the attendance of a class, you have to instantiate this class, and then call the methods to get the attendance. It contains all the methods that will actually perform the facial recognition using multithreading. After you are done you can simply delete the object, and all the data will be cleaned up.\n    \"\"\"\n    def __init__(self):\n        \"\"\"\n        Constructor\n        \"\"\"\n        print(\"Beginning Face Recognition!\")\n        self.known_face_encodings = {",
+        "detail": "app.facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tserialized_student_face_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.FaceRec",
+        "description": "app.facial_recognition.FaceRec",
+        "peekOfCode": "\t\tserialized_student_face_encodings = pickle.dumps(student_face_encodings)\n        # call the api to save the face encoding of the student.\n        # This will be used to match the face encoding of the student in the future.\n        add_face_encoding(\n\t\t\tid, len(images), student_face_encodings\n\t\t)\n\tdef update_face_encoding(self, images, id):\n    def cleanup(self):\n        \"\"\"\n        Cleanup all data from memory.",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
