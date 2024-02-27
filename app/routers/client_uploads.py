@@ -4,6 +4,7 @@ This file contains the routes for uploading images and attendance information fr
 
 from fastapi import APIRouter, File, UploadFile, Response
 from services.assistanceFirebase import AssistanceFirebase
+from services.assistanceMongoDB import MongoService
 
 # import models
 from models.ClientUploadModels import (
@@ -23,16 +24,6 @@ router = APIRouter(
 )
 
 
-# add the face to the student's row in the student collection in mongodb.
-async def add_student_face_to_db(student_id, face_url):
-	# add the face to the student's row in the student collection in mongodb.
-	# get student from the collection
-	# add the provided face url to the list of faces
-
-	# return true if successful, false if not.
-	pass
-
-
 @router.post("/add_student_face_from_url", response_model=AddFaceResponseModel)
 async def add_student_face_from_url(student_id: int, face_image_url: str):
 	"""
@@ -42,7 +33,8 @@ async def add_student_face_from_url(student_id: int, face_image_url: str):
 	"""
 	try:
 		# add this face to the student's row in student collection in the database.
-		await add_student_face_to_db(face_image_url, student_id)
+		mongo_obj = MongoService()
+		await mongo_obj.add_student_face_to_db(face_image_url, student_id)
 	except Exception as e:
 		return Response(
 			status_code=500,
@@ -71,7 +63,7 @@ async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
 
 	# upload image to firebase
 	try:
-		face_image_url = fb_storage.upload_image(face_image)
+		face_image_url = await fb_storage.upload_image(face_image)
 	except Exception as e:
 		return Response(
 			status_code=500,
@@ -81,7 +73,8 @@ async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
 	# add the face to the student's row in the student collection in mongodb.
 	try:
 		# add this face to the student's row in student collection in the database.
-		await add_student_face_to_db(face_image_url, student_id)
+		mongo_obj = MongoService()
+		await mongo_obj.add_student_face_to_db(face_image_url, student_id)
 	except Exception as e:
 		return Response(
 			status_code=500,

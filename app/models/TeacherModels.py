@@ -16,13 +16,12 @@ from typing import Optional, List
 # }
 
 
-class Teacher(BaseModel):
+class TeacherModel(BaseModel):
     name: str
     email: str
     subjects: List[str]
     panels: List[str]
 
 
-class TeacherInDB(BaseModel):
-    ids: str
-    
+class TeacherIDModel(BaseModel):
+    teacher_id: str

@@ -10,6 +10,7 @@ from facial_recognition.FaceRec import FaceRec  # main class
 
 # import models
 from models.ClientUploadModels import AttendanceModel
+from models.StudentModels import EncodingModel
 router = APIRouter(prefix="/face_rec", tags=["Face Recognition"])
 
 
@@ -24,15 +25,5 @@ def index():
 
 @router.get("/get_attendance", status_code=200, summary="Get attendance")
 def get_attendance(class_att: AttendanceModel):
-	
-	# instantiate the class
-	face_rec = FaceRec()
-	face_rec.get_attendance(class_att)
-	students_present = face_rec.get_students_present()
-	students_absent = face_rec.get_students_absent()
-	attendance = {
-		"students_present": students_present,
-		"students_absent": students_absent
-	}
-	update_attendance_in_db = classes.update_attendance_in_db(attendance)
+	pass
 	

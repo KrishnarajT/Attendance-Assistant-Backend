@@ -17,6 +17,7 @@ from typing import Optional, List
 #   "current_semester": "Semester ID"
 # }
 
+
 class Panel(BaseModel):
     panel_letter: str
     school: str
@@ -25,3 +26,6 @@ class Panel(BaseModel):
     semesters: List[str]
     current_semester: str
 
+
+class PanelID(BaseModel):
+    panel_id: str

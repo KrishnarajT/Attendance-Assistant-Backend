@@ -1,17 +1,17 @@
-'''
+"""
 This file contains routes for getting and setting data about subjects and semesters. 
-'''
-
+"""
 
 from pymongo.errors import PyMongoError
+
 # import fastapi stuff
 from fastapi import APIRouter, Response, HTTPException
 
-#import models
+# import models
 from models.SubjectModels import Subject
 
 # import the assistance service
-from services.assistanceMongoDB import AssistanceService
+from services.assistanceMongoDB import MongoService
 
 router = APIRouter(prefix="/subjects", tags=["Subjects and Semesters"])
 
@@ -29,15 +29,18 @@ def add_subject(subject: Subject):
     : return: The added subject.
     """
     try:
-        add_subject_service = AssistanceService()
+        add_subject_service = MongoService()
         added_subject = add_subject_service.add_subject(subject)
         if added_subject:
             return added_subject
         else:
-            raise HTTPException(status_code=500, detail="An error occurred while adding the subject")
+            raise HTTPException(
+                status_code=500, detail="An error occurred while adding the subject"
+            )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+
 # Get all subjects
 @router.get("/get_all_subjects", status_code=200, summary="Get all subjects")
 def get_all_subjects():
@@ -46,11 +49,13 @@ def get_all_subjects():
     : return: A list of all the subjects in the database.
     """
     try:
-        get_all_subjects_service = AssistanceService()
+        get_all_subjects_service = MongoService()
         all_subjects = get_all_subjects_service.get_all_subjects()
         if all_subjects:
             return all_subjects
         else:
-            raise HTTPException(status_code=500, detail="An error occurred while getting all subjects")
+            raise HTTPException(
+                status_code=500, detail="An error occurred while getting all subjects"
+            )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
