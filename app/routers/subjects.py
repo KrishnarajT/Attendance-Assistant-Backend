@@ -12,6 +12,7 @@ from models.SubjectModels import Subject
 
 # import the assistance service
 from services.assistanceMongoDB import MongoService
+from models.PanelModels import SemesterModel
 
 router = APIRouter(prefix="/subjects", tags=["Subjects and Semesters"])
 
@@ -56,6 +57,45 @@ def get_all_subjects():
         else:
             raise HTTPException(
                 status_code=500, detail="An error occurred while getting all subjects"
+            )
+    except PyMongoError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/add_semester", status_code=201, summary="Add a semester")
+def add_semester(semester: SemesterModel):
+    """
+    This route adds a semester to the database.
+    : param semester: The semester to be added.
+    : return: The added semester.
+    """
+    try:
+        add_semester_service = MongoService()
+        added_semester = add_semester_service.add_semester(semester)
+        if added_semester:
+            return added_semester
+        else:
+            raise HTTPException(
+                status_code=500, detail="An error occurred while adding the semester"
+            )
+    except PyMongoError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/get_all_semesters", status_code=200, summary="Get all semesters")
+def get_all_semesters():
+    """
+    This route gets all the semesters from the database.
+    : return: A list of all the semesters in the database.
+    """
+    try:
+        get_all_semesters_service = MongoService()
+        all_semesters = get_all_semesters_service.get_all_semesters()
+        if all_semesters:
+            return all_semesters
+        else:
+            raise HTTPException(
+                status_code=500, detail="An error occurred while getting all semesters"
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))

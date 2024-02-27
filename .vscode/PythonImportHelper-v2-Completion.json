@@ -501,6 +501,14 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -693,6 +701,14 @@
         "documentation": {}
     },
     {
+        "label": "MongoService",
+        "importPath": "services.assistanceMongoDB",
+        "description": "services.assistanceMongoDB",
+        "isExtraImport": true,
+        "detail": "services.assistanceMongoDB",
+        "documentation": {}
+    },
+    {
         "label": "AddFaceModel",
         "importPath": "models.ClientUploadModels",
         "description": "models.ClientUploadModels",
@@ -757,6 +773,62 @@
         "documentation": {}
     },
     {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "RoomModel",
+        "importPath": "models.CollegeModels",
+        "description": "models.CollegeModels",
+        "isExtraImport": true,
+        "detail": "models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingModel",
+        "importPath": "models.CollegeModels",
+        "description": "models.CollegeModels",
+        "isExtraImport": true,
+        "detail": "models.CollegeModels",
+        "documentation": {}
+    },
+    {
         "label": "FaceRec",
         "importPath": "facial_recognition.FaceRec",
         "description": "facial_recognition.FaceRec",
@@ -805,39 +877,31 @@
         "documentation": {}
     },
     {
-        "label": "PyMongoError",
-        "importPath": "pymongo.errors",
-        "description": "pymongo.errors",
+        "label": "PanelModel",
+        "importPath": "models.PanelModels",
+        "description": "models.PanelModels",
         "isExtraImport": true,
-        "detail": "pymongo.errors",
+        "detail": "models.PanelModels",
         "documentation": {}
     },
     {
-        "label": "PyMongoError",
-        "importPath": "pymongo.errors",
-        "description": "pymongo.errors",
+        "label": "SchoolModel",
+        "importPath": "models.PanelModels",
+        "description": "models.PanelModels",
         "isExtraImport": true,
-        "detail": "pymongo.errors",
+        "detail": "models.PanelModels",
         "documentation": {}
     },
     {
-        "label": "PyMongoError",
-        "importPath": "pymongo.errors",
-        "description": "pymongo.errors",
+        "label": "SpecializationModel",
+        "importPath": "models.PanelModels",
+        "description": "models.PanelModels",
         "isExtraImport": true,
-        "detail": "pymongo.errors",
+        "detail": "models.PanelModels",
         "documentation": {}
     },
     {
-        "label": "PyMongoError",
-        "importPath": "pymongo.errors",
-        "description": "pymongo.errors",
-        "isExtraImport": true,
-        "detail": "pymongo.errors",
-        "documentation": {}
-    },
-    {
-        "label": "Panel",
+        "label": "SemesterModel",
         "importPath": "models.PanelModels",
         "description": "models.PanelModels",
         "isExtraImport": true,
@@ -846,6 +910,14 @@
     },
     {
         "label": "PanelID",
+        "importPath": "models.PanelModels",
+        "description": "models.PanelModels",
+        "isExtraImport": true,
+        "detail": "models.PanelModels",
+        "documentation": {}
+    },
+    {
+        "label": "SemesterModel",
         "importPath": "models.PanelModels",
         "description": "models.PanelModels",
         "isExtraImport": true,
@@ -1702,7 +1774,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes  # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")",
+        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1711,7 +1783,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo: bytes  # the image of the class to be added\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:",
+        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:\n            datetime.strptime(v, \"%Y-%m-%d\")",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1743,11 +1815,29 @@
         "documentation": {}
     },
     {
-        "label": "Panel",
+        "label": "RoomModel",
+        "kind": 6,
+        "importPath": "app.models.CollegeModels",
+        "description": "app.models.CollegeModels",
+        "peekOfCode": "class RoomModel(BaseModel):\n    name: str\nclass BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []",
+        "detail": "app.models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingModel",
+        "kind": 6,
+        "importPath": "app.models.CollegeModels",
+        "description": "app.models.CollegeModels",
+        "peekOfCode": "class BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []",
+        "detail": "app.models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "PanelModel",
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class Panel(BaseModel):\n    panel_letter: str\n    school: str\n    specialization: str\n    students: List[str]\n    semesters: List[str]\n    current_semester: str\nclass PanelID(BaseModel):\n    panel_id: str",
+        "peekOfCode": "class PanelModel(BaseModel):\n    panel_letter: str\n    school: str\n    specialization: Optional[str] = \"\"\n    students: List[str]\n    semesters: List[str]\n    current_semester: str\nclass PanelID(BaseModel):\n    panel_id: str\nclass SchoolModel(BaseModel):",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1756,7 +1846,34 @@
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class PanelID(BaseModel):\n    panel_id: str",
+        "peekOfCode": "class PanelID(BaseModel):\n    panel_id: str\nclass SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str",
+        "detail": "app.models.PanelModels",
+        "documentation": {}
+    },
+    {
+        "label": "SchoolModel",
+        "kind": 6,
+        "importPath": "app.models.PanelModels",
+        "description": "app.models.PanelModels",
+        "peekOfCode": "class SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str\n    start_date: str\n    end_date: str",
+        "detail": "app.models.PanelModels",
+        "documentation": {}
+    },
+    {
+        "label": "SemesterModel",
+        "kind": 6,
+        "importPath": "app.models.PanelModels",
+        "description": "app.models.PanelModels",
+        "peekOfCode": "class SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str\n    start_date: str\n    end_date: str\n    subjects: Optional[List[str]] = []\n    teachers: Optional[List[str]] = []\n    teacher_subjects: Optional[dict] = {}",
+        "detail": "app.models.PanelModels",
+        "documentation": {}
+    },
+    {
+        "label": "SpecializationModel",
+        "kind": 6,
+        "importPath": "app.models.PanelModels",
+        "description": "app.models.PanelModels",
+        "peekOfCode": "class SpecializationModel(BaseModel):\n    name: str\n    panels: Optional[List[str]] = []",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1846,7 +1963,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n\tprefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n\t\"\"\"\n\tAdds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n\t:return: URL of the uploaded image.\n\t\"\"\"",
+        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1855,196 +1972,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "router = APIRouter(\n\tprefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n\t\"\"\"\n\tAdds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n\t:return: URL of the uploaded image.\n\t\"\"\"\n\ttry:",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tmongo_obj",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tmongo_obj = MongoService()\n\t\tawait mongo_obj.add_student_face_to_db(face_image_url, student_id)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\n\t\t\t\t\"detail\": f\"An error occurred while adding face to database: {str(e)}\"\n\t\t\t},\n\t\t)\n\t# to return information about the face that was added, we create a new object of the AddFaceModel class,",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_face_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=student_id, face_image_url=face_image_url\n\t)\n\treturn Response(status_code=200, content=output_face_model)\n@router.post(\"/add_student_face\", response_model=AddFaceResponseModel)\nasync def add_student_face(student_id: str, face_image: UploadFile = File(...)):\n\t\"\"\"\n\tUploads face image to firebase. This is going to be one of the base faces of the student, from which the model trains.\n\t:return: URL of the uploaded image.\n\t\"\"\"",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_image",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_image = await face_image.read()\n\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tadd_face_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tface_image_url",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# add the face to the student's row in the student collection in mongodb.\n\ttry:\n\t\t# add this face to the student's row in student collection in the database.",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tmongo_obj",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tmongo_obj = MongoService()\n\t\tmongo_obj.add_student_face_to_db(student_id, face_image_url)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\n\t\t\t\t\"detail\": f\"Uploaded Image {face_image_url}, but An error occurred while adding face to database: {str(e)}\"\n\t\t\t},\n\t\t)\n\t# to return information about the face that was added, we create a new object of the AddFaceModel class,",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_face_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=add_face_model.student_id, face_image_url=face_image_url\n\t)\n\treturn output_face_model\n@router.post(\"/add_class_photo_from_url\", response_model=AddClassPhotoResponseModel)\nasync def add_class_photo_from_url(\n\t\troom_id: str, date: str, time: str, class_photo_url: str\n):\n\t\"\"\"\n\tAdds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_class_photo",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_class_photo = AddClassPhotoResponseModel(\n\t\troom_id=room_id, date=date, time=time, class_photo_url=class_photo_url\n\t)\n\treturn Response(status_code=200, content=output_class_photo)\n@router.post(\"/add_class_photo\", response_model=AddClassPhotoResponseModel)\nasync def add_class_photo(\n\t\troom_id: str,\n\t\tdate: str,\n\t\ttime: str,\n\t\tclass_photo: UploadFile = File(...),",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tclass_photo",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tclass_photo = await class_photo.read()\n\tadd_class_photo_model = AddClassPhotoModel(\n\t\troom_id=room_id,\n\t\tdate=date,\n\t\ttime=time,\n\t\tclass_photo=class_photo,\n\t)\n\t# upload image to firebase\n\ttry:\n\t\tclass_photo_url = fb_storage.upload_image(class_photo)",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tadd_class_photo_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tadd_class_photo_model = AddClassPhotoModel(\n\t\troom_id=room_id,\n\t\tdate=date,\n\t\ttime=time,\n\t\tclass_photo=class_photo,\n\t)\n\t# upload image to firebase\n\ttry:\n\t\tclass_photo_url = fb_storage.upload_image(class_photo)\n\texcept Exception as e:",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tclass_photo_url",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tclass_photo_url = fb_storage.upload_image(class_photo)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# create a new row in the Lecture Images collection in the database, with the class_id, room_id, date, time,\n\t# class_photo_url\n\t# to return information about the class photo that was added, we create a new object of the AddClassPhotoModel\n\t# class, and return that object.",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_class_photo",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_class_photo = AddClassPhotoResponseModel(\n\t\troom_id=add_class_photo_model, class_photo_url=class_photo_url\n\t)\n\treturn Response(status_code=200, content=output_class_photo)\n@router.post(\"/add_attendance\", response_model=AttendanceModel)\nasync def add_attendance(attModel: AttendanceModel):\n\t\"\"\"\n\tAdds attendance to the database. This is information from the teachers' app from the teacher.\n\t:param attModel: Attendance model that contains all the necessary information\n\t:return: URL of the uploaded image.",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_attendance",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_attendance = AttendanceModel(\n\t\troom_id=attModel.room_id,\n\t\tdate=attModel.date,\n\t\ttime=attModel.time,\n\t\tstudents=attModel.students,\n\t)\n\treturn Response(status_code=200, content=output_attendance)\n# separating out this funciton to be called from within the server later on without triggering route.\nasync def add_face_encoding(student_id: str, number_of_faces: int, face_encoding):\n\t\"\"\"",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_encoding_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_encoding_model = FaceEncodingModel(\n\t\tstudent_id=student_id, number_of_faces=number_of_faces, encoding=face_encoding\n\t)\n\t# upload to firebase\n\ttry:\n\t\tface_encoding_model_url = fb_storage.upload_image(face_encoding)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tface_encoding_model_url",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tface_encoding_model_url = fb_storage.upload_image(face_encoding)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# add face_encoding_model_url to the database using the face_encoding_model object to the students collection.\n\t# to return information about the face encoding that was added, we create a new object of the FaceEncodingModel class, and return that object.\n\t# these attributes may change.\n\toutput_face_encoding = FaceEncodingResponseModel(",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_face_encoding",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_encoding = FaceEncodingResponseModel(\n\t\tstudent_id=face_encoding_model.student_id,\n\t\tnumber_of_faces=face_encoding_model.number_of_faces,\n\t\tencoding_url=face_encoding_model_url,\n\t)\n\treturn Response(status_code=200, content=output_face_encoding)\n@router.post(\"/add_face_encoding\", response_model=FaceEncodingModel)\nasync def add_face_encoding_route(\n\t\tstudent_id: str, number_of_faces: int, face_encoding: UploadFile = File(...)\n):",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_encoding",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_encoding = await face_encoding.read()\n\treturn await add_face_encoding(student_id, number_of_faces, face_encoding)\n@router.post(\"/update_face_encoding\", response_model=FaceEncodingResponseModel)\nasync def update_face_encoding(\n\t\told_encoding_url: str,\n\t\tstudent_id: str,\n\t\tnumber_of_faces: int,\n\t\tface_encoding: UploadFile = File(...),\n):\n\t\"\"\"",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_encoding",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_encoding = await face_encoding.read()\n\tface_encoding_model = FaceEncodingModel(\n\t\tstudent_id=student_id, number_of_faces=number_of_faces, encoding=face_encoding\n\t)\n\t# upload the new face encoding to firebase, and get the new url\n\ttry:\n\t\tnew_face_encoding_url = fb_storage.upload_image(face_encoding)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\tface_encoding_model",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_encoding_model = FaceEncodingModel(\n\t\tstudent_id=student_id, number_of_faces=number_of_faces, encoding=face_encoding\n\t)\n\t# upload the new face encoding to firebase, and get the new url\n\ttry:\n\t\tnew_face_encoding_url = fb_storage.upload_image(face_encoding)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tnew_face_encoding_url",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tnew_face_encoding_url = fb_storage.upload_image(face_encoding)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# delete the previous face encoding from firebase\n\ttry:\n\t\tfb_storage.delete_image(old_encoding_url)\n\texcept Exception as e:",
-        "detail": "app.routers.client_uploads",
-        "documentation": {}
-    },
-    {
-        "label": "\toutput_face_encoding",
-        "kind": 5,
-        "importPath": "app.routers.client_uploads",
-        "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_encoding = FaceEncodingResponseModel(\n\t\tstudent_id=face_encoding_model.student_id,\n\t\tnumber_of_faces=face_encoding_model.number_of_faces,\n\t\tencoding_url=new_face_encoding_url,\n\t)\n\treturn Response(status_code=200, content=output_face_encoding)",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"\n    try:",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -2053,7 +1981,61 @@
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_rooms",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        rooms = mongodb_obj.get_all_rooms()\n        if rooms:\n            return rooms",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "add_room",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def add_room(roomModel: RoomModel):\n    \"\"\"\n    This route adds a room to the database.\n    : param room: The room to be added.\n    : return: The added room.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room(roomModel)\n        if room:",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "add_building",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def add_building(buildingModel: BuildingModel):\n    \"\"\"\n    This route adds a building to the database.\n    : param building: The building to be added.\n    : return: The added building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        building = mongodb_obj.add_building(buildingModel)\n        if building:",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_buildings",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def get_all_buildings():\n    \"\"\"\n    This route gets all the buildings from the database.\n    : return: A list of all the buildings in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        all_buildings = mongodb_obj.get_all_buildings()\n        if all_buildings:\n            return all_buildings",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "get_rooms_from_building_id",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def get_rooms_from_building_id(building_id: str):\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        rooms = mongodb_obj.get_rooms_from_building_id(building_id)\n        if rooms:\n            return rooms",
+        "detail": "app.routers.college",
+        "documentation": {}
+    },
+    {
+        "label": "add_room_to_building",
+        "kind": 2,
+        "importPath": "app.routers.college",
+        "description": "app.routers.college",
+        "peekOfCode": "def add_room_to_building(room_id: str, building_id: str):\n    \"\"\"\n    This route adds a room to a building.\n    : param room_id: The room id to be added.\n    : param building_id: The building id to be added.\n    : return: The added room to the building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room_to_building(room_id, building_id)",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2062,7 +2044,7 @@
         "kind": 5,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "router = APIRouter(prefix=\"/college\", tags=[\"Rooms and Buildings\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
+        "peekOfCode": "router = APIRouter(prefix=\"/college\", tags=[\"Rooms and Buildings\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2107,7 +2089,7 @@
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: Panel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"",
+        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2116,7 +2098,7 @@
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_panel(panel: Panel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"\n    try:\n        add_panel_service = MongoService()\n        added_panel = add_panel_service.add_panel(panel)\n        if added_panel:",
+        "peekOfCode": "def add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"\n    try:\n        add_panel_service = MongoService()\n        added_panel = add_panel_service.add_panel(panel)\n        if added_panel:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2130,11 +2112,92 @@
         "documentation": {}
     },
     {
+        "label": "add_school",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def add_school(school: SchoolModel):\n    \"\"\"\n    This route adds a school to the database.\n    : param school: The school to be added.\n    : return: The added school.\n    \"\"\"\n    try:\n        add_school_service = MongoService()\n        added_school = add_school_service.add_school(school)\n        if added_school:",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_schools",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def get_all_schools():\n    \"\"\"\n    This route gets all the schools from the database.\n    : return: A list of all the schools in the database.\n    \"\"\"\n    try:\n        get_all_schools_service = MongoService()\n        all_schools = get_all_schools_service.get_all_schools()\n        if all_schools:\n            return all_schools",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "add_specialization",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def add_specialization(specialization: SpecializationModel):\n    \"\"\"\n    This route adds a specialization to the database.\n    : param specialization: The specialization to be added.\n    : return: The added specialization.\n    \"\"\"\n    try:\n        add_specialization_service = MongoService()\n        added_specialization = add_specialization_service.add_specialization(specialization)\n        if added_specialization:",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_specializations",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def get_all_specializations():\n    \"\"\"\n    This route gets all the specializations from the database.\n    : return: A list of all the specializations in the database.\n    \"\"\"\n    try:\n        get_all_specializations_service = MongoService()\n        all_specializations = get_all_specializations_service.get_all_specializations()\n        if all_specializations:\n            return all_specializations",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "add_spec_to_school",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def add_spec_to_school(school_id: str, spec_id: str):\n    \"\"\"\n    This route adds a specialization to a school.\n    : param school_id: The school to which the specialization is to be added.\n    : param spec_id: The specialization to be added to the school.\n    : return: The updated school.\n    \"\"\"\n    try:\n        add_spec_to_school_service = MongoService()\n        updated_school = add_spec_to_school_service.add_spec_to_school(school_id, spec_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "update_school_for_panel",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def update_school_for_panel(panel_id: str, school_id: str):\n    \"\"\"\n    This route updates the school for a panel.\n    : param panel_id: The panel for which the school is to be updated.\n    : param school_id: The school to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        update_school_for_panel_service = MongoService()\n        updated_panel = update_school_for_panel_service.update_school_for_panel(panel_id, school_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "update_spec_for_panel",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def update_spec_for_panel(panel_id: str, spec_id: str):\n    \"\"\"\n    This route updates the specialization for a panel.\n    : param panel_id: The panel for which the specialization is to be updated.\n    : param spec_id: The specialization to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        update_spec_for_panel_service = MongoService()\n        updated_panel = update_spec_for_panel_service.update_spec_for_panel(panel_id, spec_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "set_current_sem_for_panel",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def set_current_sem_for_panel(panel_id: str, sem_id: str):\n    \"\"\"\n    This route sets the current semester for a panel.\n    : param panel_id: The panel for which the current semester is to be set.\n    : param sem_id: The semester to be set as the current semester for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        set_current_sem_for_panel_service = MongoService()\n        updated_panel = set_current_sem_for_panel_service.set_current_sem_for_panel(panel_id, sem_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester_to_panel",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def add_semester_to_panel(panel_id: str, sem_id: str):\n    \"\"\"\n    This route adds a semester to a panel.\n    : param panel_id: The panel to which the semester is to be added.\n    : param sem_id: The semester to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        add_semester_to_panel_service = MongoService()\n        updated_panel = add_semester_to_panel_service.add_semester_to_panel(panel_id, sem_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "router = APIRouter(prefix=\"/panels\", tags=[\"Panels, Schools and Specializations\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: Panel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.",
+        "peekOfCode": "router = APIRouter(prefix=\"/panels\", tags=[\"Panels, Schools and Specializations\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2216,6 +2279,24 @@
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
         "peekOfCode": "def get_all_subjects():\n    \"\"\"\n    This route gets all the subjects from the database.\n    : return: A list of all the subjects in the database.\n    \"\"\"\n    try:\n        get_all_subjects_service = MongoService()\n        all_subjects = get_all_subjects_service.get_all_subjects()\n        if all_subjects:\n            return all_subjects",
+        "detail": "app.routers.subjects",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester",
+        "kind": 2,
+        "importPath": "app.routers.subjects",
+        "description": "app.routers.subjects",
+        "peekOfCode": "def add_semester(semester: SemesterModel):\n    \"\"\"\n    This route adds a semester to the database.\n    : param semester: The semester to be added.\n    : return: The added semester.\n    \"\"\"\n    try:\n        add_semester_service = MongoService()\n        added_semester = add_semester_service.add_semester(semester)\n        if added_semester:",
+        "detail": "app.routers.subjects",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_semesters",
+        "kind": 2,
+        "importPath": "app.routers.subjects",
+        "description": "app.routers.subjects",
+        "peekOfCode": "def get_all_semesters():\n    \"\"\"\n    This route gets all the semesters from the database.\n    : return: A list of all the semesters in the database.\n    \"\"\"\n    try:\n        get_all_semesters_service = MongoService()\n        all_semesters = get_all_semesters_service.get_all_semesters()\n        if all_semesters:\n            return all_semesters",
         "detail": "app.routers.subjects",
         "documentation": {}
     },

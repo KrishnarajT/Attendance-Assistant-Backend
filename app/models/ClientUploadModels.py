@@ -41,7 +41,6 @@ class AddClassPhotoModel(BaseModel):
     room_id: str
     date: date
     time: time
-    class_photo: bytes  # the image of the class to be added
 
     # date must follow the format YYYY-MM-DD HH:MM:SS
     @field_validator("date")

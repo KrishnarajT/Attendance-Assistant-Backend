@@ -165,3 +165,209 @@ class MongoService:
         except Exception as e:
             print(f"An error occurred while inserting the student: {e}")
             return None
+        
+    def add_class_photo_to_db(self, room_id, date, time, class_photo_url):
+        try:
+            self.db["lectureImages"].insert_one(
+                {
+                    "room_id": room_id,
+                    "date": date,
+                    "time": time,
+                    "class_photo_url": class_photo_url,
+                }
+            )
+        except Exception as e:
+            print(f"An error occurred while inserting the class photo: {e}")
+            
+    def get_all_class_photos(self):
+        try:
+            class_photos = self.db["lectureImages"].find()
+            return [
+                {
+                    "_id": str(class_photo["_id"]),
+                    **{key: value for key, value in class_photo.items() if key != "_id"},
+                }
+                for class_photo in class_photos
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all class photos: {e}")
+            return None
+
+    def get_all_rooms(self):
+        try:
+            rooms = self.db["rooms"].find()
+            return [
+                {
+                    "_id": str(room["_id"]),
+                    **{key: value for key, value in room.items() if key != "_id"},
+                }
+                for room in rooms
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all rooms: {e}")
+            return None
+        
+    def add_room(self, room):
+        try:
+            mongo_output = self.db["rooms"].insert_one(room.dict())
+            room.set_id(str(mongo_output.inserted_id))
+            return room
+        except Exception as e:
+            print(f"An error occurred while inserting the room: {e}")
+            return None
+        
+    def add_building(self, building):
+        try:
+            mongo_output = self.db["buildings"].insert_one(building.dict())
+            building.set_id(str(mongo_output.inserted_id))
+            return building
+        except Exception as e:
+            print(f"An error occurred while inserting the building: {e}")
+            return None
+        
+    def get_all_buildings(self):
+        try:
+            buildings = self.db["buildings"].find()
+            return [
+                {
+                    "_id": str(building["_id"]),
+                    **{key: value for key, value in building.items() if key != "_id"},
+                }
+                for building in buildings
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all buildings: {e}")
+            return None
+        
+    def get_rooms_from_building_id(self, building_id):
+        try:
+            rooms = self.db["rooms"].find({"building_id": ObjectId(building_id)})
+            return [
+                {
+                    "_id": str(room["_id"]),
+                    **{key: value for key, value in room.items() if key != "_id"},
+                }
+                for room in rooms
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting the rooms: {e}")
+            return None
+        
+    def add_room_to_building(self, room_id, building_id):
+        try:
+            self.db["buildings"].update_one(
+                {"_id": ObjectId(building_id)}, {"$push": {"rooms": ObjectId(room_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while adding the room to the building: {e}")
+    
+    def add_panel(self, panel):
+        try:
+            mongo_output = self.db["panels"].insert_one(panel.dict())
+            panel.set_id(str(mongo_output.inserted_id))
+            return panel
+        except Exception as e:
+            print(f"An error occurred while inserting the panel: {e}")
+            return None
+    
+    def get_all_panels(self):
+        try:
+            panels = self.db["panels"].find()
+            return [
+                {
+                    "_id": str(panel["_id"]),
+                    **{key: value for key, value in panel.items() if key != "_id"},
+                }
+                for panel in panels
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all panels: {e}")
+            return None
+    
+    def add_school(self, school):
+        try:
+            mongo_output = self.db["schools"].insert_one(school.dict())
+            school.set_id(str(mongo_output.inserted_id))
+            return school
+        except Exception as e:
+            print(f"An error occurred while inserting the school: {e}")
+            return None
+        
+    def get_all_schools(self):
+        try:
+            schools = self.db["schools"].find()
+            return [
+                {
+                    "_id": str(school["_id"]),
+                    **{key: value for key, value in school.items() if key != "_id"},
+                }
+                for school in schools
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all schools: {e}")
+            return None
+    
+    def add_specialization(self, specialization):
+        try:
+            mongo_output = self.db["specializations"].insert_one(specialization.dict())
+            specialization.set_id(str(mongo_output.inserted_id))
+            return specialization
+        except Exception as e:
+            print(f"An error occurred while inserting the specialization: {e}")
+            return None
+    
+    def get_all_specializations(self):
+        try:
+            specializations = self.db["specializations"].find()
+            return [
+                {
+                    "_id": str(specialization["_id"]),
+                    **{key: value for key, value in specialization.items() if key != "_id"},
+                }
+                for specialization in specializations
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all specializations: {e}")
+            return None
+        
+    def add_spec_to_school(self, school_id, spec_id):
+        try:
+            self.db["schools"].update_one(
+                {"_id": ObjectId(school_id)}, {"$push": {"specializations": ObjectId(spec_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while adding the specialization to the school: {e}")
+    
+    
+    def update_school_for_panel(self, panel_id, school_id):
+        try:
+            self.db["panels"].update_one(
+                {"_id": ObjectId(panel_id)}, {"$set": {"school_id": ObjectId(school_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while updating the school for the panel: {e}")
+            
+    def update_spec_for_panel(self, panel_id, spec_id):
+        try:
+            self.db["panels"].update_one(
+                {"_id": ObjectId(panel_id)}, {"$set": {"spec_id": ObjectId(spec_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while updating the specialization for the panel: {e}")
+            
+    def set_current_sem_for_panel(self, panel_id, sem_id):
+        try:
+            self.db["panels"].update_one(
+                {"_id": ObjectId(panel_id)}, {"$set": {"current_sem": ObjectId(sem_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while setting the current semester for the panel: {e}")
+        
+        
+    def add_semester_to_panel(self, panel_id, sem_id):
+        try:
+            self.db["panels"].update_one(
+                {"_id": ObjectId(panel_id)}, {"$push": {"semesters": ObjectId(sem_id)}}
+            )
+        except Exception as e:
+            print(f"An error occurred while adding the semester to the panel: {e}")
