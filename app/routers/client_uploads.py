@@ -52,7 +52,7 @@ async def add_student_face_from_url(student_id: int, face_image_url: str):
 
 
 @router.post("/add_student_face", response_model=AddFaceResponseModel)
-async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
+async def add_student_face(student_id: str, face_image: UploadFile = File(...)):
 	"""
 	Uploads face image to firebase. This is going to be one of the base faces of the student, from which the model trains.
 	:return: URL of the uploaded image.
@@ -60,11 +60,11 @@ async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
 	# read image
 	face_image = await face_image.read()
 	add_face_model = AddFaceModel(student_id=student_id, face_image=face_image)
-
 	# upload image to firebase
 	try:
-		face_image_url = await fb_storage.upload_image(face_image)
+		face_image_url = fb_storage.upload_image(face_image)
 	except Exception as e:
+		print(e)
 		return Response(
 			status_code=500,
 			content={"detail": f"An error occurred while uploading image: {str(e)}"},
@@ -74,7 +74,7 @@ async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
 	try:
 		# add this face to the student's row in student collection in the database.
 		mongo_obj = MongoService()
-		await mongo_obj.add_student_face_to_db(face_image_url, student_id)
+		mongo_obj.add_student_face_to_db(student_id, face_image_url)
 	except Exception as e:
 		return Response(
 			status_code=500,
@@ -88,7 +88,7 @@ async def add_student_face(student_id: int, face_image: UploadFile = File(...)):
 	output_face_model = AddFaceResponseModel(
 		student_id=add_face_model.student_id, face_image_url=face_image_url
 	)
-	return Response(status_code=200, content=output_face_model)
+	return output_face_model
 
 
 @router.post("/add_class_photo_from_url", response_model=AddClassPhotoResponseModel)

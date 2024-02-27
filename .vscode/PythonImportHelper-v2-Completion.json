@@ -1873,7 +1873,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=student_id, face_image_url=face_image_url\n\t)\n\treturn Response(status_code=200, content=output_face_model)\n@router.post(\"/add_student_face\", response_model=AddFaceResponseModel)\nasync def add_student_face(student_id: int, face_image: UploadFile = File(...)):\n\t\"\"\"\n\tUploads face image to firebase. This is going to be one of the base faces of the student, from which the model trains.\n\t:return: URL of the uploaded image.\n\t\"\"\"",
+        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=student_id, face_image_url=face_image_url\n\t)\n\treturn Response(status_code=200, content=output_face_model)\n@router.post(\"/add_student_face\", response_model=AddFaceResponseModel)\nasync def add_student_face(student_id: str, face_image: UploadFile = File(...)):\n\t\"\"\"\n\tUploads face image to firebase. This is going to be one of the base faces of the student, from which the model trains.\n\t:return: URL of the uploaded image.\n\t\"\"\"",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1882,7 +1882,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\tface_image = await face_image.read()\n\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = await fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)",
+        "peekOfCode": "\tface_image = await face_image.read()\n\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1891,7 +1891,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = await fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# add the face to the student's row in the student collection in mongodb.",
+        "peekOfCode": "\tadd_face_model = AddFaceModel(student_id=student_id, face_image=face_image)\n\t# upload image to firebase\n\ttry:\n\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1900,7 +1900,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tface_image_url = await fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# add the face to the student's row in the student collection in mongodb.\n\ttry:\n\t\t# add this face to the student's row in student collection in the database.\n\t\tmongo_obj = MongoService()",
+        "peekOfCode": "\t\tface_image_url = fb_storage.upload_image(face_image)\n\texcept Exception as e:\n\t\tprint(e)\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\"detail\": f\"An error occurred while uploading image: {str(e)}\"},\n\t\t)\n\t# add the face to the student's row in the student collection in mongodb.\n\ttry:\n\t\t# add this face to the student's row in student collection in the database.",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1909,7 +1909,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\t\tmongo_obj = MongoService()\n\t\tawait mongo_obj.add_student_face_to_db(face_image_url, student_id)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\n\t\t\t\t\"detail\": f\"Uploaded Image {face_image_url}, but An error occurred while adding face to database: {str(e)}\"\n\t\t\t},\n\t\t)\n\t# to return information about the face that was added, we create a new object of the AddFaceModel class,",
+        "peekOfCode": "\t\tmongo_obj = MongoService()\n\t\tmongo_obj.add_student_face_to_db(student_id, face_image_url)\n\texcept Exception as e:\n\t\treturn Response(\n\t\t\tstatus_code=500,\n\t\t\tcontent={\n\t\t\t\t\"detail\": f\"Uploaded Image {face_image_url}, but An error occurred while adding face to database: {str(e)}\"\n\t\t\t},\n\t\t)\n\t# to return information about the face that was added, we create a new object of the AddFaceModel class,",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -1918,7 +1918,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=add_face_model.student_id, face_image_url=face_image_url\n\t)\n\treturn Response(status_code=200, content=output_face_model)\n@router.post(\"/add_class_photo_from_url\", response_model=AddClassPhotoResponseModel)\nasync def add_class_photo_from_url(\n\t\troom_id: str, date: str, time: str, class_photo_url: str\n):\n\t\"\"\"\n\tAdds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.",
+        "peekOfCode": "\toutput_face_model = AddFaceResponseModel(\n\t\tstudent_id=add_face_model.student_id, face_image_url=face_image_url\n\t)\n\treturn output_face_model\n@router.post(\"/add_class_photo_from_url\", response_model=AddClassPhotoResponseModel)\nasync def add_class_photo_from_url(\n\t\troom_id: str, date: str, time: str, class_photo_url: str\n):\n\t\"\"\"\n\tAdds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
