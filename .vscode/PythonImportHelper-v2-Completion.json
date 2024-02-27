@@ -813,6 +813,14 @@
         "documentation": {}
     },
     {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
         "label": "RoomModel",
         "importPath": "models.CollegeModels",
         "description": "models.CollegeModels",
@@ -822,6 +830,22 @@
     },
     {
         "label": "BuildingModel",
+        "importPath": "models.CollegeModels",
+        "description": "models.CollegeModels",
+        "isExtraImport": true,
+        "detail": "models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "RoomResponseModel",
+        "importPath": "models.CollegeModels",
+        "description": "models.CollegeModels",
+        "isExtraImport": true,
+        "detail": "models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingResponseModel",
         "importPath": "models.CollegeModels",
         "description": "models.CollegeModels",
         "isExtraImport": true,
@@ -901,7 +925,7 @@
         "documentation": {}
     },
     {
-        "label": "SemesterModel",
+        "label": "SpecializationResponseModel",
         "importPath": "models.PanelModels",
         "description": "models.PanelModels",
         "isExtraImport": true,
@@ -1765,7 +1789,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddFaceModel(BaseModel):\n    student_id: str\n    face_image: bytes  # the image of the face to be added. from fastapi uploads.\nclass AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time",
+        "peekOfCode": "class AddFaceModel(BaseModel):\n    student_id: str\n    face_image: bytes  # the image of the face to be added. from fastapi uploads.\nclass AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: str\n    time: str",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1774,7 +1798,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):",
+        "peekOfCode": "class AddFaceResponseModel(BaseModel):\n    student_id: str\n    face_image_url: str  # from the place face image is stored.\nclass AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: str\n    time: str\n    # # date must follow the format YYYY-MM-DD HH:MM:SS\n    # @field_validator(\"date\")\n    # def date_format(cls, v):",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1783,7 +1807,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    # date must follow the format YYYY-MM-DD HH:MM:SS\n    @field_validator(\"date\")\n    def date_format(cls, v):\n        v = \"%Y-%m-%d\"\n        try:\n            datetime.strptime(v, \"%Y-%m-%d\")",
+        "peekOfCode": "class AddClassPhotoModel(BaseModel):\n    room_id: str\n    date: str\n    time: str\n    # # date must follow the format YYYY-MM-DD HH:MM:SS\n    # @field_validator(\"date\")\n    # def date_format(cls, v):\n    #     v = \"%Y-%m-%d\"\n    #     try:\n    #         datetime.strptime(v, \"%Y-%m-%d\")",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1792,7 +1816,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AddClassPhotoResponseModel(BaseModel):\n    room_id: str\n    date: date\n    time: time\n    class_photo_url: str  # from the place class photo is stored.\nclass FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):",
+        "peekOfCode": "class AddClassPhotoResponseModel(BaseModel):\n    room_id: str\n    date: str\n    time: str\n    class_photo_url: str  # from the place class photo is stored.\nclass FaceEncodingModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding: bytes\nclass FaceEncodingResponseModel(BaseModel):",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1819,7 +1843,16 @@
         "kind": 6,
         "importPath": "app.models.CollegeModels",
         "description": "app.models.CollegeModels",
-        "peekOfCode": "class RoomModel(BaseModel):\n    name: str\nclass BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []",
+        "peekOfCode": "class RoomModel(BaseModel):\n    name: str\n    def set_id(self, _id):\n        self._id = _id\nclass RoomResponseModel(BaseModel):\n    name: str\n    room_id: str\nclass BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []",
+        "detail": "app.models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "RoomResponseModel",
+        "kind": 6,
+        "importPath": "app.models.CollegeModels",
+        "description": "app.models.CollegeModels",
+        "peekOfCode": "class RoomResponseModel(BaseModel):\n    name: str\n    room_id: str\nclass BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []\n    def set_id(self, _id):\n        self._id = _id\nclass BuildingResponseModel(BaseModel):\n    name: str",
         "detail": "app.models.CollegeModels",
         "documentation": {}
     },
@@ -1828,7 +1861,16 @@
         "kind": 6,
         "importPath": "app.models.CollegeModels",
         "description": "app.models.CollegeModels",
-        "peekOfCode": "class BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []",
+        "peekOfCode": "class BuildingModel(BaseModel):\n    name: str\n    rooms: Optional[List] = []\n    def set_id(self, _id):\n        self._id = _id\nclass BuildingResponseModel(BaseModel):\n    name: str\n    building_id: str\n    rooms: Optional[List] = []",
+        "detail": "app.models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingResponseModel",
+        "kind": 6,
+        "importPath": "app.models.CollegeModels",
+        "description": "app.models.CollegeModels",
+        "peekOfCode": "class BuildingResponseModel(BaseModel):\n    name: str\n    building_id: str\n    rooms: Optional[List] = []",
         "detail": "app.models.CollegeModels",
         "documentation": {}
     },
@@ -1837,7 +1879,7 @@
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class PanelModel(BaseModel):\n    panel_letter: str\n    school: str\n    specialization: Optional[str] = \"\"\n    students: List[str]\n    semesters: List[str]\n    current_semester: str\nclass PanelID(BaseModel):\n    panel_id: str\nclass SchoolModel(BaseModel):",
+        "peekOfCode": "class PanelModel(BaseModel):\n    panel_letter: str\n    school: str\n    specialization: Optional[str] = \"\"\n    students: List[str]\n    semesters: List[str]\n    current_semester: str\n    def set_id(self, _id):\n        self._id = _id\nclass PanelID(BaseModel):",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1846,7 +1888,7 @@
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class PanelID(BaseModel):\n    panel_id: str\nclass SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str",
+        "peekOfCode": "class PanelID(BaseModel):\n    panel_id: str\nclass SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\n    def set_id(self, _id):\n        self._id = _id\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1855,7 +1897,7 @@
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str\n    start_date: str\n    end_date: str",
+        "peekOfCode": "class SchoolModel(BaseModel):\n    name: str\n    specializations: Optional[List[str]] = []\n    def set_id(self, _id):\n        self._id = _id\nclass SemesterModel(BaseModel):\n    semester_number: int\n    panel: str\n    specialization: str\n    school: str",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1873,7 +1915,16 @@
         "kind": 6,
         "importPath": "app.models.PanelModels",
         "description": "app.models.PanelModels",
-        "peekOfCode": "class SpecializationModel(BaseModel):\n    name: str\n    panels: Optional[List[str]] = []",
+        "peekOfCode": "class SpecializationModel(BaseModel):\n    name: str\n    panels: Optional[List[str]] = []\n    def set_id(self, _id):\n        self._id = _id\nclass SpecializationResponseModel(BaseModel):\n    specialization_id: str\n    name: str\n    panels: Optional[List[str]] = []",
+        "detail": "app.models.PanelModels",
+        "documentation": {}
+    },
+    {
+        "label": "SpecializationResponseModel",
+        "kind": 6,
+        "importPath": "app.models.PanelModels",
+        "description": "app.models.PanelModels",
+        "peekOfCode": "class SpecializationResponseModel(BaseModel):\n    specialization_id: str\n    name: str\n    panels: Optional[List[str]] = []",
         "detail": "app.models.PanelModels",
         "documentation": {}
     },
@@ -1891,7 +1942,7 @@
         "kind": 6,
         "importPath": "app.models.StudentModels",
         "description": "app.models.StudentModels",
-        "peekOfCode": "class StudentResponseModel(BaseModel):\n    student_id: str\n    name: str\n    prn: str\n    panel: str\n    panel_roll_no: Optional[int] = None\n# this is what should be called when getting an encoding for a student face.\n# used to store this encoding in firebase. The url is returned of the stored encoding, and is stored in mongodb.\nclass EncodingModel(BaseModel):\n    student_id: str",
+        "peekOfCode": "class StudentResponseModel(BaseModel):\n    _id: str\n    name: str\n    prn: str\n    panel: str\n    panel_roll_no: Optional[int] = None\n# this is what should be called when getting an encoding for a student face.\n# used to store this encoding in firebase. The url is returned of the stored encoding, and is stored in mongodb.\nclass EncodingModel(BaseModel):\n    student_id: str",
         "detail": "app.models.StudentModels",
         "documentation": {}
     },
@@ -1900,7 +1951,7 @@
         "kind": 6,
         "importPath": "app.models.StudentModels",
         "description": "app.models.StudentModels",
-        "peekOfCode": "class EncodingModel(BaseModel):\n    student_id: str\nclass EncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
+        "peekOfCode": "class EncodingModel(BaseModel):\n    student_id: str\nclass EncodingResponseModel(BaseModel):\n    _id: str\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
         "detail": "app.models.StudentModels",
         "documentation": {}
     },
@@ -1909,7 +1960,7 @@
         "kind": 6,
         "importPath": "app.models.StudentModels",
         "description": "app.models.StudentModels",
-        "peekOfCode": "class EncodingResponseModel(BaseModel):\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
+        "peekOfCode": "class EncodingResponseModel(BaseModel):\n    _id: str\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
         "detail": "app.models.StudentModels",
         "documentation": {}
     },
@@ -1999,7 +2050,7 @@
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_room(roomModel: RoomModel):\n    \"\"\"\n    This route adds a room to the database.\n    : param room: The room to be added.\n    : return: The added room.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room(roomModel)\n        if room:",
+        "peekOfCode": "def add_room(roomModel: RoomModel):\n    \"\"\"\n    This route adds a room to the database.\n    : param room: The room to be added.\n    : return: The added room.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room(roomModel)\n        if not room:",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2008,7 +2059,7 @@
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_building(buildingModel: BuildingModel):\n    \"\"\"\n    This route adds a building to the database.\n    : param building: The building to be added.\n    : return: The added building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        building = mongodb_obj.add_building(buildingModel)\n        if building:",
+        "peekOfCode": "def add_building(buildingModel: BuildingModel):\n    \"\"\"\n    This route adds a building to the database.\n    : param building: The building to be added.\n    : return: The added building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        building = mongodb_obj.add_building(buildingModel)\n        print(building)",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2035,7 +2086,7 @@
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_room_to_building(room_id: str, building_id: str):\n    \"\"\"\n    This route adds a room to a building.\n    : param room_id: The room id to be added.\n    : param building_id: The building id to be added.\n    : return: The added room to the building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room_to_building(room_id, building_id)",
+        "peekOfCode": "def add_room_to_building(room_id: str, building_id: str):\n    \"\"\"\n    This route adds a room to a building.\n    : param room_id: The room id to be added.\n    : param building_id: The building id to be added.\n    : return: The added room to the building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        mongodb_obj.add_room_to_building(room_id, building_id)",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2134,7 +2185,7 @@
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_specialization(specialization: SpecializationModel):\n    \"\"\"\n    This route adds a specialization to the database.\n    : param specialization: The specialization to be added.\n    : return: The added specialization.\n    \"\"\"\n    try:\n        add_specialization_service = MongoService()\n        added_specialization = add_specialization_service.add_specialization(specialization)\n        if added_specialization:",
+        "peekOfCode": "def add_specialization(specialization: SpecializationModel):\n    \"\"\"\n    This route adds a specialization to the database.\n    : param specialization: The specialization to be added.\n    : return: The added specialization.\n    \"\"\"\n    try:\n        add_specialization_service = MongoService()\n        added_specialization = add_specialization_service.add_specialization(specialization)\n        if not added_specialization:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2143,7 +2194,7 @@
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def get_all_specializations():\n    \"\"\"\n    This route gets all the specializations from the database.\n    : return: A list of all the specializations in the database.\n    \"\"\"\n    try:\n        get_all_specializations_service = MongoService()\n        all_specializations = get_all_specializations_service.get_all_specializations()\n        if all_specializations:\n            return all_specializations",
+        "peekOfCode": "def get_all_specializations():\n    \"\"\"\n    This route gets all the specializations from the database.\n    : return: A list of all the specializations in the database.\n    \"\"\"\n    try:\n        get_all_specializations_service = MongoService()\n        all_specializations = get_all_specializations_service.get_all_specializations()\n        if not all_specializations:\n            raise HTTPException(",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2193,6 +2244,15 @@
         "documentation": {}
     },
     {
+        "label": "add_student_to_panel",
+        "kind": 2,
+        "importPath": "app.routers.panels",
+        "description": "app.routers.panels",
+        "peekOfCode": "def add_student_to_panel(panel_id: str, student_id: str):\n    \"\"\"\n    This route adds a student to a panel.\n    : param panel_id: The panel to which the student is to be added.\n    : param student_id: The student to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        add_student_to_panel_service = MongoService()\n        add_student_to_panel_service.add_student_to_panel(panel_id, student_id)",
+        "detail": "app.routers.panels",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "app.routers.panels",
@@ -2215,7 +2275,7 @@
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def add_student(student: StudentModel):\n    # add the student to the database\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to add the student\n        student_response = mongo_obj.add_student(student)\n        print(student_response)\n        return StudentResponseModel(\n            student_id=student_response._id,",
+        "peekOfCode": "def add_student(student: StudentModel):\n    # add the student to the database\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to add the student\n        student_response = mongo_obj.add_student(student)\n        print(student_response)\n        return StudentResponseModel(\n            _id=student_response._id,",
         "detail": "app.routers.students",
         "documentation": {}
     },

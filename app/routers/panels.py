@@ -10,7 +10,7 @@ from pymongo.errors import PyMongoError
 from services.assistanceMongoDB import MongoService
 
 # import models
-from models.PanelModels import PanelModel, SchoolModel, SpecializationModel, SemesterModel
+from models.PanelModels import PanelModel, SchoolModel, SpecializationModel, SpecializationResponseModel
 
 router = APIRouter(prefix="/panels", tags=["Panels, Schools and Specializations"])
 
@@ -78,7 +78,7 @@ def add_school(school: SchoolModel):
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 @router.get("/get_all_schools", status_code=200, summary="Get all schools")
 def get_all_schools():
     """
@@ -96,7 +96,7 @@ def get_all_schools():
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 @router.post("/add_specialization", status_code=201, summary="Add a specialization")
 def add_specialization(specialization: SpecializationModel):
     """
@@ -107,15 +107,19 @@ def add_specialization(specialization: SpecializationModel):
     try:
         add_specialization_service = MongoService()
         added_specialization = add_specialization_service.add_specialization(specialization)
-        if added_specialization:
-            return added_specialization
-        else:
+        if not added_specialization:
             raise HTTPException(
                 status_code=500, detail="An error occurred while adding the specialization"
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
     
+    return SpecializationResponseModel(
+        _id=added_specialization._id,
+        name=added_specialization.name,
+        panels=added_specialization.panels,
+    )
+
 @router.get("/get_all_specializations", status_code=200, summary="Get all specializations")
 def get_all_specializations():
     """
@@ -125,15 +129,14 @@ def get_all_specializations():
     try:
         get_all_specializations_service = MongoService()
         all_specializations = get_all_specializations_service.get_all_specializations()
-        if all_specializations:
-            return all_specializations
-        else:
+        if not all_specializations:
             raise HTTPException(
                 status_code=500, detail="An error occurred while getting all specializations"
             )
+        return all_specializations
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 @router.post("/add_spec_to_school", status_code=201, summary="Add a specialization to a school")
 def add_spec_to_school(school_id: str, spec_id: str):
     """
@@ -153,7 +156,7 @@ def add_spec_to_school(school_id: str, spec_id: str):
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 
 @router.post("/update_school_for_panel", status_code=201, summary="Update school for a panel")
 def update_school_for_panel(panel_id: str, school_id: str):
@@ -174,7 +177,7 @@ def update_school_for_panel(panel_id: str, school_id: str):
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 @router.post("/update_spec_for_panel", status_code=201, summary="Update specialization for a panel")
 def update_spec_for_panel(panel_id: str, spec_id: str):
     """
@@ -214,7 +217,7 @@ def set_current_sem_for_panel(panel_id: str, sem_id: str):
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
 @router.post("/add_semester_to_panel", status_code=201, summary="Add a semester to a panel")
 def add_semester_to_panel(panel_id: str, sem_id: str):
     """
@@ -232,5 +235,20 @@ def add_semester_to_panel(panel_id: str, sem_id: str):
             raise HTTPException(
                 status_code=500, detail="An error occurred while adding the semester to the panel"
             )
+    except PyMongoError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/add_student_to_panel", status_code=201, summary="Add a student to a panel")
+def add_student_to_panel(panel_id: str, student_id: str):
+    """
+    This route adds a student to a panel.
+    : param panel_id: The panel to which the student is to be added.
+    : param student_id: The student to be added to the panel.
+    : return: The updated panel.
+    """
+    try:
+        add_student_to_panel_service = MongoService()
+        add_student_to_panel_service.add_student_to_panel(panel_id, student_id)
+        return True
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))

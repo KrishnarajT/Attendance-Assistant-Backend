@@ -39,32 +39,32 @@ class AddFaceResponseModel(BaseModel):
 
 class AddClassPhotoModel(BaseModel):
     room_id: str
-    date: date
-    time: time
+    date: str
+    time: str
 
-    # date must follow the format YYYY-MM-DD HH:MM:SS
-    @field_validator("date")
-    def date_format(cls, v):
-        v = "%Y-%m-%d"
-        try:
-            datetime.strptime(v, "%Y-%m-%d")
-        except ValueError:
-            raise ValueError("Incorrect date format, should be YYYY-MM-DD")
+    # # date must follow the format YYYY-MM-DD HH:MM:SS
+    # @field_validator("date")
+    # def date_format(cls, v):
+    #     v = "%Y-%m-%d"
+    #     try:
+    #         datetime.strptime(v, "%Y-%m-%d")
+    #     except ValueError:
+    #         raise ValueError("Incorrect date format, should be YYYY-MM-DD")
 
-    # time must follow the format HH:MM:SS
-    @field_validator("time")
-    def time_format(cls, v):
-        v = "%H:%M:%S"
-        try:
-            datetime.strptime(v, "%H:%M:%S")
-        except ValueError:
-            raise ValueError("Incorrect time format, should be HH:MM:SS")
+    # # time must follow the format HH:MM:SS
+    # @field_validator("time")
+    # def time_format(cls, v):
+    #     v = "%H:%M:%S"
+    #     try:
+    #         datetime.strptime(v, "%H:%M:%S")
+    #     except ValueError:
+    #         raise ValueError("Incorrect time format, should be HH:MM:SS")
 
 
 class AddClassPhotoResponseModel(BaseModel):
     room_id: str
-    date: date
-    time: time
+    date: str
+    time: str
     class_photo_url: str  # from the place class photo is stored.
 
 

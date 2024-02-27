@@ -41,7 +41,7 @@ def add_student(student: StudentModel):
         
         print(student_response)
         return StudentResponseModel(
-            student_id=student_response._id,
+            _id=student_response._id,
             name=student_response.name,
             prn=student_response.prn,
             panel=student_response.panel,

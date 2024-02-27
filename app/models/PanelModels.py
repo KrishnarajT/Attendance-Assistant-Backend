@@ -59,14 +59,20 @@ class PanelModel(BaseModel):
     semesters: List[str]
     current_semester: str
 
+    def set_id(self, _id):
+        self._id = _id
+
 
 class PanelID(BaseModel):
     panel_id: str
 
-
 class SchoolModel(BaseModel):
     name: str
     specializations: Optional[List[str]] = []
+
+    def set_id(self, _id):
+        self._id = _id
+
 
 class SemesterModel(BaseModel):
     semester_number: int
@@ -79,6 +85,18 @@ class SemesterModel(BaseModel):
     teachers: Optional[List[str]] = []
     teacher_subjects: Optional[dict] = {}
 
+    def set_id(self, _id):
+        self._id = _id
+
+
 class SpecializationModel(BaseModel):
+    name: str
+    panels: Optional[List[str]] = []
+
+    def set_id(self, _id):
+        self._id = _id
+
+class SpecializationResponseModel(BaseModel):
+    specialization_id: str
     name: str
     panels: Optional[List[str]] = []

@@ -10,7 +10,7 @@ from services.assistanceMongoDB import MongoService
 from pymongo.errors import PyMongoError
 
 # importing models
-from models.CollegeModels import RoomModel, BuildingModel
+from models.CollegeModels import RoomModel, BuildingModel, RoomResponseModel, BuildingResponseModel
 
 
 router = APIRouter(prefix="/college", tags=["Rooms and Buildings"])
@@ -50,15 +50,16 @@ def add_room(roomModel: RoomModel):
     try:
         mongodb_obj = MongoService()
         room = mongodb_obj.add_room(roomModel)
-        if room:
-            return room
-        else:
+        if not room:
             raise HTTPException(
                 status_code=500, detail="An error occurred while adding the panel"
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+    return RoomResponseModel(
+        name=room.name,
+        room_id=room._id,
+    )
 
 @router.post("/add_building", status_code=201, summary="Add a building")
 def add_building(buildingModel: BuildingModel):
@@ -70,15 +71,19 @@ def add_building(buildingModel: BuildingModel):
     try:
         mongodb_obj = MongoService()
         building = mongodb_obj.add_building(buildingModel)
-        if building:
-            return building
-        else:
+        print(building)
+        if not building:
             raise HTTPException(
                 status_code=500, detail="An error occurred while adding the panel"
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+    
+    return BuildingResponseModel(
+        name=building.name,
+        building_id=building._id,
+        rooms=building.rooms,
+    )
 
 @router.get("/get_all_buildings", status_code=200, summary="Get all buildings")
 def get_all_buildings():
@@ -132,12 +137,7 @@ def add_room_to_building(room_id: str, building_id: str):
     """
     try:
         mongodb_obj = MongoService()
-        room = mongodb_obj.add_room_to_building(room_id, building_id)
-        if room:
-            return room
-        else:
-            raise HTTPException(
-                status_code=500, detail="An error occurred while adding the panel"
-            )
+        mongodb_obj.add_room_to_building(room_id, building_id)
+        return True
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))

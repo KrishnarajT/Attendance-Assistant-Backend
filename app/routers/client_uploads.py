@@ -93,13 +93,15 @@ async def add_student_face(student_id: str, face_image: UploadFile = File(...)):
 
 @router.post("/add_class_photo_from_url", response_model=AddClassPhotoResponseModel)
 async def add_class_photo_from_url(
-    add_class_photo_model: AddClassPhotoModel, class_photo_url: str
+    room_id, date, time, class_photo_url: str
 ):
     """
     Adds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.
     :return: URL of the uploaded image.
     """
-
+    add_class_photo_model = AddClassPhotoModel(
+        room_id=room_id, date=date, time=time
+    )
     # create a new row in the Lecture Images collection in the database, with the class_id, room_id, date, time,
     # class_photo_url
     try:
@@ -132,13 +134,17 @@ async def add_class_photo_from_url(
 
 @router.post("/add_class_photo", response_model=AddClassPhotoResponseModel)
 async def add_class_photo(
-    add_class_photo_model: AddClassPhotoModel,
+    room_id, date, time,
     class_photo: UploadFile = File(...),
 ):
     """
     Adds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.
     :return: URL of the uploaded image.
     """
+    add_class_photo_model = AddClassPhotoModel(
+        room_id=room_id, date=date, time=time
+    )
+    
     # read image
     class_photo = await class_photo.read()
 
