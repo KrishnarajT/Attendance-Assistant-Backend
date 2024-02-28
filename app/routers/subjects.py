@@ -11,27 +11,33 @@ from fastapi import APIRouter, Response, HTTPException
 from models.SubjectModels import Subject
 
 # import the assistance service
-from services.assistanceMongoDB import MongoService
 from models.PanelModels import SemesterModel
+
+# import the services
+from services.teacher_and_subject_services import (
+    add_subject,
+    get_all_subjects,
+)
+
+from services.panel_services import add_semester, get_all_semesters
 
 router = APIRouter(prefix="/subjects", tags=["Subjects and Semesters"])
 
 
 @router.get("/test", status_code=200, summary="Test route")
-def index():
+def index_route():
     return Response(content="Hello, World!", status_code=200)
 
 
 @router.post("/add_subject", status_code=201, summary="Add a subject")
-def add_subject(subject: Subject):
+def add_subject_route(subject: Subject):
     """
     This route adds a subject to the database.
     : param subject: The subject to be added.
     : return: The added subject.
     """
     try:
-        add_subject_service = MongoService()
-        added_subject = add_subject_service.add_subject(subject)
+        added_subject = add_subject(subject)
         if added_subject:
             return added_subject
         else:
@@ -44,14 +50,13 @@ def add_subject(subject: Subject):
 
 # Get all subjects
 @router.get("/get_all_subjects", status_code=200, summary="Get all subjects")
-def get_all_subjects():
+def get_all_subjects_route():
     """
     This route gets all the subjects from the database.
     : return: A list of all the subjects in the database.
     """
     try:
-        get_all_subjects_service = MongoService()
-        all_subjects = get_all_subjects_service.get_all_subjects()
+        all_subjects = get_all_subjects()
         if all_subjects:
             return all_subjects
         else:
@@ -63,15 +68,14 @@ def get_all_subjects():
 
 
 @router.post("/add_semester", status_code=201, summary="Add a semester")
-def add_semester(semester: SemesterModel):
+def add_semester_route(semester: SemesterModel):
     """
     This route adds a semester to the database.
     : param semester: The semester to be added.
     : return: The added semester.
     """
     try:
-        add_semester_service = MongoService()
-        added_semester = add_semester_service.add_semester(semester)
+        added_semester = add_semester(semester)
         if added_semester:
             return added_semester
         else:
@@ -83,14 +87,13 @@ def add_semester(semester: SemesterModel):
 
 
 @router.get("/get_all_semesters", status_code=200, summary="Get all semesters")
-def get_all_semesters():
+def get_all_semesters_route():
     """
     This route gets all the semesters from the database.
     : return: A list of all the semesters in the database.
     """
     try:
-        get_all_semesters_service = MongoService()
-        all_semesters = get_all_semesters_service.get_all_semesters()
+        all_semesters = get_all_semesters()
         if all_semesters:
             return all_semesters
         else:

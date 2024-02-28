@@ -4,7 +4,14 @@ This file contains the routes for uploading images and attendance information fr
 
 from fastapi import APIRouter, File, UploadFile, Response
 from services.assistanceFirebase import AssistanceFirebase
-from services.assistanceMongoDB import MongoService
+from services.lecture_services import get_lecture_images_between_time
+
+from services.panel_services import (
+    get_student_ids_from_panel_id,
+    get_student_encodings_from_panel_id,
+)
+from facial_recognition.StudentManager import StudentManager
+from facial_recognition.FaceRec import FaceRec
 
 # import models
 from models.ClientUploadModels import (
@@ -17,6 +24,19 @@ from models.ClientUploadModels import (
     AttendanceModel,
 )
 
+# import services
+from services.student_services import (
+    add_student_face_to_db,
+
+)
+
+from services.lecture_services import (
+    add_class_photo_to_db,
+)
+
+
+
+
 fb_storage = AssistanceFirebase()
 
 router = APIRouter(
@@ -25,7 +45,7 @@ router = APIRouter(
 
 
 @router.post("/add_student_face_from_url", response_model=AddFaceResponseModel)
-async def add_student_face_from_url(student_id: int, face_image_url: str):
+async def add_student_face_from_url_route(student_id: int, face_image_url: str):
     """
     Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.
 
@@ -33,8 +53,7 @@ async def add_student_face_from_url(student_id: int, face_image_url: str):
     """
     try:
         # add this face to the student's row in student collection in the database.
-        mongo_obj = MongoService()
-        await mongo_obj.add_student_face_to_db(face_image_url, student_id)
+        await add_student_face_to_db(face_image_url, student_id)
     except Exception as e:
         return Response(
             status_code=500,
@@ -52,7 +71,7 @@ async def add_student_face_from_url(student_id: int, face_image_url: str):
 
 
 @router.post("/add_student_face", response_model=AddFaceResponseModel)
-async def add_student_face(student_id: str, face_image: UploadFile = File(...)):
+async def add_student_face_route(student_id: str, face_image: UploadFile = File(...)):
     """
     Uploads face image to firebase. This is going to be one of the base faces of the student, from which the model trains.
     :return: URL of the uploaded image.
@@ -73,8 +92,7 @@ async def add_student_face(student_id: str, face_image: UploadFile = File(...)):
     # add the face to the student's row in the student collection in mongodb.
     try:
         # add this face to the student's row in student collection in the database.
-        mongo_obj = MongoService()
-        mongo_obj.add_student_face_to_db(student_id, face_image_url)
+        add_student_face_to_db(student_id, face_image_url)
     except Exception as e:
         return Response(
             status_code=500,
@@ -92,22 +110,17 @@ async def add_student_face(student_id: str, face_image: UploadFile = File(...)):
 
 
 @router.post("/add_class_photo_from_url", response_model=AddClassPhotoResponseModel)
-async def add_class_photo_from_url(
-    room_id, date, time, class_photo_url: str
-):
+async def add_class_photo_from_url_route(room_id, date, time, class_photo_url: str):
     """
     Adds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.
     :return: URL of the uploaded image.
     """
-    add_class_photo_model = AddClassPhotoModel(
-        room_id=room_id, date=date, time=time
-    )
+    add_class_photo_model = AddClassPhotoModel(room_id=room_id, date=date, time=time)
     # create a new row in the Lecture Images collection in the database, with the class_id, room_id, date, time,
     # class_photo_url
     try:
         # add this face to the student's row in student collection in the database.
-        mongo_obj = MongoService()
-        mongo_obj.add_class_photo_to_db(
+        add_class_photo_to_db(
             add_class_photo_model.room_id,
             add_class_photo_model.date,
             add_class_photo_model.time,
@@ -133,18 +146,18 @@ async def add_class_photo_from_url(
 
 
 @router.post("/add_class_photo", response_model=AddClassPhotoResponseModel)
-async def add_class_photo(
-    room_id, date, time,
+async def add_class_photo_route(
+    room_id,
+    date,
+    time,
     class_photo: UploadFile = File(...),
 ):
     """
     Adds class photo to firebase. This is ideally from PI. Non ideally from teachers phone.
     :return: URL of the uploaded image.
     """
-    add_class_photo_model = AddClassPhotoModel(
-        room_id=room_id, date=date, time=time
-    )
-    
+    add_class_photo_model = AddClassPhotoModel(room_id=room_id, date=date, time=time)
+
     # read image
     class_photo = await class_photo.read()
 
@@ -163,8 +176,7 @@ async def add_class_photo(
     # add the face to the student's row in the student collection in mongodb.
     try:
         # add this face to the student's row in student collection in the database.
-        mongo_obj = MongoService()
-        mongo_obj.add_class_photo_to_db(
+        add_class_photo_to_db(
             add_class_photo_model.room_id,
             add_class_photo_model.date,
             add_class_photo_model.time,
@@ -190,7 +202,7 @@ async def add_class_photo(
 
 
 @router.post("/add_attendance", response_model=AttendanceModel)
-async def add_attendance(attModel: AttendanceModel):
+async def add_attendance_route(attModel: AttendanceModel):
     """
     Adds attendance to the database. This is information from the teachers' app from the teacher.
     :param attModel: Attendance model that contains all the necessary information
@@ -201,6 +213,57 @@ async def add_attendance(attModel: AttendanceModel):
     # ideally this must be done to the Classes collection, which will have other data from other sources. A new row in the classes collection will be created in this function. Attendance data will be added later to it. This means that only after the teacher manually adds info about which room they are in, and which panel they are teaching, will the processing start. Images however will be stored in advance during the class. This function would ideally be called after the class is over.
 
     # to return information about the attendance that was added, we create a new object of the AttendanceModel class, and return that object.
+
+    # get the lecture images and student encodings from the database
+
+    # get all lecture images in between the start and end time
+    # instantiate lecture
+    print(attModel.start_time, attModel.end_time)
+    print(attModel.panel_id)
+    # print(attModel.lecture_id)
+    lecture_images = get_lecture_images_between_time(
+        attModel.start_time, attModel.end_time
+    )
+
+    if not lecture_images:
+        return Response(
+            status_code=500,
+            content={"detail": f"No images found for the given time range"},
+        )
+
+    try:
+        # get all encodings of students in the panel
+        student_encodings = get_student_encodings_from_panel_id(attModel.panel_id)
+
+        # iterate through all encodings, and if they are empty, create encodings. We can dothis because we did not have any errors regarding faces, that means faces exist but no encodings.
+        for student_id, encoding in student_encodings.items():
+            if not encoding:
+                # then create encodings
+                student_manager = StudentManager(student_id, [], [])
+                face_encoding = student_manager.create_face_encoding()
+                # add the face encoding to the student's row in the student collection in mongodb.
+                await add_face_encoding(student_id, 1, face_encoding)
+                # add the face encoding to the student_encodings dictionary
+                student_encodings[student_id] = face_encoding
+                
+                
+    except Exception as e:
+        return Response(status_code=500, content={"detail": f" {str(e)}"})
+
+    student_ids = get_student_ids_from_panel_id(attModel.panel_id)
+
+    # check encoding id is present for each student
+
+    # if not present, return error
+    # if present, add to the list of student encodings
+
+    print("lecture images ", lecture_images)
+    print("student encodings ", student_encodings)
+    print("student ids ", student_ids)
+
+    face_rec_obj = FaceRec(
+        lecture_images, student_encodings, attModel.panel_id, student_ids
+    )
 
     # these attributes may change.
     output_attendance = AttendanceModel(
@@ -253,7 +316,7 @@ async def add_face_encoding_route(
 
 
 @router.post("/update_face_encoding", response_model=FaceEncodingResponseModel)
-async def update_face_encoding(
+async def update_face_encoding_route(
     old_encoding_url: str,
     student_id: str,
     number_of_faces: int,

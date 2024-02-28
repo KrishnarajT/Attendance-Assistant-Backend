@@ -50,14 +50,6 @@
         "documentation": {}
     },
     {
-        "label": "add_face_encoding",
-        "importPath": "routers.client_uploads",
-        "description": "routers.client_uploads",
-        "isExtraImport": true,
-        "detail": "routers.client_uploads",
-        "documentation": {}
-    },
-    {
         "label": "pickle",
         "kind": 6,
         "isExtraImport": true,
@@ -509,6 +501,14 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -645,67 +645,164 @@
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "get_lecture_images_between_time",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "add_class_photo_to_db",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "add_lecture",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "get_lecture",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "get_all_lectures",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "get_lecture_images_between_time",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "services.panel_services",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "detail": "services.panel_services",
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "importPath": "services.assistanceMongoDB",
-        "description": "services.assistanceMongoDB",
+        "label": "get_student_ids_from_panel_id",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
         "isExtraImport": true,
-        "detail": "services.assistanceMongoDB",
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_panel_id",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_panels",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "set_current_sem_for_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester_to_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_to_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_by_panel_id",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_semesters",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "StudentManager",
+        "importPath": "facial_recognition.StudentManager",
+        "description": "facial_recognition.StudentManager",
+        "isExtraImport": true,
+        "detail": "facial_recognition.StudentManager",
+        "documentation": {}
+    },
+    {
+        "label": "FaceRec",
+        "importPath": "facial_recognition.FaceRec",
+        "description": "facial_recognition.FaceRec",
+        "isExtraImport": true,
+        "detail": "facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "FaceRec",
+        "importPath": "facial_recognition.FaceRec",
+        "description": "facial_recognition.FaceRec",
+        "isExtraImport": true,
+        "detail": "facial_recognition.FaceRec",
         "documentation": {}
     },
     {
@@ -773,11 +870,51 @@
         "documentation": {}
     },
     {
-        "label": "PyMongoError",
-        "importPath": "pymongo.errors",
-        "description": "pymongo.errors",
+        "label": "add_student_face_to_db",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
         "isExtraImport": true,
-        "detail": "pymongo.errors",
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encoding_from_student_id",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_students",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_encoding",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_student_ids",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
         "documentation": {}
     },
     {
@@ -818,6 +955,86 @@
         "description": "pymongo.errors",
         "isExtraImport": true,
         "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "PyMongoError",
+        "importPath": "pymongo.errors",
+        "description": "pymongo.errors",
+        "isExtraImport": true,
+        "detail": "pymongo.errors",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_rooms",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_room",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_building",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_buildings",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_rooms_from_building_id",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_room_to_building",
+        "importPath": "services.room_services",
+        "description": "services.room_services",
+        "isExtraImport": true,
+        "detail": "services.room_services",
         "documentation": {}
     },
     {
@@ -850,14 +1067,6 @@
         "description": "models.CollegeModels",
         "isExtraImport": true,
         "detail": "models.CollegeModels",
-        "documentation": {}
-    },
-    {
-        "label": "FaceRec",
-        "importPath": "facial_recognition.FaceRec",
-        "description": "facial_recognition.FaceRec",
-        "isExtraImport": true,
-        "detail": "facial_recognition.FaceRec",
         "documentation": {}
     },
     {
@@ -901,11 +1110,11 @@
         "documentation": {}
     },
     {
-        "label": "lectureServices",
-        "importPath": "services.lectures",
-        "description": "services.lectures",
+        "label": "LectureModel",
+        "importPath": "models.lectureModels",
+        "description": "models.lectureModels",
         "isExtraImport": true,
-        "detail": "services.lectures",
+        "detail": "models.lectureModels",
         "documentation": {}
     },
     {
@@ -957,11 +1166,107 @@
         "documentation": {}
     },
     {
+        "label": "add_school",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_schools",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_specialization",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_specializations",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "update_school_for_panel",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "update_spec_for_panel",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_spec_to_school",
+        "importPath": "services.school_and_spec_services",
+        "description": "services.school_and_spec_services",
+        "isExtraImport": true,
+        "detail": "services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
         "label": "Subject",
         "importPath": "models.SubjectModels",
         "description": "models.SubjectModels",
         "isExtraImport": true,
         "detail": "models.SubjectModels",
+        "documentation": {}
+    },
+    {
+        "label": "add_subject",
+        "importPath": "services.teacher_and_subject_services",
+        "description": "services.teacher_and_subject_services",
+        "isExtraImport": true,
+        "detail": "services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_subjects",
+        "importPath": "services.teacher_and_subject_services",
+        "description": "services.teacher_and_subject_services",
+        "isExtraImport": true,
+        "detail": "services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_teacher",
+        "importPath": "services.teacher_and_subject_services",
+        "description": "services.teacher_and_subject_services",
+        "isExtraImport": true,
+        "detail": "services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_teachers",
+        "importPath": "services.teacher_and_subject_services",
+        "description": "services.teacher_and_subject_services",
+        "isExtraImport": true,
+        "detail": "services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_teacher_by_id",
+        "importPath": "services.teacher_and_subject_services",
+        "description": "services.teacher_and_subject_services",
+        "isExtraImport": true,
+        "detail": "services.teacher_and_subject_services",
         "documentation": {}
     },
     {
@@ -1011,6 +1316,86 @@
         "description": "data.mongodb",
         "isExtraImport": true,
         "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_mongo",
+        "importPath": "data.mongodb",
+        "description": "data.mongodb",
+        "isExtraImport": true,
+        "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_mongo",
+        "importPath": "data.mongodb",
+        "description": "data.mongodb",
+        "isExtraImport": true,
+        "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_mongo",
+        "importPath": "data.mongodb",
+        "description": "data.mongodb",
+        "isExtraImport": true,
+        "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_mongo",
+        "importPath": "data.mongodb",
+        "description": "data.mongodb",
+        "isExtraImport": true,
+        "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_mongo",
+        "importPath": "data.mongodb",
+        "description": "data.mongodb",
+        "isExtraImport": true,
+        "detail": "data.mongodb",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
         "documentation": {}
     },
     {
@@ -1239,7 +1624,7 @@
         "kind": 2,
         "importPath": "app.data.mongodb",
         "description": "app.data.mongodb",
-        "peekOfCode": "def connect_to_mongo():\n    client = MongoClient(mongodb_uri)\n    db = client['Attendance']\n    return db",
+        "peekOfCode": "def connect_to_mongo():\n    client = MongoClient(mongodb_uri)\n    db = client['Attendance']\n    print(\"connected to mongo db!\")\n    return db",
         "detail": "app.data.mongodb",
         "documentation": {}
     },
@@ -1329,7 +1714,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tface_encodings = pickle.loads(add_face_encoding(self.student_face_encodings[student_id]))\n\t\t\t# replace the url with the face encodings\n\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()",
+        "peekOfCode": "\t\t\tface_encodings = pickle.loads(self.student_face_encodings[student_id])\n\t\t\t# replace the url with the face encodings\n\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -2049,7 +2434,7 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"",
+        "peekOfCode": "fb_storage = AssistanceFirebase()\nrouter = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url_route(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
@@ -2058,70 +2443,70 @@
         "kind": 5,
         "importPath": "app.routers.client_uploads",
         "description": "app.routers.client_uploads",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"\n    try:",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/upload\", tags=[\"Upload Images or Attendance Info from App/Website/Pi\"]\n)\n@router.post(\"/add_student_face_from_url\", response_model=AddFaceResponseModel)\nasync def add_student_face_from_url_route(student_id: int, face_image_url: str):\n    \"\"\"\n    Adds a face to the student's row in the student collection in the database. This is going to be one of the base faces of the student, from which the model trains.\n    :return: URL of the uploaded image.\n    \"\"\"\n    try:",
         "detail": "app.routers.client_uploads",
         "documentation": {}
     },
     {
-        "label": "index",
+        "label": "index_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()",
+        "peekOfCode": "def index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms_from_db_route():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        rooms = get_all_rooms()",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "get_all_rooms",
+        "label": "get_all_rooms_from_db_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        rooms = mongodb_obj.get_all_rooms()\n        if rooms:\n            return rooms",
+        "peekOfCode": "def get_all_rooms_from_db_route():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        rooms = get_all_rooms()\n        if rooms:\n            return rooms\n        else:",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "add_room",
+        "label": "add_room_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_room(roomModel: RoomModel):\n    \"\"\"\n    This route adds a room to the database.\n    : param room: The room to be added.\n    : return: The added room.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        room = mongodb_obj.add_room(roomModel)\n        if not room:",
+        "peekOfCode": "def add_room_route(roomModel: RoomModel):\n    \"\"\"\n    This route adds a room to the database.\n    : param room: The room to be added.\n    : return: The added room.\n    \"\"\"\n    try:\n        room = add_room(roomModel)\n        if not room:\n            raise HTTPException(",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "add_building",
+        "label": "add_building_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_building(buildingModel: BuildingModel):\n    \"\"\"\n    This route adds a building to the database.\n    : param building: The building to be added.\n    : return: The added building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        building = mongodb_obj.add_building(buildingModel)\n        print(building)",
+        "peekOfCode": "def add_building_route(buildingModel: BuildingModel):\n    \"\"\"\n    This route adds a building to the database.\n    : param building: The building to be added.\n    : return: The added building.\n    \"\"\"\n    try:\n        building = add_building(buildingModel)\n        print(building)\n        if not building:",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "get_all_buildings",
+        "label": "get_all_buildings_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def get_all_buildings():\n    \"\"\"\n    This route gets all the buildings from the database.\n    : return: A list of all the buildings in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        all_buildings = mongodb_obj.get_all_buildings()\n        if all_buildings:\n            return all_buildings",
+        "peekOfCode": "def get_all_buildings_route():\n    \"\"\"\n    This route gets all the buildings from the database.\n    : return: A list of all the buildings in the database.\n    \"\"\"\n    try:\n        all_buildings = get_all_buildings()\n        if all_buildings:\n            return all_buildings\n        else:",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "get_rooms_from_building_id",
+        "label": "get_rooms_from_building_id_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def get_rooms_from_building_id(building_id: str):\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        rooms = mongodb_obj.get_rooms_from_building_id(building_id)\n        if rooms:\n            return rooms",
+        "peekOfCode": "def get_rooms_from_building_id_route(building_id: str):\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"\n    try:\n        rooms = get_rooms_from_building_id(building_id)\n        if rooms:\n            return rooms\n        else:",
         "detail": "app.routers.college",
         "documentation": {}
     },
     {
-        "label": "add_room_to_building",
+        "label": "add_room_to_building_route",
         "kind": 2,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "def add_room_to_building(room_id: str, building_id: str):\n    \"\"\"\n    This route adds a room to a building.\n    : param room_id: The room id to be added.\n    : param building_id: The building id to be added.\n    : return: The added room to the building.\n    \"\"\"\n    try:\n        mongodb_obj = MongoService()\n        mongodb_obj.add_room_to_building(room_id, building_id)",
+        "peekOfCode": "def add_room_to_building_route(room_id: str, building_id: str):\n    \"\"\"\n    This route adds a room to a building.\n    : param room_id: The room id to be added.\n    : param building_id: The building id to be added.\n    : return: The added room to the building.\n    \"\"\"\n    try:\n        add_room_to_building(room_id, building_id)\n        return True",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2130,7 +2515,7 @@
         "kind": 5,
         "importPath": "app.routers.college",
         "description": "app.routers.college",
-        "peekOfCode": "router = APIRouter(prefix=\"/college\", tags=[\"Rooms and Buildings\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"",
+        "peekOfCode": "router = APIRouter(prefix=\"/college\", tags=[\"Rooms and Buildings\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.get(\"/get_all_rooms\", status_code=200, summary=\"Get all rooms\")\ndef get_all_rooms_from_db_route():\n    \"\"\"\n    This route gets all the rooms from the database.\n    : return: A list of all the rooms in the database.\n    \"\"\"",
         "detail": "app.routers.college",
         "documentation": {}
     },
@@ -2139,16 +2524,7 @@
         "kind": 2,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "def index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.post(\"/add_attendance\", status_code=200, summary=\"add attendace\")\ndef get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.",
-        "detail": "app.routers.face_rec",
-        "documentation": {}
-    },
-    {
-        "label": "get_attendance",
-        "kind": 2,
-        "importPath": "app.routers.face_rec",
-        "description": "app.routers.face_rec",
-        "peekOfCode": "def get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.\n\t:param class_att: The attendance model.\n\t:return: The attendance model.\n\t\"\"\"\n\ttry:\n\t\t# get the lecture images and student encodings from the database\n\t\t# get all lecture images in between the start and end time\n\t\t# instantiate lecture",
+        "peekOfCode": "def index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2157,7 +2533,7 @@
         "kind": 5,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])\n# import lecture service\nfrom services.lectures import lectureServices\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"",
+        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2166,160 +2542,169 @@
         "kind": 5,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.post(\"/add_attendance\", status_code=200, summary=\"add attendace\")\ndef get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.\n\t:param class_att: The attendance model.",
+        "peekOfCode": "\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
     {
-        "label": "\t\tlecture_obj",
+        "label": "add_lecture_route",
+        "kind": 2,
+        "importPath": "app.routers.lectures",
+        "description": "app.routers.lectures",
+        "peekOfCode": "def add_lecture_route(lecture_details: LectureModel):\n    \"\"\"\n    Add a lecture to the database.\n    \"\"\"\n    # call the function from lecture services to add the lecture\n    lecture_response = add_lecture(lecture_details)\n    return lecture_response\n@router.get(\"/get_lecture\", status_code=200, summary=\"Get a lecture\")\ndef get_lecture_route(lecture_id: str):\n    \"\"\"",
+        "detail": "app.routers.lectures",
+        "documentation": {}
+    },
+    {
+        "label": "get_lecture_route",
+        "kind": 2,
+        "importPath": "app.routers.lectures",
+        "description": "app.routers.lectures",
+        "peekOfCode": "def get_lecture_route(lecture_id: str):\n    \"\"\"\n    Get a lecture from the database.\n    \"\"\"\n    # call the function from lecture services to get the lecture\n    lecture_response = get_lecture(lecture_id)\n    return lecture_response\n@router.get(\"/get_all_lectures\", status_code=200, summary=\"Get all lectures\")\ndef get_all_lectures_route():\n    \"\"\"",
+        "detail": "app.routers.lectures",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_lectures_route",
+        "kind": 2,
+        "importPath": "app.routers.lectures",
+        "description": "app.routers.lectures",
+        "peekOfCode": "def get_all_lectures_route():\n    \"\"\"\n    Get all lectures from the database.\n    \"\"\"\n    # call the function from lecture services to get all the lectures\n    lecture_response = get_all_lectures()\n    return lecture_response\n@router.get(\n    \"/get_lecture_images_between_time\",\n    status_code=200,",
+        "detail": "app.routers.lectures",
+        "documentation": {}
+    },
+    {
+        "label": "get_lecture_images_between_time_route",
+        "kind": 2,
+        "importPath": "app.routers.lectures",
+        "description": "app.routers.lectures",
+        "peekOfCode": "def get_lecture_images_between_time_route(start_time: str, end_time: str):\n    \"\"\"\n    Get all lecture images between a start and end time.\n    \"\"\"\n    # call the function from lecture services to get all the lecture images between the start and end time\n    lecture_response = get_lecture_images_between_time(start_time, end_time)\n    return lecture_response",
+        "detail": "app.routers.lectures",
+        "documentation": {}
+    },
+    {
+        "label": "router",
         "kind": 5,
-        "importPath": "app.routers.face_rec",
-        "description": "app.routers.face_rec",
-        "peekOfCode": "\t\tlecture_obj = lectureServices()\n\t\tprint(class_att.start_time, class_att.end_time)\n\t\tprint(class_att.panel_id)\n\t\t# print(class_att.lecture_id)\n\t\tlecture_images = lecture_obj.get_lecture_images_between_time(class_att.start_time,class_att.end_time)\n\t\t# get all encodings of students in the panel\n\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error",
-        "detail": "app.routers.face_rec",
+        "importPath": "app.routers.lectures",
+        "description": "app.routers.lectures",
+        "peekOfCode": "router = APIRouter(prefix=\"/lectures\", tags=[\"Lectures\"])\n# import lecture service\nfrom services.lecture_services import (\n    add_lecture,\n    get_lecture,\n    get_all_lectures,\n    get_lecture_images_between_time,\n)\n@router.post(\"/add_lecture\", status_code=200, summary=\"Add a lecture\")\ndef add_lecture_route(lecture_details: LectureModel):",
+        "detail": "app.routers.lectures",
         "documentation": {}
     },
     {
-        "label": "\t\tlecture_images",
-        "kind": 5,
-        "importPath": "app.routers.face_rec",
-        "description": "app.routers.face_rec",
-        "peekOfCode": "\t\tlecture_images = lecture_obj.get_lecture_images_between_time(class_att.start_time,class_att.end_time)\n\t\t# get all encodings of students in the panel\n\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)",
-        "detail": "app.routers.face_rec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tstudent_encodings",
-        "kind": 5,
-        "importPath": "app.routers.face_rec",
-        "description": "app.routers.face_rec",
-        "peekOfCode": "\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)\n\t\t# face_rec_obj = FaceRec(lecture_images,student_encodings,class_att.panel_id,student_ids)\n\t\t# add new row to classes collection",
-        "detail": "app.routers.face_rec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tstudent_ids",
-        "kind": 5,
-        "importPath": "app.routers.face_rec",
-        "description": "app.routers.face_rec",
-        "peekOfCode": "\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)\n\t\t# face_rec_obj = FaceRec(lecture_images,student_encodings,class_att.panel_id,student_ids)\n\t\t# add new row to classes collection\n\t\tlecture_obj.add_lecture(class_att)",
-        "detail": "app.routers.face_rec",
-        "documentation": {}
-    },
-    {
-        "label": "index",
+        "label": "index_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"",
+        "peekOfCode": "def index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel_route(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_panel",
+        "label": "add_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"\n    try:\n        add_panel_service = MongoService()\n        added_panel = add_panel_service.add_panel(panel)\n        if added_panel:",
+        "peekOfCode": "def add_panel_route(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.\n    : return: The added panel.\n    \"\"\"\n    try:\n        added_panel = add_panel(panel)\n        if added_panel:\n            return added_panel",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "get_all_panels",
+        "label": "get_all_panels_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def get_all_panels():\n    \"\"\"\n    This route gets all the panels from the database.\n    : return: A list of all the panels in the database.\n    \"\"\"\n    try:\n        get_all_panels_service = MongoService()\n        all_panels = get_all_panels_service.get_all_panels()\n        if all_panels:\n            return all_panels",
+        "peekOfCode": "def get_all_panels_route():\n    \"\"\"\n    This route gets all the panels from the database.\n    : return: A list of all the panels in the database.\n    \"\"\"\n    try:\n        all_panels = get_all_panels()\n        if all_panels:\n            return all_panels\n        else:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_school",
+        "label": "add_school_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_school(school: SchoolModel):\n    \"\"\"\n    This route adds a school to the database.\n    : param school: The school to be added.\n    : return: The added school.\n    \"\"\"\n    try:\n        add_school_service = MongoService()\n        added_school = add_school_service.add_school(school)\n        if added_school:",
+        "peekOfCode": "def add_school_route(school: SchoolModel):\n    \"\"\"\n    This route adds a school to the database.\n    : param school: The school to be added.\n    : return: The added school.\n    \"\"\"\n    try:\n        added_school = add_school(school)\n        if added_school:\n            return added_school",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "get_all_schools",
+        "label": "get_all_schools_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def get_all_schools():\n    \"\"\"\n    This route gets all the schools from the database.\n    : return: A list of all the schools in the database.\n    \"\"\"\n    try:\n        get_all_schools_service = MongoService()\n        all_schools = get_all_schools_service.get_all_schools()\n        if all_schools:\n            return all_schools",
+        "peekOfCode": "def get_all_schools_route():\n    \"\"\"\n    This route gets all the schools from the database.\n    : return: A list of all the schools in the database.\n    \"\"\"\n    try:\n        all_schools = get_all_schools()\n        if all_schools:\n            return all_schools\n        else:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_specialization",
+        "label": "add_specialization_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_specialization(specialization: SpecializationModel):\n    \"\"\"\n    This route adds a specialization to the database.\n    : param specialization: The specialization to be added.\n    : return: The added specialization.\n    \"\"\"\n    try:\n        add_specialization_service = MongoService()\n        added_specialization = add_specialization_service.add_specialization(specialization)\n        if not added_specialization:",
+        "peekOfCode": "def add_specialization_route(specialization: SpecializationModel):\n    \"\"\"\n    This route adds a specialization to the database.\n    : param specialization: The specialization to be added.\n    : return: The added specialization.\n    \"\"\"\n    try:\n        added_specialization = add_specialization(specialization)\n        if not added_specialization:\n            raise HTTPException(",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "get_all_specializations",
+        "label": "get_all_specializations_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def get_all_specializations():\n    \"\"\"\n    This route gets all the specializations from the database.\n    : return: A list of all the specializations in the database.\n    \"\"\"\n    try:\n        get_all_specializations_service = MongoService()\n        all_specializations = get_all_specializations_service.get_all_specializations()\n        if not all_specializations:\n            raise HTTPException(",
+        "peekOfCode": "def get_all_specializations_route():\n    \"\"\"\n    This route gets all the specializations from the database.\n    : return: A list of all the specializations in the database.\n    \"\"\"\n    try:\n        all_specializations = get_all_specializations()\n        if not all_specializations:\n            raise HTTPException(\n                status_code=500,",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_spec_to_school",
+        "label": "add_spec_to_school_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_spec_to_school(school_id: str, spec_id: str):\n    \"\"\"\n    This route adds a specialization to a school.\n    : param school_id: The school to which the specialization is to be added.\n    : param spec_id: The specialization to be added to the school.\n    : return: The updated school.\n    \"\"\"\n    try:\n        add_spec_to_school_service = MongoService()\n        updated_school = add_spec_to_school_service.add_spec_to_school(school_id, spec_id)",
+        "peekOfCode": "def add_spec_to_school_route(school_id: str, spec_id: str):\n    \"\"\"\n    This route adds a specialization to a school.\n    : param school_id: The school to which the specialization is to be added.\n    : param spec_id: The specialization to be added to the school.\n    : return: The updated school.\n    \"\"\"\n    try:\n        updated_school = add_spec_to_school(school_id, spec_id)\n        if updated_school:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "update_school_for_panel",
+        "label": "update_school_for_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def update_school_for_panel(panel_id: str, school_id: str):\n    \"\"\"\n    This route updates the school for a panel.\n    : param panel_id: The panel for which the school is to be updated.\n    : param school_id: The school to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        update_school_for_panel_service = MongoService()\n        updated_panel = update_school_for_panel_service.update_school_for_panel(panel_id, school_id)",
+        "peekOfCode": "def update_school_for_panel_route(panel_id: str, school_id: str):\n    \"\"\"\n    This route updates the school for a panel.\n    : param panel_id: The panel for which the school is to be updated.\n    : param school_id: The school to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        updated_panel = update_school_for_panel(panel_id, school_id)\n        if updated_panel:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "update_spec_for_panel",
+        "label": "update_spec_for_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def update_spec_for_panel(panel_id: str, spec_id: str):\n    \"\"\"\n    This route updates the specialization for a panel.\n    : param panel_id: The panel for which the specialization is to be updated.\n    : param spec_id: The specialization to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        update_spec_for_panel_service = MongoService()\n        updated_panel = update_spec_for_panel_service.update_spec_for_panel(panel_id, spec_id)",
+        "peekOfCode": "def update_spec_for_panel_route(panel_id: str, spec_id: str):\n    \"\"\"\n    This route updates the specialization for a panel.\n    : param panel_id: The panel for which the specialization is to be updated.\n    : param spec_id: The specialization to be updated for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        updated_panel = update_spec_for_panel(panel_id, spec_id)\n        if updated_panel:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "set_current_sem_for_panel",
+        "label": "set_current_sem_for_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def set_current_sem_for_panel(panel_id: str, sem_id: str):\n    \"\"\"\n    This route sets the current semester for a panel.\n    : param panel_id: The panel for which the current semester is to be set.\n    : param sem_id: The semester to be set as the current semester for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        set_current_sem_for_panel_service = MongoService()\n        updated_panel = set_current_sem_for_panel_service.set_current_sem_for_panel(panel_id, sem_id)",
+        "peekOfCode": "def set_current_sem_for_panel_route(panel_id: str, sem_id: str):\n    \"\"\"\n    This route sets the current semester for a panel.\n    : param panel_id: The panel for which the current semester is to be set.\n    : param sem_id: The semester to be set as the current semester for the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        updated_panel = set_current_sem_for_panel(panel_id, sem_id)\n        if updated_panel:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_semester_to_panel",
+        "label": "add_semester_to_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_semester_to_panel(panel_id: str, sem_id: str):\n    \"\"\"\n    This route adds a semester to a panel.\n    : param panel_id: The panel to which the semester is to be added.\n    : param sem_id: The semester to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        add_semester_to_panel_service = MongoService()\n        updated_panel = add_semester_to_panel_service.add_semester_to_panel(panel_id, sem_id)",
+        "peekOfCode": "def add_semester_to_panel_route(panel_id: str, sem_id: str):\n    \"\"\"\n    This route adds a semester to a panel.\n    : param panel_id: The panel to which the semester is to be added.\n    : param sem_id: The semester to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        updated_panel = add_semester_to_panel(panel_id, sem_id)\n        if updated_panel:",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "add_student_to_panel",
+        "label": "add_student_to_panel_route",
         "kind": 2,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "def add_student_to_panel(panel_id: str, student_id: str):\n    \"\"\"\n    This route adds a student to a panel.\n    : param panel_id: The panel to which the student is to be added.\n    : param student_id: The student to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        add_student_to_panel_service = MongoService()\n        add_student_to_panel_service.add_student_to_panel(panel_id, student_id)",
+        "peekOfCode": "def add_student_to_panel_route(panel_id: str, student_id: str):\n    \"\"\"\n    This route adds a student to a panel.\n    : param panel_id: The panel to which the student is to be added.\n    : param student_id: The student to be added to the panel.\n    : return: The updated panel.\n    \"\"\"\n    try:\n        add_student_to_panel(panel_id, student_id)\n        return True",
         "detail": "app.routers.panels",
         "documentation": {}
     },
@@ -2328,61 +2713,61 @@
         "kind": 5,
         "importPath": "app.routers.panels",
         "description": "app.routers.panels",
-        "peekOfCode": "router = APIRouter(prefix=\"/panels\", tags=[\"Panels, Schools and Specializations\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.",
+        "peekOfCode": "router = APIRouter(prefix=\"/panels\", tags=[\"Panels, Schools and Specializations\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a panel\n@router.post(\"/add_panel\", status_code=201, summary=\"Add a panel\")\ndef add_panel_route(panel: PanelModel):\n    \"\"\"\n    This route adds a panel to the database.\n    : param panel: The panel to be added.",
         "detail": "app.routers.panels",
         "documentation": {}
     },
     {
-        "label": "index",
+        "label": "index_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)\ndef add_student(student: StudentModel):\n    # add the student to the database",
+        "peekOfCode": "def index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)\ndef add_student_route(student: StudentModel):\n    # add the student to the database",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "add_student",
+        "label": "add_student_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def add_student(student: StudentModel):\n    # add the student to the database\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to add the student\n        student_response = mongo_obj.add_student(student)\n        print(student_response)\n        return StudentResponseModel(\n            _id=student_response._id,",
+        "peekOfCode": "def add_student_route(student: StudentModel):\n    # add the student to the database\n    try:\n        # instantiate the mongo service\n        # call the function from mongo service to add the student\n        student_response = add_student(student)\n        print(student_response)\n        return StudentResponseModel(\n            _id=student_response._id,\n            name=student_response.name,",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "get_students_from_panel_id",
+        "label": "get_students_from_panel_id_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def get_students_from_panel_id(panel_id: PanelID):\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the mongo function to get the student from panel\n        students = mongo_obj.get_student_by_panel_id(panel_id.panel_id)\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    except Exception as e:",
+        "peekOfCode": "def get_students_from_panel_id_route(panel_id: PanelID):\n    try:\n        # instantiate the mongo service\n        # call the mongo function to get the student from panel\n        students = get_student_by_panel_id(panel_id.panel_id)\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=500, detail=str(e))\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "get_student_encoding",
+        "label": "get_student_encoding_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def get_student_encoding(student_encoding_model: EncodingModel):\n    # get student_id\n    student_id = student_encoding_model.student_id\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to get the student encoding\n        student_encoding = mongo_obj.get_student_encoding_from_student_id(student_id)\n        print(student_encoding)\n        encoding_response_model = EncodingResponseModel(",
+        "peekOfCode": "def get_student_encoding_route(student_encoding_model: EncodingModel):\n    # get student_id\n    student_id = student_encoding_model.student_id\n    try:\n        # call the function from mongo service to get the student encoding\n        student_encoding = get_student_encoding_from_student_id(student_id)\n        print(student_encoding)\n        encoding_response_model = EncodingResponseModel(\n            student_id=student_id,\n            number_of_faces=student_encoding[\"number_of_faces\"],",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "get_all_students",
+        "label": "get_all_students_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def get_all_students():\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to get all students\n        students = mongo_obj.get_all_students()\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=503, detail=str(e))\n    except Exception as e:",
+        "peekOfCode": "def get_all_students_route():\n    try:\n        # call the function from mongo service to get all students\n        students = get_all_students()\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=503, detail=str(e))\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n# route for adding student encoding",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "add_student_encoding",
+        "label": "add_student_encoding_route",
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def add_student_encoding(student_encoding: EncodingModel):\n    # get the student id and the encoding url\n    student_id = student_encoding.student_id\n    encoding_url = student_encoding.encoding_url\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to add the student encoding\n        student_encoding_response = mongo_obj.add_student_encoding(\n            student_id, encoding_url",
+        "peekOfCode": "def add_student_encoding_route(student_encoding: EncodingModel):\n    # get the student id and the encoding url\n    student_id = student_encoding.student_id\n    encoding_url = student_encoding.encoding_url\n    try:\n        # call the function from mongo service to add the student encoding\n        student_encoding_response = add_student_encoding(student_id, encoding_url)\n        encoding_response_model = EncodingResponseModel(\n            student_id=student_id,\n            number_of_faces=student_encoding_response[\"number_of_faces\"],",
         "detail": "app.routers.students",
         "documentation": {}
     },
@@ -2391,52 +2776,52 @@
         "kind": 5,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "router = APIRouter(prefix=\"/student\", tags=[\"Students\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)",
+        "peekOfCode": "router = APIRouter(prefix=\"/student\", tags=[\"Students\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\n    \"/add_student\",\n    status_code=200,\n    summary=\"Add a student\",\n    response_model=StudentResponseModel,\n)",
         "detail": "app.routers.students",
         "documentation": {}
     },
     {
-        "label": "index",
+        "label": "index_route",
         "kind": 2,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\"/add_subject\", status_code=201, summary=\"Add a subject\")\ndef add_subject(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.\n    \"\"\"\n    try:",
+        "peekOfCode": "def index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\"/add_subject\", status_code=201, summary=\"Add a subject\")\ndef add_subject_route(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.\n    \"\"\"\n    try:",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
     {
-        "label": "add_subject",
+        "label": "add_subject_route",
         "kind": 2,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "def add_subject(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.\n    \"\"\"\n    try:\n        add_subject_service = MongoService()\n        added_subject = add_subject_service.add_subject(subject)\n        if added_subject:",
+        "peekOfCode": "def add_subject_route(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.\n    \"\"\"\n    try:\n        added_subject = add_subject(subject)\n        if added_subject:\n            return added_subject",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
     {
-        "label": "get_all_subjects",
+        "label": "get_all_subjects_route",
         "kind": 2,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "def get_all_subjects():\n    \"\"\"\n    This route gets all the subjects from the database.\n    : return: A list of all the subjects in the database.\n    \"\"\"\n    try:\n        get_all_subjects_service = MongoService()\n        all_subjects = get_all_subjects_service.get_all_subjects()\n        if all_subjects:\n            return all_subjects",
+        "peekOfCode": "def get_all_subjects_route():\n    \"\"\"\n    This route gets all the subjects from the database.\n    : return: A list of all the subjects in the database.\n    \"\"\"\n    try:\n        all_subjects = get_all_subjects()\n        if all_subjects:\n            return all_subjects\n        else:",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
     {
-        "label": "add_semester",
+        "label": "add_semester_route",
         "kind": 2,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "def add_semester(semester: SemesterModel):\n    \"\"\"\n    This route adds a semester to the database.\n    : param semester: The semester to be added.\n    : return: The added semester.\n    \"\"\"\n    try:\n        add_semester_service = MongoService()\n        added_semester = add_semester_service.add_semester(semester)\n        if added_semester:",
+        "peekOfCode": "def add_semester_route(semester: SemesterModel):\n    \"\"\"\n    This route adds a semester to the database.\n    : param semester: The semester to be added.\n    : return: The added semester.\n    \"\"\"\n    try:\n        added_semester = add_semester(semester)\n        if added_semester:\n            return added_semester",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
     {
-        "label": "get_all_semesters",
+        "label": "get_all_semesters_route",
         "kind": 2,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "def get_all_semesters():\n    \"\"\"\n    This route gets all the semesters from the database.\n    : return: A list of all the semesters in the database.\n    \"\"\"\n    try:\n        get_all_semesters_service = MongoService()\n        all_semesters = get_all_semesters_service.get_all_semesters()\n        if all_semesters:\n            return all_semesters",
+        "peekOfCode": "def get_all_semesters_route():\n    \"\"\"\n    This route gets all the semesters from the database.\n    : return: A list of all the semesters in the database.\n    \"\"\"\n    try:\n        all_semesters = get_all_semesters()\n        if all_semesters:\n            return all_semesters\n        else:",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
@@ -2445,43 +2830,43 @@
         "kind": 5,
         "importPath": "app.routers.subjects",
         "description": "app.routers.subjects",
-        "peekOfCode": "router = APIRouter(prefix=\"/subjects\", tags=[\"Subjects and Semesters\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\"/add_subject\", status_code=201, summary=\"Add a subject\")\ndef add_subject(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.",
+        "peekOfCode": "router = APIRouter(prefix=\"/subjects\", tags=[\"Subjects and Semesters\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n@router.post(\"/add_subject\", status_code=201, summary=\"Add a subject\")\ndef add_subject_route(subject: Subject):\n    \"\"\"\n    This route adds a subject to the database.\n    : param subject: The subject to be added.\n    : return: The added subject.",
         "detail": "app.routers.subjects",
         "documentation": {}
     },
     {
-        "label": "index",
+        "label": "index_route",
         "kind": 2,
         "importPath": "app.routers.teachers",
         "description": "app.routers.teachers",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a teacher\n@router.post(\"/add_teacher\", status_code=201, summary=\"Add a teacher\")\ndef add_teacher(teacher: TeacherModel):\n    try:\n        add_teacher_service = MongoService()\n        added_teacher = add_teacher_service.add_teacher(teacher)\n        if added_teacher:\n            return added_teacher",
+        "peekOfCode": "def index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a teacher\n@router.post(\"/add_teacher\", status_code=201, summary=\"Add a teacher\")\ndef add_teacher_route(teacher: TeacherModel):\n    try:\n        added_teacher = add_teacher(teacher)\n        if added_teacher:\n            return added_teacher\n        else:",
         "detail": "app.routers.teachers",
         "documentation": {}
     },
     {
-        "label": "add_teacher",
+        "label": "add_teacher_route",
         "kind": 2,
         "importPath": "app.routers.teachers",
         "description": "app.routers.teachers",
-        "peekOfCode": "def add_teacher(teacher: TeacherModel):\n    try:\n        add_teacher_service = MongoService()\n        added_teacher = add_teacher_service.add_teacher(teacher)\n        if added_teacher:\n            return added_teacher\n        else:\n            raise HTTPException(\n                status_code=500, detail=\"An error occurred while adding the teacher\"\n            )",
+        "peekOfCode": "def add_teacher_route(teacher: TeacherModel):\n    try:\n        added_teacher = add_teacher(teacher)\n        if added_teacher:\n            return added_teacher\n        else:\n            raise HTTPException(\n                status_code=500, detail=\"An error occurred while adding the teacher\"\n            )\n    except PyMongoError as e:",
         "detail": "app.routers.teachers",
         "documentation": {}
     },
     {
-        "label": "get_all_teachers",
+        "label": "get_all_teachers_route",
         "kind": 2,
         "importPath": "app.routers.teachers",
         "description": "app.routers.teachers",
-        "peekOfCode": "def get_all_teachers():\n    try:\n        get_all_teachers_service = MongoService()\n        all_teachers = get_all_teachers_service.get_all_teachers()\n        if all_teachers:\n            return all_teachers\n        else:\n            raise HTTPException(\n                status_code=500, detail=\"An error occurred while getting all teachers\"\n            )",
+        "peekOfCode": "def get_all_teachers_route():\n    try:\n        all_teachers = get_all_teachers()\n        if all_teachers:\n            return all_teachers\n        else:\n            raise HTTPException(\n                status_code=500, detail=\"An error occurred while getting all teachers\"\n            )\n    except PyMongoError as e:",
         "detail": "app.routers.teachers",
         "documentation": {}
     },
     {
-        "label": "get_teacher_by_id",
+        "label": "get_teacher_by_id_route",
         "kind": 2,
         "importPath": "app.routers.teachers",
         "description": "app.routers.teachers",
-        "peekOfCode": "def get_teacher_by_id(teacher_in_db_model: TeacherIDModel):\n    try:\n        get_teacher_by_id_service = MongoService()\n        teacher = get_teacher_by_id_service.get_teacher_by_id(\n            teacher_in_db_model.teacher_id\n        )\n        if teacher:\n            return teacher.to_dict()\n        else:\n            raise HTTPException(",
+        "peekOfCode": "def get_teacher_by_id_route(teacher_in_db_model: TeacherIDModel):\n    try:\n        teacher = get_teacher_by_id(teacher_in_db_model.teacher_id)\n        if teacher:\n            return teacher.to_dict()\n        else:\n            raise HTTPException(\n                status_code=500, detail=\"An error occurred while getting the teacher\"\n            )\n    except PyMongoError as e:",
         "detail": "app.routers.teachers",
         "documentation": {}
     },
@@ -2490,7 +2875,7 @@
         "kind": 5,
         "importPath": "app.routers.teachers",
         "description": "app.routers.teachers",
-        "peekOfCode": "router = APIRouter(prefix=\"/teachers\", tags=[\"Teachers\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a teacher\n@router.post(\"/add_teacher\", status_code=201, summary=\"Add a teacher\")\ndef add_teacher(teacher: TeacherModel):\n    try:\n        add_teacher_service = MongoService()\n        added_teacher = add_teacher_service.add_teacher(teacher)",
+        "peekOfCode": "router = APIRouter(prefix=\"/teachers\", tags=[\"Teachers\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index_route():\n    return Response(content=\"Hello, World!\", status_code=200)\n# Add a teacher\n@router.post(\"/add_teacher\", status_code=201, summary=\"Add a teacher\")\ndef add_teacher_route(teacher: TeacherModel):\n    try:\n        added_teacher = add_teacher(teacher)\n        if added_teacher:",
         "detail": "app.routers.teachers",
         "documentation": {}
     },
@@ -2522,21 +2907,444 @@
         "documentation": {}
     },
     {
-        "label": "MongoService",
-        "kind": 6,
-        "importPath": "app.services.assistanceMongoDB",
-        "description": "app.services.assistanceMongoDB",
-        "peekOfCode": "class MongoService:\n    def __init__(self):\n        self.db = connect_to_mongo()\n    def add_teacher(self, teacher):\n        try:\n            self.db[\"teachers\"].insert_one(teacher.dict())\n            return teacher\n        except Exception as e:\n            print(f\"An error occurred while inserting the teacher: {e}\")\n            return None",
-        "detail": "app.services.assistanceMongoDB",
+        "label": "add_class_photo_to_db",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def add_class_photo_to_db(room_id, date, time, class_photo_url):\n    try:\n        db[\"lectureImages\"].insert_one(\n            {\n                \"room_id\": room_id,\n                \"date\": date,\n                \"time\": time,\n                \"class_photo_url\": class_photo_url,\n            }\n        )",
+        "detail": "app.services.lecture_services",
         "documentation": {}
     },
     {
-        "label": "lectureServices",
-        "kind": 6,
-        "importPath": "app.services.lectures",
-        "description": "app.services.lectures",
-        "peekOfCode": "class lectureServices:\n    def add_lecture(lecture_details):\n        \"\"\"\n        Add a lecture to the database.\n        \"\"\"\n        # add the lecture to the database\n        try:\n            # instantiate the mongo service\n            mongo_obj = MongoService()\n            # call the function from mongo service to add the lecture",
-        "detail": "app.services.lectures",
+        "label": "get_all_class_photos",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def get_all_class_photos():\n    try:\n        class_photos = db[\"lectureImages\"].find()\n        return [\n            {\n                \"_id\": str(class_photo[\"_id\"]),\n                **{key: value for key, value in class_photo.items() if key != \"_id\"},\n            }\n            for class_photo in class_photos\n        ]",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_lecture",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def add_lecture(lecture):\n    try:\n        mongo_output = db[\"classes\"].insert_one(lecture.dict())\n        lecture.set_id(str(mongo_output.inserted_id))\n        return lecture\n    except Exception as e:\n        print(f\"An error occurred while adding the lecture: {e}\")\n        return None\ndef get_lecture(lecture_id):\n    try:",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_lecture",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def get_lecture(lecture_id):\n    try:\n        lecture = db[\"classes\"].find_one({\"_id\": ObjectId(lecture_id)})\n        return {\n            \"_id\": str(lecture[\"_id\"]),\n            **{key: value for key, value in lecture.items() if key != \"_id\"},\n        }\n    except Exception as e:\n        print(f\"An error occurred while getting the lecture: {e}\")\n        return None",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_lectures",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def get_all_lectures():\n    try:\n        lectures = db[\"classes\"].find()\n        return [\n            {\n                \"_id\": str(lecture[\"_id\"]),\n                **{key: value for key, value in lecture.items() if key != \"_id\"},\n            }\n            for lecture in lectures\n        ]",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_lecture_images_between_time",
+        "kind": 2,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "def get_lecture_images_between_time(start_time, end_time):\n    try:\n        lecture_images = db[\"lectureImages\"].find(\n            {\"time\": {\"$gte\": start_time, \"$lte\": end_time}}\n        )\n        return [\n            {\n                \"_id\": str(lecture_image[\"_id\"]),\n                **{key: value for key, value in lecture_image.items() if key != \"_id\"},\n            }",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.lecture_services",
+        "description": "app.services.lecture_services",
+        "peekOfCode": "db = connect_to_mongo()\ndef add_class_photo_to_db(room_id, date, time, class_photo_url):\n    try:\n        db[\"lectureImages\"].insert_one(\n            {\n                \"room_id\": room_id,\n                \"date\": date,\n                \"time\": time,\n                \"class_photo_url\": class_photo_url,\n            }",
+        "detail": "app.services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_panel_id",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id\n    try:\n        # get all students in a panel.\n        student_ids = get_student_ids_from_panel_id(panel_id)\n        student_encodings = get_student_encodings_from_student_ids(student_ids)\n        return student_encodings",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def add_panel(panel):\n    try:\n        db[\"panels\"].insert_one(panel.dict())\n        return panel\n    except Exception as e:\n        print(f\"An error occurred while inserting the panel: {e}\")\n        return None\ndef get_all_panels():\n    try:\n        panels = db[\"panels\"].find()",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_panels",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_all_panels():\n    try:\n        panels = db[\"panels\"].find()\n        panels = [\n            {\n                \"_id\": str(panel[\"_id\"]),\n                **{key: value for key, value in panel.items() if key != \"_id\"},\n            }\n            for panel in panels\n        ]",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_by_panel_id",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_student_by_panel_id(panel_id):\n    try:\n        student_ids_from_panel = db[\"panels\"].find_one({\"_id\": ObjectId(panel_id)})[\n            \"students\"\n        ]\n        # get the student row from the students collection using the ids we retrieved\n        students = {}\n        for student_id in student_ids_from_panel:\n            student = db[\"students\"].find_one({\"_id\": ObjectId(student_id)})\n            if student:",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def add_panel(panel):\n    try:\n        mongo_output = db[\"panels\"].insert_one(panel.dict())\n        panel.set_id(str(mongo_output.inserted_id))\n        return panel\n    except Exception as e:\n        print(f\"An error occurred while inserting the panel: {e}\")\n        return None\ndef set_current_sem_for_panel(panel_id, sem_id):\n    try:",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "set_current_sem_for_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def set_current_sem_for_panel(panel_id, sem_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$set\": {\"current_sem\": ObjectId(sem_id)}}\n        )\n    except Exception as e:\n        print(\n            f\"An error occurred while setting the current semester for the panel: {e}\"\n        )\ndef add_semester_to_panel(panel_id, sem_id):",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester_to_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def add_semester_to_panel(panel_id, sem_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$push\": {\"semesters\": ObjectId(sem_id)}}\n        )\n    except Exception as e:\n        print(f\"An error occurred while adding the semester to the panel: {e}\")\ndef add_semester(semester):\n    try:\n        mongo_output = db[\"semesters\"].insert_one(semester.dict())",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def add_semester(semester):\n    try:\n        mongo_output = db[\"semesters\"].insert_one(semester.dict())\n        semester.set_id(str(mongo_output.inserted_id))\n        return semester\n    except Exception as e:\n        print(f\"An error occurred while inserting the semester: {e}\")\n        return None\ndef add_student_to_panel(panel_id, student_id):\n    try:",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_to_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def add_student_to_panel(panel_id, student_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$push\": {\"students\": student_id}}\n        )\n    except PyMongoError as e:\n        print(e)\n        print(f\"An error occurred while adding the student to the panel: {e}\")\n        return False\n    return True",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_semesters",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_all_semesters():\n    try:\n        semesters = db[\"semesters\"].find()\n        return [\n            {\n                \"_id\": str(semester[\"_id\"]),\n                **{key: value for key, value in semester.items() if key != \"_id\"},\n            }\n            for semester in semesters\n        ]",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_ids_from_panel_id",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_student_ids_from_panel_id(panel_id):\n    try:\n        student_ids = db[\"panels\"].find_one({\"_id\": ObjectId(panel_id)})[\"students\"]\n        return student_ids\n    except Exception as e:\n        print(f\"An error occurred while getting the student ids: {e}\")\n        return None",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "db = connect_to_mongo()\nimport services.panel_services\nfrom services.student_services import (\n    get_student_encodings_from_student_ids,\n)\ndef get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_rooms",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def get_all_rooms():\n    try:\n        rooms = db[\"rooms\"].find()\n        return [\n            {\n                \"_id\": str(room[\"_id\"]),\n                **{key: value for key, value in room.items() if key != \"_id\"},\n            }\n            for room in rooms\n        ]",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_room",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def add_room(room):\n    try:\n        mongo_output = db[\"rooms\"].insert_one(room.dict())\n        room.set_id(str(mongo_output.inserted_id))\n        return room\n    except Exception as e:\n        print(f\"An error occurred while inserting the room: {e}\")\n        return None\ndef add_building(building):\n    try:",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_building",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def add_building(building):\n    try:\n        mongo_output = db[\"buildings\"].insert_one(building.dict())\n        building.set_id(str(mongo_output.inserted_id))\n        return building\n    except Exception as e:\n        print(f\"An error occurred while inserting the building: {e}\")\n        return None\ndef get_all_buildings():\n    try:",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_buildings",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def get_all_buildings():\n    try:\n        buildings = db[\"buildings\"].find()\n        return [\n            {\n                \"_id\": str(building[\"_id\"]),\n                **{key: value for key, value in building.items() if key != \"_id\"},\n            }\n            for building in buildings\n        ]",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_rooms_from_building_id",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def get_rooms_from_building_id(building_id):\n    try:\n        rooms = db[\"rooms\"].find({\"building_id\": ObjectId(building_id)})\n        return [\n            {\n                \"_id\": str(room[\"_id\"]),\n                **{key: value for key, value in room.items() if key != \"_id\"},\n            }\n            for room in rooms\n        ]",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_room_to_building",
+        "kind": 2,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "def add_room_to_building(room_id, building_id):\n    try:\n        db[\"buildings\"].update_one(\n            {\"_id\": ObjectId(building_id)}, {\"$push\": {\"rooms\": room_id}}\n        )\n    except Exception as e:\n        print(f\"An error occurred while adding the room to the building: {e}\")",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.room_services",
+        "description": "app.services.room_services",
+        "peekOfCode": "db = connect_to_mongo()\ndef get_all_rooms():\n    try:\n        rooms = db[\"rooms\"].find()\n        return [\n            {\n                \"_id\": str(room[\"_id\"]),\n                **{key: value for key, value in room.items() if key != \"_id\"},\n            }\n            for room in rooms",
+        "detail": "app.services.room_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_school",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def add_school(school):\n    try:\n        mongo_output = db[\"schools\"].insert_one(school.dict())\n        school.set_id(str(mongo_output.inserted_id))\n        return school\n    except Exception as e:\n        print(f\"An error occurred while inserting the school: {e}\")\n        return None\ndef get_all_schools():\n    try:",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_schools",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def get_all_schools():\n    try:\n        schools = db[\"schools\"].find()\n        return [\n            {\n                \"_id\": str(school[\"_id\"]),\n                **{key: value for key, value in school.items() if key != \"_id\"},\n            }\n            for school in schools\n        ]",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_specialization",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def add_specialization(specialization):\n    try:\n        mongo_output = db[\"specializations\"].insert_one(specialization.dict())\n        specialization.set_id(str(mongo_output.inserted_id))\n        return specialization\n    except Exception as e:\n        print(f\"An error occurred while inserting the specialization: {e}\")\n        return None\ndef get_all_specializations():\n    try:",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_specializations",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def get_all_specializations():\n    try:\n        specializations = db[\"specializations\"].find()\n        return [\n            {\n                \"_id\": str(specialization[\"_id\"]),\n                **{key: value for key, value in specialization.items() if key != \"_id\"},\n            }\n            for specialization in specializations\n        ]",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_spec_to_school",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def add_spec_to_school(school_id, spec_id):\n    try:\n        db[\"schools\"].update_one(\n            {\"_id\": ObjectId(school_id)},\n            {\"$push\": {\"specializations\": ObjectId(spec_id)}},\n        )\n    except Exception as e:\n        print(f\"An error occurred while adding the specialization to the school: {e}\")\ndef update_school_for_panel(panel_id, school_id):\n    try:",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "update_school_for_panel",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def update_school_for_panel(panel_id, school_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)},\n            {\"$set\": {\"school_id\": ObjectId(school_id)}},\n        )\n    except Exception as e:\n        print(f\"An error occurred while updating the school for the panel: {e}\")\ndef update_spec_for_panel(panel_id, spec_id):\n    try:",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "update_spec_for_panel",
+        "kind": 2,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "def update_spec_for_panel(panel_id, spec_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$set\": {\"spec_id\": ObjectId(spec_id)}}\n        )\n    except Exception as e:\n        print(f\"An error occurred while updating the specialization for the panel: {e}\")",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.school_and_spec_services",
+        "description": "app.services.school_and_spec_services",
+        "peekOfCode": "db = connect_to_mongo()\ndef add_school(school):\n    try:\n        mongo_output = db[\"schools\"].insert_one(school.dict())\n        school.set_id(str(mongo_output.inserted_id))\n        return school\n    except Exception as e:\n        print(f\"An error occurred while inserting the school: {e}\")\n        return None\ndef get_all_schools():",
+        "detail": "app.services.school_and_spec_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encoding_from_student_id",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def get_student_encoding_from_student_id(student_id):\n    \"\"\"Gets the student encoding dictionary that is stored in mongodb.\n    Args:\n        student_id (string): the id of the student that we want the encoding from.\n    Returns:\n        dictionary: the encoding of the student.\n    \"\"\"\n    try:\n        # getting the student encoding id from students collection\n        student = db[\"students\"].find_one({\"_id\": ObjectId(student_id)})",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_face_to_db",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def add_student_face_to_db(student_id, face_url):\n    \"\"\"Adds the face url to the faces list of the student row matching with id = student_id.\n    Args:\n        student_id (str): id of the student that you wanna add the face of.\n        face_url (str): url of the firebase storage of the image containing the face of the concerned student.\n    \"\"\"\n    try:\n        db[\"students\"].update_one(\n            {\"_id\": ObjectId(student_id)}, {\"$push\": {\"faces\": face_url}}\n        )",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_students",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def get_all_students():\n    try:\n        students = db[\"students\"].find()\n        return [\n            {\n                \"_id\": str(student[\"_id\"]),\n                **{key: value for key, value in student.items() if key != \"_id\"},\n            }\n            for student in students\n        ]",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def add_student(student):\n    try:\n        mongo_output = db[\"students\"].insert_one(student.dict())\n        student.set_id(str(mongo_output.inserted_id))\n        return student\n    except Exception as e:\n        print(f\"An error occurred while inserting the student: {e}\")\n        return None\ndef add_student_encoding(student_id, encoding):\n    try:",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_encoding",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def add_student_encoding(student_id, encoding):\n    try:\n        mongo_output = db[\"encodings\"].insert_one(encoding)\n        encoding_id = str(mongo_output.inserted_id)\n        db[\"students\"].update_one(\n            {\"_id\": ObjectId(student_id)}, {\"$set\": {\"face_encoding\": encoding_id}}\n        )\n        return encoding_id\n    except Exception as e:\n        print(f\"An error occurred while adding the student encoding: {e}\")",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_student_ids",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def get_student_encodings_from_student_ids(student_ids):\n    \"\"\"\n    Get all student encodings from the panel id.\n    :param panel_id: The panel id.\n    :return: The student encodings.\n    \"\"\"\n    try:\n        student_encodings = {}\n        for student_id in student_ids:\n            student = db[\"students\"].find_one({\"_id\": ObjectId(student_id)})",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "db = connect_to_mongo()\ndef get_student_encoding_from_student_id(student_id):\n    \"\"\"Gets the student encoding dictionary that is stored in mongodb.\n    Args:\n        student_id (string): the id of the student that we want the encoding from.\n    Returns:\n        dictionary: the encoding of the student.\n    \"\"\"\n    try:\n        # getting the student encoding id from students collection",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_teacher",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def add_teacher(teacher):\n    try:\n        db[\"teachers\"].insert_one(teacher.dict())\n        return teacher\n    except Exception as e:\n        print(f\"An error occurred while inserting the teacher: {e}\")\n        return None\ndef add_subject(subject):\n    try:\n        db[\"subjects\"].insert_one(subject.dict())",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_subject",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def add_subject(subject):\n    try:\n        db[\"subjects\"].insert_one(subject.dict())\n        return subject\n    except Exception as e:\n        print(f\"An error occurred while inserting the subject: {e}\")\n        return None\ndef get_all_teachers(self):\n    try:\n        teachers = db[\"teachers\"].find()",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_teachers",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def get_all_teachers(self):\n    try:\n        teachers = db[\"teachers\"].find()\n        return [\n            {\n                \"_id\": str(teacher[\"_id\"]),\n                **{key: value for key, value in teacher.items() if key != \"_id\"},\n            }\n            for teacher in teachers\n        ]",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_subjects",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def get_all_subjects(self):\n    try:\n        subjects = db[\"subjects\"].find()\n        return [\n            {\n                \"_id\": str(subject[\"_id\"]),\n                **{key: value for key, value in subject.items() if key != \"_id\"},\n            }\n            for subject in subjects\n        ]",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_panel",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def add_panel(panel):\n    try:\n        db[\"panels\"].insert_one(panel.dict())\n        return panel\n    except Exception as e:\n        print(f\"An error occurred while inserting the panel: {e}\")\n        return None\ndef get_all_panels(self):\n    try:\n        panels = db[\"panels\"].find()",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_panels",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def get_all_panels(self):\n    try:\n        panels = db[\"panels\"].find()\n        panels = [\n            {\n                \"_id\": str(panel[\"_id\"]),\n                **{key: value for key, value in panel.items() if key != \"_id\"},\n            }\n            for panel in panels\n        ]",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_teacher_by_id",
+        "kind": 2,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "def get_teacher_by_id(teacher_id):\n    try:\n        teacher = db[\"teachers\"].find_one({\"_id\": ObjectId(teacher_id)})\n        if teacher:\n            return {\n                \"_id\": str(teacher[\"_id\"]),\n                **{key: value for key, value in teacher.items() if key != \"_id\"},\n            }\n        else:\n            return None",
+        "detail": "app.services.teacher_and_subject_services",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "app.services.teacher_and_subject_services",
+        "description": "app.services.teacher_and_subject_services",
+        "peekOfCode": "db = connect_to_mongo()\ndef add_teacher(teacher):\n    try:\n        db[\"teachers\"].insert_one(teacher.dict())\n        return teacher\n    except Exception as e:\n        print(f\"An error occurred while inserting the teacher: {e}\")\n        return None\ndef add_subject(subject):\n    try:",
+        "detail": "app.services.teacher_and_subject_services",
         "documentation": {}
     },
     {

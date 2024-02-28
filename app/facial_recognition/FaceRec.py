@@ -1,9 +1,9 @@
 # Main Class file for FaceRecognition
 # import face_recognition
 import threading
-from routers.client_uploads import add_face_encoding
 import pickle
 
+# import services
 
 class FaceRec:
 	"""
@@ -42,7 +42,7 @@ class FaceRec:
 		# load the face encodings
 		for student_id in self.student_face_encodings:
 			# get the face encodings
-			face_encodings = pickle.loads(add_face_encoding(self.student_face_encodings[student_id]))
+			face_encodings = pickle.loads(self.student_face_encodings[student_id])
 			# replace the url with the face encodings
 			self.student_face_encodings[student_id] = face_encodings
 

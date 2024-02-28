@@ -4,7 +4,6 @@ This file will contain routes for setting and getting student data.
 
 # import fastapi stuff
 from fastapi import APIRouter, Response, HTTPException
-from services.assistanceMongoDB import MongoService
 from models.StudentModels import (
     StudentModel,
     StudentResponseModel,
@@ -16,11 +15,21 @@ from models.PanelModels import PanelID
 # import db
 from pymongo.errors import PyMongoError
 
+# import from services
+from services.student_services import (
+    add_student,
+    get_student_encoding_from_student_id,
+    get_all_students,
+    add_student_encoding,
+)
+
+from services.panel_services import get_student_by_panel_id
+
 router = APIRouter(prefix="/student", tags=["Students"])
 
 
 @router.get("/test", status_code=200, summary="Test route")
-def index():
+def index_route():
     return Response(content="Hello, World!", status_code=200)
 
 
@@ -30,15 +39,13 @@ def index():
     summary="Add a student",
     response_model=StudentResponseModel,
 )
-def add_student(student: StudentModel):
+def add_student_route(student: StudentModel):
     # add the student to the database
     try:
         # instantiate the mongo service
-        mongo_obj = MongoService()
         # call the function from mongo service to add the student
-        student_response = mongo_obj.add_student(student)
-        
-        
+        student_response = add_student(student)
+
         print(student_response)
         return StudentResponseModel(
             _id=student_response._id,
@@ -56,12 +63,11 @@ def add_student(student: StudentModel):
 @router.post(
     "/get_student_from_panel_id", status_code=200, summary="Get students from panel id"
 )
-def get_students_from_panel_id(panel_id: PanelID):
+def get_students_from_panel_id_route(panel_id: PanelID):
     try:
         # instantiate the mongo service
-        mongo_obj = MongoService()
         # call the mongo function to get the student from panel
-        students = mongo_obj.get_student_by_panel_id(panel_id.panel_id)
+        students = get_student_by_panel_id(panel_id.panel_id)
         return students
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -74,14 +80,12 @@ def get_students_from_panel_id(panel_id: PanelID):
     status_code=200,
     summary="Get student encoding From student ID",
 )
-def get_student_encoding(student_encoding_model: EncodingModel):
+def get_student_encoding_route(student_encoding_model: EncodingModel):
     # get student_id
     student_id = student_encoding_model.student_id
     try:
-        # instantiate the mongo service
-        mongo_obj = MongoService()
         # call the function from mongo service to get the student encoding
-        student_encoding = mongo_obj.get_student_encoding_from_student_id(student_id)
+        student_encoding = get_student_encoding_from_student_id(student_id)
         print(student_encoding)
         encoding_response_model = EncodingResponseModel(
             student_id=student_id,
@@ -94,19 +98,19 @@ def get_student_encoding(student_encoding_model: EncodingModel):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
 # route for getting all students
 @router.get("/get_all_students", status_code=200, summary="Get all students")
-def get_all_students():
+def get_all_students_route():
     try:
-        # instantiate the mongo service
-        mongo_obj = MongoService()
         # call the function from mongo service to get all students
-        students = mongo_obj.get_all_students()
+        students = get_all_students()
         return students
     except PyMongoError as e:
         raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 # route for adding student encoding
 @router.post(
@@ -115,17 +119,13 @@ def get_all_students():
     summary="Add student encoding",
     response_model=EncodingResponseModel,
 )
-def add_student_encoding(student_encoding: EncodingModel):
+def add_student_encoding_route(student_encoding: EncodingModel):
     # get the student id and the encoding url
     student_id = student_encoding.student_id
     encoding_url = student_encoding.encoding_url
     try:
-        # instantiate the mongo service
-        mongo_obj = MongoService()
         # call the function from mongo service to add the student encoding
-        student_encoding_response = mongo_obj.add_student_encoding(
-            student_id, encoding_url
-        )
+        student_encoding_response = add_student_encoding(student_id, encoding_url)
         encoding_response_model = EncodingResponseModel(
             student_id=student_id,
             number_of_faces=student_encoding_response["number_of_faces"],
