@@ -17,9 +17,11 @@ def get_student_encodings_from_panel_id(panel_id):
     try:
         # get all students in a panel.
         student_ids = get_student_ids_from_panel_id(panel_id)
-
-        student_encodings = get_student_encodings_from_student_ids(student_ids)
-        return student_encodings
+        print(student_ids, "are the students that are present in the panel ", panel_id)
+        student_encodings, student_faces, no_faces = get_student_encodings_from_student_ids(student_ids)
+        if len(no_faces) > 0:
+            print("These students do not have faces: ", no_faces)
+        return student_encodings, no_faces
     except Exception as e:
         # handle exception
         print(e)
