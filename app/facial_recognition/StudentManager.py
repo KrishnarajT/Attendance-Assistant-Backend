@@ -31,7 +31,7 @@ class StudentManager:
 		images: list of image urls that contain only one face, the face belonging to student with id 'student_id'
 		id: id of the student whose faces are provided in the images list
 		"""
-
+		print("trying to create face encoding. ")
 		# Create face encoding for the given images
 		for image in self.student_faces_image_urls:
 			student_image = face_recognition.load_image_file(image)

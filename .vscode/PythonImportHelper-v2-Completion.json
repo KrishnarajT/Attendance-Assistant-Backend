@@ -149,6 +149,14 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -645,7 +653,7 @@
         "documentation": {}
     },
     {
-        "label": "get_lecture_images_between_time",
+        "label": "get_lecture_images_between_time_on_date",
         "importPath": "services.lecture_services",
         "description": "services.lecture_services",
         "isExtraImport": true,
@@ -685,7 +693,7 @@
         "documentation": {}
     },
     {
-        "label": "get_lecture_images_between_time",
+        "label": "get_lecture_images_between_time_on_date",
         "importPath": "services.lecture_services",
         "description": "services.lecture_services",
         "isExtraImport": true,
@@ -1110,7 +1118,7 @@
         "documentation": {}
     },
     {
-        "label": "LectureModel",
+        "label": "lectureModel",
         "importPath": "models.lectureModels",
         "description": "models.lectureModels",
         "isExtraImport": true,
@@ -1472,6 +1480,14 @@
     },
     {
         "label": "panels",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "lectures",
         "importPath": "routers",
         "description": "routers",
         "isExtraImport": true,
@@ -1903,7 +1919,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.StudentManager",
         "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.number_of_faces = 0\n\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\t# Create face encoding for the given images",
+        "peekOfCode": "\t\tself.number_of_faces = 0\n\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")",
         "detail": "app.facial_recognition.StudentManager",
         "documentation": {}
     },
@@ -1912,7 +1928,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.StudentManager",
         "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\t# Create face encoding for the given images\n\t\tfor image in self.student_faces_image_urls:",
+        "peekOfCode": "\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")\n\t\t# Create face encoding for the given images",
         "detail": "app.facial_recognition.StudentManager",
         "documentation": {}
     },
@@ -1921,7 +1937,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.StudentManager",
         "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\t# Create face encoding for the given images\n\t\tfor image in self.student_faces_image_urls:\n\t\t\tstudent_image = face_recognition.load_image_file(image)",
+        "peekOfCode": "\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")\n\t\t# Create face encoding for the given images\n\t\tfor image in self.student_faces_image_urls:",
         "detail": "app.facial_recognition.StudentManager",
         "documentation": {}
     },
@@ -2200,7 +2216,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: str\n    end_time: str\n    # @field_validator(\"start_time\")\n    # def start_time_must_be_before_end_time(cls, v, values):\n    #     pass",
+        "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: str\n    date: str\n    end_time: str\nclass AddFaceModel(BaseModel):\n    student_id: str",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -2551,7 +2567,7 @@
         "kind": 2,
         "importPath": "app.routers.lectures",
         "description": "app.routers.lectures",
-        "peekOfCode": "def add_lecture_route(lecture_details: LectureModel):\n    \"\"\"\n    Add a lecture to the database.\n    \"\"\"\n    # call the function from lecture services to add the lecture\n    lecture_response = add_lecture(lecture_details)\n    return lecture_response\n@router.get(\"/get_lecture\", status_code=200, summary=\"Get a lecture\")\ndef get_lecture_route(lecture_id: str):\n    \"\"\"",
+        "peekOfCode": "def add_lecture_route(lecture_details: lectureModel):\n    \"\"\"\n    Add a lecture to the database.\n    \"\"\"\n    # call the function from lecture services to add the lecture\n    lecture_response = add_lecture(lecture_details)\n    return lecture_response\n@router.get(\"/get_lecture\", status_code=200, summary=\"Get a lecture\")\ndef get_lecture_route(lecture_id: str):\n    \"\"\"",
         "detail": "app.routers.lectures",
         "documentation": {}
     },
@@ -2578,7 +2594,7 @@
         "kind": 2,
         "importPath": "app.routers.lectures",
         "description": "app.routers.lectures",
-        "peekOfCode": "def get_lecture_images_between_time_route(start_time: str, end_time: str):\n    \"\"\"\n    Get all lecture images between a start and end time.\n    \"\"\"\n    # call the function from lecture services to get all the lecture images between the start and end time\n    lecture_response = get_lecture_images_between_time(start_time, end_time)\n    return lecture_response",
+        "peekOfCode": "def get_lecture_images_between_time_route(start_time: str, end_time: str):\n    \"\"\"\n    Get all lecture images between a start and end time.\n    \"\"\"\n    # call the function from lecture services to get all the lecture images between the start and end time\n    lecture_response = get_lecture_images_between_time_on_date(start_time, end_time)\n    return lecture_response",
         "detail": "app.routers.lectures",
         "documentation": {}
     },
@@ -2587,7 +2603,7 @@
         "kind": 5,
         "importPath": "app.routers.lectures",
         "description": "app.routers.lectures",
-        "peekOfCode": "router = APIRouter(prefix=\"/lectures\", tags=[\"Lectures\"])\n# import lecture service\nfrom services.lecture_services import (\n    add_lecture,\n    get_lecture,\n    get_all_lectures,\n    get_lecture_images_between_time,\n)\n@router.post(\"/add_lecture\", status_code=200, summary=\"Add a lecture\")\ndef add_lecture_route(lecture_details: LectureModel):",
+        "peekOfCode": "router = APIRouter(prefix=\"/lectures\", tags=[\"Lectures\"])\n# import lecture service\nfrom services.lecture_services import (\n    add_lecture,\n    get_lecture,\n    get_all_lectures,\n    get_lecture_images_between_time_on_date,\n)\n@router.post(\"/add_lecture\", status_code=200, summary=\"Add a lecture\")\ndef add_lecture_route(lecture_details: lectureModel):",
         "detail": "app.routers.lectures",
         "documentation": {}
     },
@@ -2952,11 +2968,11 @@
         "documentation": {}
     },
     {
-        "label": "get_lecture_images_between_time",
+        "label": "get_lecture_images_between_time_on_date",
         "kind": 2,
         "importPath": "app.services.lecture_services",
         "description": "app.services.lecture_services",
-        "peekOfCode": "def get_lecture_images_between_time(start_time, end_time):\n    try:\n        lecture_images = db[\"lectureImages\"].find(\n            {\"time\": {\"$gte\": start_time, \"$lte\": end_time}}\n        )\n        return [\n            {\n                \"_id\": str(lecture_image[\"_id\"]),\n                **{key: value for key, value in lecture_image.items() if key != \"_id\"},\n            }",
+        "peekOfCode": "def get_lecture_images_between_time_on_date(start_time, end_time, given_date):\n    try:\n        lecture_images = db[\"lectureImages\"].find(\n            {\n                \"time\": {\"$gte\": start_time, \"$lte\": end_time},\n                \"date\": given_date,\n            }\n        )\n        return [\n            {",
         "detail": "app.services.lecture_services",
         "documentation": {}
     },
@@ -2974,7 +2990,7 @@
         "kind": 2,
         "importPath": "app.services.panel_services",
         "description": "app.services.panel_services",
-        "peekOfCode": "def get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id\n    try:\n        # get all students in a panel.\n        student_ids = get_student_ids_from_panel_id(panel_id)\n        student_encodings = get_student_encodings_from_student_ids(student_ids)\n        return student_encodings",
+        "peekOfCode": "def get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id\n    try:\n        # get all students in a panel.\n        student_ids = get_student_ids_from_panel_id(panel_id)\n        print(student_ids, \"are the students that are present in the panel \", panel_id)\n        student_encodings, student_faces, no_faces = get_student_encodings_from_student_ids(student_ids)",
         "detail": "app.services.panel_services",
         "documentation": {}
     },
@@ -3262,7 +3278,7 @@
         "kind": 2,
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
-        "peekOfCode": "def get_student_encodings_from_student_ids(student_ids):\n    \"\"\"\n    Get all student encodings from the panel id.\n    :param panel_id: The panel id.\n    :return: The student encodings.\n    \"\"\"\n    try:\n        student_encodings = {}\n        for student_id in student_ids:\n            student = db[\"students\"].find_one({\"_id\": ObjectId(student_id)})",
+        "peekOfCode": "def get_student_encodings_from_student_ids(student_ids):\n    \"\"\"\n    Get all student encodings from the panel id.\n    :param panel_id: The panel id.\n    :return: The student encodings.\n    \"\"\"\n    try:\n        print(\"trying to get student encodings\")\n        student_encodings = {}\n        no_faces = []",
         "detail": "app.services.student_services",
         "documentation": {}
     },
@@ -3433,7 +3449,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, panels\napp.include_router(client_uploads.router)\napp.include_router(students.router)\napp.include_router(face_rec.router)\napp.include_router(panels.router)\napp.include_router(college.router)\napp.include_router(subjects.router)\napp.include_router(teachers.router)",
+        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, panels, lectures\napp.include_router(client_uploads.router)\napp.include_router(students.router)\napp.include_router(face_rec.router)\napp.include_router(panels.router)\napp.include_router(college.router)\napp.include_router(subjects.router)\napp.include_router(teachers.router)",
         "detail": "app.main",
         "documentation": {}
     },

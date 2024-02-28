@@ -83,14 +83,22 @@ def get_student_encodings_from_student_ids(student_ids):
     :return: The student encodings.
     """
     try:
+        print("trying to get student encodings")
         student_encodings = {}
+        no_faces = []
+        student_faces = {}
         for student_id in student_ids:
+            print(student_id)
             student = db["students"].find_one({"_id": ObjectId(student_id)})
+            print(student)
             # check if their faces are present
             if len(student["faces"]) == 0:
-                raise Exception(f"Student {student_id} has no faces")
+                no_faces.append(student_id)
+            else:
+                student_faces[str(student["_id"])] = student["faces"]
             student_encodings[str(student["_id"])] = student["face_encoding"]
-        return student_encodings
+
+        return (student_encodings, student_faces, no_faces)
     except Exception as e:
         print(f"An error occurred while getting the student encodings: {e}")
-        return None
+        return e
