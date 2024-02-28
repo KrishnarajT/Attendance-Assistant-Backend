@@ -33,10 +33,31 @@ class FaceRec:
 		self.students_absent = []
 		self.student_ids = student_ids
 
+	def process_face_encodings(self):
+		"""
+		Process the face encodings of the students.
+		# student face encodings is a dictionary with student id as key and face encodings url as value. 
+		The url is of a pickle file. we have to load the pickle file and get the face encodings.
+		"""
+		# load the face encodings
+		for student_id in self.student_face_encodings:
+			# get the face encodings
+			face_encodings = pickle.loads(add_face_encoding(self.student_face_encodings[student_id]))
+			# replace the url with the face encodings
+			self.student_face_encodings[student_id] = face_encodings
+
+		
 	def find_attendance(self):
 		"""
 		Perform the facial recognition on the class images, and return the attendance.
 		"""
+
+		# check if the student face encodings are a string or a face encoding object. 
+		if isinstance(list(self.student_face_encodings.values())[0], str):
+			self.process_face_encodings()
+		else:
+			print("Face encodings are already loaded!")
+  
 		# create threads for each image
 		threads = []
 		for image in self.class_images:
