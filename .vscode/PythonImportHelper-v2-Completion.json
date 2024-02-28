@@ -85,6 +85,78 @@
         "documentation": {}
     },
     {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -109,7 +181,7 @@
         "documentation": {}
     },
     {
-        "label": "field_validator",
+        "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -117,7 +189,7 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
+        "label": "field_validator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -362,94 +434,6 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "date",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -709,6 +693,22 @@
         "documentation": {}
     },
     {
+        "label": "MongoService",
+        "importPath": "services.assistanceMongoDB",
+        "description": "services.assistanceMongoDB",
+        "isExtraImport": true,
+        "detail": "services.assistanceMongoDB",
+        "documentation": {}
+    },
+    {
+        "label": "MongoService",
+        "importPath": "services.assistanceMongoDB",
+        "description": "services.assistanceMongoDB",
+        "isExtraImport": true,
+        "detail": "services.assistanceMongoDB",
+        "documentation": {}
+    },
+    {
         "label": "AddFaceModel",
         "importPath": "models.ClientUploadModels",
         "description": "models.ClientUploadModels",
@@ -901,6 +901,14 @@
         "documentation": {}
     },
     {
+        "label": "lectureServices",
+        "importPath": "services.lectures",
+        "description": "services.lectures",
+        "isExtraImport": true,
+        "detail": "services.lectures",
+        "documentation": {}
+    },
+    {
         "label": "PanelModel",
         "importPath": "models.PanelModels",
         "description": "models.PanelModels",
@@ -1078,14 +1086,6 @@
         "documentation": {}
     },
     {
-        "label": "classes",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
-        "documentation": {}
-    },
-    {
         "label": "panels",
         "importPath": "routers",
         "description": "routers",
@@ -1183,6 +1183,32 @@
         "documentation": {}
     },
     {
+        "label": "tello",
+        "importPath": "djitellopy",
+        "description": "djitellopy",
+        "isExtraImport": true,
+        "detail": "djitellopy",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "CORSMiddleware",
         "importPath": "fastapi.middleware.cors",
         "description": "fastapi.middleware.cors",
@@ -1231,7 +1257,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tstudent_face_encodings = {}\n\t\tprint(\"Init Face Recognition!\")\n\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):",
+        "peekOfCode": "\t\t\tstudent_face_encodings = {}\n\t\tprint(\"Init Face Recognition!\")\n\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1240,7 +1266,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.",
+        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1249,7 +1275,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"",
+        "peekOfCode": "\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. ",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1258,7 +1284,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# create threads for each image",
+        "peekOfCode": "\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1267,7 +1293,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# create threads for each image\n\t\tthreads = []",
+        "peekOfCode": "\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1276,7 +1302,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# create threads for each image\n\t\tthreads = []\n\t\tfor image in self.class_images:",
+        "peekOfCode": "\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1285,7 +1311,7 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# create threads for each image\n\t\tthreads = []\n\t\tfor image in self.class_images:\n\t\t\tt = threading.Thread(target=self.recognize_faces, args=(image,))",
+        "peekOfCode": "\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings\n\t\tfor student_id in self.student_face_encodings:",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1294,7 +1320,25 @@
         "kind": 5,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_ids = student_ids\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# create threads for each image\n\t\tthreads = []\n\t\tfor image in self.class_images:\n\t\t\tt = threading.Thread(target=self.recognize_faces, args=(image,))\n\t\t\tthreads.append(t)",
+        "peekOfCode": "\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings\n\t\tfor student_id in self.student_face_encodings:\n\t\t\t# get the face encodings",
+        "detail": "app.facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tface_encodings",
+        "kind": 5,
+        "importPath": "app.facial_recognition.FaceRec",
+        "description": "app.facial_recognition.FaceRec",
+        "peekOfCode": "\t\t\tface_encodings = pickle.loads(add_face_encoding(self.student_face_encodings[student_id]))\n\t\t\t# replace the url with the face encodings\n\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()",
+        "detail": "app.facial_recognition.FaceRec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tself.student_face_encodings[student_id]",
+        "kind": 5,
+        "importPath": "app.facial_recognition.FaceRec",
+        "description": "app.facial_recognition.FaceRec",
+        "peekOfCode": "\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()\n\t\telse:\n\t\t\tprint(\"Face encodings are already loaded!\")",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1767,20 +1811,11 @@
         "documentation": {}
     },
     {
-        "label": "Classes",
-        "kind": 6,
-        "importPath": "app.models.ClassesModels",
-        "description": "app.models.ClassesModels",
-        "peekOfCode": "class Classes(BaseModel):\n    date: date\n    start_time: datetime\n    end_time: datetime\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    semester: str\n    room_id: str\n    students_present: List[str]",
-        "detail": "app.models.ClassesModels",
-        "documentation": {}
-    },
-    {
         "label": "AttendanceModel",
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: datetime\n    end_time: datetime\n    @field_validator(\"start_time\")\n    def start_time_must_be_before_end_time(cls, v, values):\n        pass",
+        "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: str\n    end_time: str\n    # @field_validator(\"start_time\")\n    # def start_time_must_be_before_end_time(cls, v, values):\n    #     pass",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -1872,6 +1907,24 @@
         "description": "app.models.CollegeModels",
         "peekOfCode": "class BuildingResponseModel(BaseModel):\n    name: str\n    building_id: str\n    rooms: Optional[List] = []",
         "detail": "app.models.CollegeModels",
+        "documentation": {}
+    },
+    {
+        "label": "lectureModel",
+        "kind": 6,
+        "importPath": "app.models.lectureModels",
+        "description": "app.models.lectureModels",
+        "peekOfCode": "class lectureModel(BaseModel):\n    date: str\n    start_time: str\n    end_time: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    semester: str\n    room_id: str\n    students_present: List[str]",
+        "detail": "app.models.lectureModels",
+        "documentation": {}
+    },
+    {
+        "label": "lectureModelId",
+        "kind": 6,
+        "importPath": "app.models.lectureModels",
+        "description": "app.models.lectureModels",
+        "peekOfCode": "class lectureModelId(BaseModel):\n    lec_id : str",
+        "detail": "app.models.lectureModels",
         "documentation": {}
     },
     {
@@ -1992,24 +2045,6 @@
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
-        "importPath": "app.routers.classes",
-        "description": "app.routers.classes",
-        "peekOfCode": "def index():\n    return Response(content=\"Hello, World!\", status_code=200)",
-        "detail": "app.routers.classes",
-        "documentation": {}
-    },
-    {
-        "label": "router",
-        "kind": 5,
-        "importPath": "app.routers.classes",
-        "description": "app.routers.classes",
-        "peekOfCode": "router = APIRouter(prefix=\"/classes\", tags=[\"Classes and Class Images\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n    return Response(content=\"Hello, World!\", status_code=200)",
-        "detail": "app.routers.classes",
-        "documentation": {}
-    },
-    {
         "label": "fb_storage",
         "kind": 5,
         "importPath": "app.routers.client_uploads",
@@ -2104,7 +2139,7 @@
         "kind": 2,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "def index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.get(\"/get_attendance\", status_code=200, summary=\"Get attendance\")\ndef get_attendance(class_att: AttendanceModel):\n\tpass",
+        "peekOfCode": "def index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.post(\"/add_attendance\", status_code=200, summary=\"add attendace\")\ndef get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2113,7 +2148,7 @@
         "kind": 2,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "def get_attendance(class_att: AttendanceModel):\n\tpass",
+        "peekOfCode": "def get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.\n\t:param class_att: The attendance model.\n\t:return: The attendance model.\n\t\"\"\"\n\ttry:\n\t\t# get the lecture images and student encodings from the database\n\t\t# get all lecture images in between the start and end time\n\t\t# instantiate lecture",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2122,7 +2157,7 @@
         "kind": 5,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.get(\"/get_attendance\", status_code=200, summary=\"Get attendance\")\ndef get_attendance(class_att: AttendanceModel):",
+        "peekOfCode": "router = APIRouter(prefix=\"/face_rec\", tags=[\"Face Recognition\"])\n# import lecture service\nfrom services.lectures import lectureServices\n@router.get(\"/test\", status_code=200, summary=\"Test route\")\ndef index():\n\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2131,7 +2166,43 @@
         "kind": 5,
         "importPath": "app.routers.face_rec",
         "description": "app.routers.face_rec",
-        "peekOfCode": "\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.get(\"/get_attendance\", status_code=200, summary=\"Get attendance\")\ndef get_attendance(class_att: AttendanceModel):\n\tpass",
+        "peekOfCode": "\ttest_obj = FaceRec()\n\t# so ideally objects of this class would receive encodings of all the students, and the class image. We would get\n\t# this from calling functions of other routes (like getting student urls, encoding urls, etc), and then we would\n\t# call the methods of this class to get the attendance. we would then return that attendance.\n\treturn \"Hello, World!\"\n@router.post(\"/add_attendance\", status_code=200, summary=\"add attendace\")\ndef get_attendance(class_att: AttendanceModel):\n\t\"\"\"\n\tAdd attendance to the database.\n\t:param class_att: The attendance model.",
+        "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tlecture_obj",
+        "kind": 5,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "\t\tlecture_obj = lectureServices()\n\t\tprint(class_att.start_time, class_att.end_time)\n\t\tprint(class_att.panel_id)\n\t\t# print(class_att.lecture_id)\n\t\tlecture_images = lecture_obj.get_lecture_images_between_time(class_att.start_time,class_att.end_time)\n\t\t# get all encodings of students in the panel\n\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error",
+        "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tlecture_images",
+        "kind": 5,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "\t\tlecture_images = lecture_obj.get_lecture_images_between_time(class_att.start_time,class_att.end_time)\n\t\t# get all encodings of students in the panel\n\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)",
+        "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tstudent_encodings",
+        "kind": 5,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "\t\tstudent_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)\n\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)\n\t\t# face_rec_obj = FaceRec(lecture_images,student_encodings,class_att.panel_id,student_ids)\n\t\t# add new row to classes collection",
+        "detail": "app.routers.face_rec",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tstudent_ids",
+        "kind": 5,
+        "importPath": "app.routers.face_rec",
+        "description": "app.routers.face_rec",
+        "peekOfCode": "\t\tstudent_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)\n\t\t# check encoding id is present for each student\n\t\t# if not present, return error\n\t\t# if present, add to the list of student encodings\n\t\tprint(\"lecture images \", lecture_images)\n\t\tprint(\"student encodings \", student_encodings)\n\t\tprint(\"student ids \", student_ids)\n\t\t# face_rec_obj = FaceRec(lecture_images,student_encodings,class_att.panel_id,student_ids)\n\t\t# add new row to classes collection\n\t\tlecture_obj.add_lecture(class_att)",
         "detail": "app.routers.face_rec",
         "documentation": {}
     },
@@ -2307,6 +2378,15 @@
         "documentation": {}
     },
     {
+        "label": "add_student_encoding",
+        "kind": 2,
+        "importPath": "app.routers.students",
+        "description": "app.routers.students",
+        "peekOfCode": "def add_student_encoding(student_encoding: EncodingModel):\n    # get the student id and the encoding url\n    student_id = student_encoding.student_id\n    encoding_url = student_encoding.encoding_url\n    try:\n        # instantiate the mongo service\n        mongo_obj = MongoService()\n        # call the function from mongo service to add the student encoding\n        student_encoding_response = mongo_obj.add_student_encoding(\n            student_id, encoding_url",
+        "detail": "app.routers.students",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "app.routers.students",
@@ -2451,6 +2531,15 @@
         "documentation": {}
     },
     {
+        "label": "lectureServices",
+        "kind": 6,
+        "importPath": "app.services.lectures",
+        "description": "app.services.lectures",
+        "peekOfCode": "class lectureServices:\n    def add_lecture(lecture_details):\n        \"\"\"\n        Add a lecture to the database.\n        \"\"\"\n        # add the lecture to the database\n        try:\n            # instantiate the mongo service\n            mongo_obj = MongoService()\n            # call the function from mongo service to add the lecture",
+        "detail": "app.services.lectures",
+        "documentation": {}
+    },
+    {
         "label": "mongodb_uri",
         "kind": 5,
         "importPath": "app.config",
@@ -2536,7 +2625,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, classes, panels\napp.include_router(client_uploads.router)\napp.include_router(students.router)\napp.include_router(face_rec.router)\napp.include_router(panels.router)\napp.include_router(college.router)\napp.include_router(subjects.router)\napp.include_router(teachers.router)",
+        "peekOfCode": "app = FastAPI()\n# Include routers here\nfrom routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, panels\napp.include_router(client_uploads.router)\napp.include_router(students.router)\napp.include_router(face_rec.router)\napp.include_router(panels.router)\napp.include_router(college.router)\napp.include_router(subjects.router)\napp.include_router(teachers.router)",
         "detail": "app.main",
         "documentation": {}
     },
@@ -2928,12 +3017,30 @@
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def index():\n\treturn {\"message\": \"Hello World\"}\n@app.post(\"/hello\")\ndef index():\n\treturn {\"message\": \"Hello World\"}",
-        "detail": "main",
+        "label": "me",
+        "kind": 5,
+        "importPath": "drone.test",
+        "description": "drone.test",
+        "peekOfCode": "me = tello.Tello()\nme.connect()\nme.streamon()\nimg = me.get_frame_read().frame\nprint(img)\ncv2.imshow(\"Tello\", img)\ntime.sleep(1)\nme.stream_off()\ntest = test - 1",
+        "detail": "drone.test",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 5,
+        "importPath": "drone.test",
+        "description": "drone.test",
+        "peekOfCode": "img = me.get_frame_read().frame\nprint(img)\ncv2.imshow(\"Tello\", img)\ntime.sleep(1)\nme.stream_off()\ntest = test - 1",
+        "detail": "drone.test",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 5,
+        "importPath": "drone.test",
+        "description": "drone.test",
+        "peekOfCode": "test = test - 1",
+        "detail": "drone.test",
         "documentation": {}
     },
     {
@@ -2941,7 +3048,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def index():\n\treturn {\"message\": \"Hello World\"}",
+        "peekOfCode": "def index():\n    return {\"message\": \"Hello World\"}",
         "detail": "main",
         "documentation": {}
     },
@@ -2950,7 +3057,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n# app.include_router(image_routes.router)\n# app.include_router(article_routes.router)\n# app.include_router(product_routes.router)\napp.add_middleware(\n\tCORSMiddleware,\n\tallow_origins=[\"http://localhost:3000\"],\n\tallow_credentials=True,\n\tallow_methods=[\"*\"],\n\tallow_headers=[\"*\"],",
+        "peekOfCode": "app = FastAPI()\n# app.include_router(user_routes.router)\n# app.include_router(article_routes.router)\n# app.include_router(product_routes.router)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:3000\"],\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],",
         "detail": "main",
         "documentation": {}
     }
