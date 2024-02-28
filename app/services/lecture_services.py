@@ -7,6 +7,7 @@ from bson import ObjectId
 
 db = connect_to_mongo()
 
+
 def add_class_photo_to_db(room_id, date, time, class_photo_url):
     try:
         db["lectureImages"].insert_one(
@@ -73,10 +74,13 @@ def get_all_lectures():
         return None
 
 
-def get_lecture_images_between_time(start_time, end_time):
+def get_lecture_images_between_time_on_date(start_time, end_time, given_date):
     try:
         lecture_images = db["lectureImages"].find(
-            {"time": {"$gte": start_time, "$lte": end_time}}
+            {
+                "time": {"$gte": start_time, "$lte": end_time},
+                "date": given_date,
+            }
         )
         return [
             {
