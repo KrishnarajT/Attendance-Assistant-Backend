@@ -446,6 +446,11 @@ class MongoService:
             return None
     
     def get_student_encodings_from_panel_id(self, panel_id):
+        """
+        Get all student encodings from the panel id.
+        :param panel_id: The panel id.
+        :return: The student encodings.
+        """
         try:
             student_ids = self.db["panels"].find_one({"_id": ObjectId(panel_id)})["students"]
             student_encodings = {}
@@ -455,4 +460,12 @@ class MongoService:
             return student_encodings
         except Exception as e:
             print(f"An error occurred while getting the student encodings: {e}")
+            return None
+        
+    def get_student_ids_from_panel_id(self, panel_id):
+        try:
+            student_ids = self.db["panels"].find_one({"_id": ObjectId(panel_id)})["students"]
+            return student_ids
+        except Exception as e:
+            print(f"An error occurred while getting the student ids: {e}")
             return None

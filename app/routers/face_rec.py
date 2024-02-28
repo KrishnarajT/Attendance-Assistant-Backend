@@ -15,6 +15,9 @@ from models.ClientUploadModels import AttendanceModel
 from models.StudentModels import EncodingModel
 router = APIRouter(prefix="/face_rec", tags=["Face Recognition"])
 
+# import lecture service
+
+from services.lectures import lectureServices
 
 @router.get("/test", status_code=200, summary="Test route")
 def index():
@@ -34,19 +37,37 @@ def get_attendance(class_att: AttendanceModel):
 
 	:return: The attendance model.
 	"""
-	# get the lecture images and student encodings from the database
+	try:
+		# get the lecture images and student encodings from the database
 
-	#get all lecture images in between the start and end time
+		# get all lecture images in between the start and end time
+		# instantiate lecture
+		lecture_obj = lectureServices()
+		print(class_att.start_time, class_att.end_time)
+		print(class_att.panel_id)
+		# print(class_att.lecture_id)
+		lecture_images = lecture_obj.get_lecture_images_between_time(class_att.start_time,class_att.end_time)
 
-	mongo_obj = MongoService()
-	
-	lecture_images = mongo_obj.get_lecture_images_between_time(class_att.start_time, class_att.end_time)
+		# get all encodings of students in the panel
+		student_encodings = lecture_obj.get_student_encodings_from_panel_id(class_att.panel_id)
 
-	# get all encodings of students in the panel
-	student_encodings = mongo_obj.get_student_encodings_from_panel_id(class_att.panel_id)
-	# instantiate the face rec object
-	face_rec_obj = FaceRec(lecture_images,student_encodings,panel_id,student_ids)
+		student_ids = lecture_obj.get_student_ids_from_panel_id(class_att.panel_id)
 
-	# add new row to classes collection
+		# check encoding id is present for each student
+		# if not present, return error
+		# if present, add to the list of student encodings
+
+		print("lecture images ", lecture_images)
+		print("student encodings ", student_encodings)
+		print("student ids ", student_ids)
+
+		# face_rec_obj = FaceRec(lecture_images,student_encodings,class_att.panel_id,student_ids)
+
+		# add new row to classes collection
+
+		lecture_obj.add_lecture(class_att)
+	except Exception as e:
+		print("An error occurred:", str(e))
+
 	pass
 	
