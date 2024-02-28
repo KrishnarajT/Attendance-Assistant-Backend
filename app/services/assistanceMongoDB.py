@@ -369,3 +369,103 @@ class MongoService:
             print(f"An error occurred while adding the student to the panel: {e}")
             return False
         return True
+    
+    def get_all_semesters(self):
+        try:
+            semesters = self.db["semesters"].find()
+            return [
+                {
+                    "_id": str(semester["_id"]),
+                    **{key: value for key, value in semester.items() if key != "_id"},
+                }
+                for semester in semesters
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all semesters: {e}")
+            return None
+    
+    def add_student_encoding(self, student_id, encoding):
+        try:
+            mongo_output = self.db["encodings"].insert_one(encoding)
+            encoding_id = str(mongo_output.inserted_id)
+            self.db["students"].update_one(
+                {"_id": ObjectId(student_id)}, {"$set": {"face_encoding": encoding_id}}
+            )
+            return encoding_id
+        except Exception as e:
+            print(f"An error occurred while adding the student encoding: {e}")
+    
+    def add_lecture(self, lecture):
+        try:
+            mongo_output = self.db["classes"].insert_one(lecture.dict())
+            lecture.set_id(str(mongo_output.inserted_id))
+            return lecture
+        except Exception as e:
+            print(f"An error occurred while adding the lecture: {e}")
+            return None
+        
+    def get_lecture(self, lecture_id):
+        try:
+            lecture = self.db["classes"].find_one({"_id": ObjectId(lecture_id)})
+            return {
+                "_id": str(lecture["_id"]),
+                **{key: value for key, value in lecture.items() if key != "_id"},
+            }
+        except Exception as e:
+            print(f"An error occurred while getting the lecture: {e}")
+            return None
+        
+    def get_all_lectures(self):
+        try:
+            lectures = self.db["classes"].find()
+            return [
+                {
+                    "_id": str(lecture["_id"]),
+                    **{key: value for key, value in lecture.items() if key != "_id"},
+                }
+                for lecture in lectures
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting all lectures: {e}")
+            return None
+    
+    def get_lecture_images_between_time(self, start_time, end_time):
+        try:
+            lecture_images = self.db["lectureImages"].find(
+                {"time": {"$gte": start_time, "$lte": end_time}}
+            )
+            return [
+                {
+                    "_id": str(lecture_image["_id"]),
+                    **{key: value for key, value in lecture_image.items() if key != "_id"},
+                }
+                for lecture_image in lecture_images
+            ]
+        except Exception as e:
+            print(f"An error occurred while getting the lecture images: {e}")
+            return None
+    
+    def get_student_encodings_from_panel_id(self, panel_id):
+        """
+        Get all student encodings from the panel id.
+        :param panel_id: The panel id.
+        :return: The student encodings.
+        """
+        try:
+            student_ids = self.db["panels"].find_one({"_id": ObjectId(panel_id)})["students"]
+            student_encodings = {}
+            for student_id in student_ids:
+                student = self.db["students"].find_one({"_id": ObjectId(student_id)})
+                student_encodings[str(student["_id"])] = student["face_encoding"]
+            return student_encodings
+        except Exception as e:
+            print(f"An error occurred while getting the student encodings: {e}")
+            return None
+        
+    def get_student_ids_from_panel_id(self, panel_id):
+        try:
+            student_ids = self.db["panels"].find_one({"_id": ObjectId(panel_id)})["students"]
+            return student_ids
+        except Exception as e:
+            print(f"An error occurred while getting the student ids: {e}")
+            return None
