@@ -3,10 +3,10 @@ from pydantic import BaseModel, field_validator
 
 
 class AttendanceModel(BaseModel):
-    room_id: str
-    subject_id: str
-    teacher_id: str
-    panel_id: str
+    room: str
+    subject: str
+    teacher: str
+    panel: str
     start_time: str
     date: str
     end_time: str

@@ -83,7 +83,7 @@ async def add_student_face_route(student_id: str, face_image: UploadFile = File(
         face_image_url = fb_storage.upload_image(face_image)
     except Exception as e:
         print(e)
-        return Response(
+        return JSONResponse(
             status_code=500,
             content={"detail": f"An error occurred while uploading image: {str(e)}"},
         )
@@ -218,7 +218,7 @@ async def add_attendance_route(attModel: AttendanceModel):
     # get all lecture images in between the start and end time
     # instantiate lecture
     print(attModel.start_time, attModel.end_time)
-    print(attModel.panel_id, attModel.room_id)
+    print(attModel.panel, attModel.room)
 
     # check start time format
     try:
@@ -250,18 +250,16 @@ async def add_attendance_route(attModel: AttendanceModel):
             content={"detail": f"No images found for the given time range"},
         )
 
-    # everything working till here. ------------------
     # return lecture_images
 
     # get all encodings of students in the panel but print error if even one student doesnt have faces. if any student has faces, but no encodings, then create encodings.
 
     student_encodings, student_faces, no_faces = get_student_encodings_from_panel_id(
-        attModel.panel_id
+        attModel.panel
     )
     print("student_encodings", student_encodings)
     print("student_faces", student_faces)
     print("no_faces", no_faces)
-
     if len(no_faces) > 0:
         print("These students do not have faces: ", no_faces)
         # return an error, that these students do not have faces.
@@ -274,47 +272,65 @@ async def add_attendance_route(attModel: AttendanceModel):
     for i in no_faces:
         student_encodings.pop(i)
 
+    student_ids = list(student_encodings.keys())
+
     # iterate through all encodings, and if they are empty, create an instance of the student manager class, and pass the faces.
     for i, j in student_encodings.items():
         if not j:
+            print("Creating encoding for student: ", i)
             student_manager = StudentManager(i, student_faces[i], [])
             # get the encoding from the studentmanager class' create_encoding method.
             student_manager.create_face_encoding()
             # get face encodings from the student manager class
-            face_encoding = student_manager.get_student_face_encodings()
-            add_student_encoding(i, len(student_faces[i]), face_encoding)
+            face_encoding = student_manager.get_serialized_student_face_encodings()
+            print(face_encoding)
+            # return []
+            await add_student_encoding(i, len(student_faces[i]), face_encoding)
 
+    # everything working till here. ------------------
     # call the get attendance function from the face rec class, and pass the needed things.
     face_rec = FaceRec(
-        lecture_images, student_encodings, attModel.panel_id, attModel.room_id
+        student_encodings,
+        lecture_images,
+        attModel.panel,
+        student_ids,
+        attModel.room,
     )
     # get present and absent students from the attendance function. (id)
-    present, absent = face_rec.get_attendance()
-
+    present, absent = face_rec.find_attendance()
+    print(present, absent)
     # add the no faces people to the absent list.
     absent.extend(no_faces)
     # create a new row in the lectures collection in the database, with the class_id, room_id, date, time, students_present, students_absent, and lecture_images, and teacher and subject id.
-    current_semester = get_current_sem_from_panel(attModel.panel_id)
+    current_semester = get_current_sem_from_panel(attModel.panel)
     new_lecture = {
         "date": attModel.date,
         "start_time": attModel.start_time,
         "end_time": attModel.end_time,
         "subject": attModel.subject,
         "teacher": attModel.teacher,
-        "panel": attModel.panel_id,
-        "room": attModel.room_id,
+        "panel": attModel.panel,
+        "room": attModel.room,
         "semester": current_semester,
         "students_present": present,
         "students_absent": absent,
         "lecture_images": lecture_images,
     }
-    add_lecture(new_lecture)
-
+    print(new_lecture)
+    lec_id = add_lecture(new_lecture)
+    if not lec_id:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "detail": f"An error occurred while adding the lecture to the database"
+            },
+        )
     return JSONResponse(
         status_code=200,
-        content=new_lecture,
+        content={
+            "detail": f"Lecture added successfully. Present: {present}, Absent: {absent}. id is: {lec_id}"
+        },
     )
-
 
 # separating out this funciton to be called from within the server later on without triggering route.
 async def add_face_encoding(student_id: str, number_of_faces: int, face_encoding):
@@ -329,7 +345,7 @@ async def add_face_encoding(student_id: str, number_of_faces: int, face_encoding
 
     # upload to firebase
     try:
-        face_encoding_model_url = fb_storage.upload_image(face_encoding)
+        face_encoding_model_url = fb_storage.upload_encoding(face_encoding)
     except Exception as e:
         return Response(
             status_code=500,

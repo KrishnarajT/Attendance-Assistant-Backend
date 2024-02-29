@@ -58,6 +58,17 @@ class FaceRec:
         image_np = np.array(image)
         return image_np
 
+    def get_encodings_from_url(self, encoding_url):
+        response = requests.get(encoding_url)
+        response.raise_for_status()  # Ensure we got a valid response
+
+        # Use BytesIO to handle the byte stream
+        bytes_io = io.BytesIO(response.content)
+
+        # convert back from pickle to the face encodings
+        face_encodings = pickle.load(bytes_io)
+        return face_encodings
+    
     def process_face_encodings(self):
         """
         Process the face encodings of the students.
@@ -67,7 +78,8 @@ class FaceRec:
         # load the face encodings
         for student_id in self.student_face_encodings:
             # get the face encodings
-            face_encodings = pickle.loads(self.student_face_encodings[student_id])
+            face_encodings = self.get_encodings_from_url(self.student_face_encodings[student_id])
+            
             # replace the url with the face encodings
             self.student_face_encodings[student_id] = face_encodings
 

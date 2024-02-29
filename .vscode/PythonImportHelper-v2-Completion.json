@@ -994,14 +994,6 @@
         "documentation": {}
     },
     {
-        "label": "add_student_encoding",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
         "label": "get_student_encodings_from_student_ids",
         "importPath": "services.student_services",
         "description": "services.student_services",
@@ -1897,7 +1889,7 @@
         "kind": 6,
         "importPath": "app.models.ClientUploadModels",
         "description": "app.models.ClientUploadModels",
-        "peekOfCode": "class AttendanceModel(BaseModel):\n    room_id: str\n    subject_id: str\n    teacher_id: str\n    panel_id: str\n    start_time: str\n    date: str\n    end_time: str\nclass AddFaceModel(BaseModel):\n    student_id: str",
+        "peekOfCode": "class AttendanceModel(BaseModel):\n    room: str\n    subject: str\n    teacher: str\n    panel: str\n    start_time: str\n    date: str\n    end_time: str\nclass AddFaceModel(BaseModel):\n    student_id: str",
         "detail": "app.models.ClientUploadModels",
         "documentation": {}
     },
@@ -2590,7 +2582,7 @@
         "kind": 6,
         "importPath": "app.services.assistanceFirebase",
         "description": "app.services.assistanceFirebase",
-        "peekOfCode": "class AssistanceFirebase:\n    def __init__(self):\n        self.storage = firebaseStorage.fb_storage\n    def upload_image(self, image):\n        bucket = self.storage\n        unique_name = str(uuid.uuid4())\n        blob = bucket.blob(unique_name + \".jpg\")\n        image_stream = BytesIO(image)\n        blob.upload_from_file(image_stream)\n        blob.make_public()",
+        "peekOfCode": "class AssistanceFirebase:\n    def __init__(self):\n        self.storage = firebaseStorage.fb_storage\n        self.image_url = None\n        self.encoding_url = None\n    def upload_image(self, image):\n        bucket = self.storage\n        unique_name = str(uuid.uuid4())\n        blob = bucket.blob(unique_name + \".jpg\")\n        image_stream = BytesIO(image)",
         "detail": "app.services.assistanceFirebase",
         "documentation": {}
     },
@@ -2617,7 +2609,7 @@
         "kind": 2,
         "importPath": "app.services.lecture_services",
         "description": "app.services.lecture_services",
-        "peekOfCode": "def add_lecture(lecture):\n    try:\n        mongo_output = db[\"classes\"].insert_one(lecture.dict())\n        lecture.set_id(str(mongo_output.inserted_id))\n        return lecture\n    except Exception as e:\n        print(f\"An error occurred while adding the lecture: {e}\")\n        return None\ndef get_lecture(lecture_id):\n    try:",
+        "peekOfCode": "def add_lecture(lecture):\n    try:\n        mongo_obj = db[\"classes\"].insert_one(lecture)\n        return str(mongo_obj.inserted_id)\n    except Exception as e:\n        print(f\"An error occurred while adding the lecture: {e}\")\n        return False\ndef get_lecture(lecture_id):\n    try:\n        lecture = db[\"classes\"].find_one({\"_id\": ObjectId(lecture_id)})",
         "detail": "app.services.lecture_services",
         "documentation": {}
     },
@@ -2644,7 +2636,7 @@
         "kind": 2,
         "importPath": "app.services.lecture_services",
         "description": "app.services.lecture_services",
-        "peekOfCode": "def get_lecture_images_between_time_on_date(start_time, end_time, given_date):\n    try:\n        lecture_images = db[\"lectureImages\"].find(\n            {\n                \"time\": {\"$gte\": start_time, \"$lte\": end_time},\n                \"date\": given_date,\n            }\n        )\n        return [\n            {",
+        "peekOfCode": "def get_lecture_images_between_time_on_date(start_time, end_time, given_date):\n    try:\n        lecture_images = db[\"lectureImages\"].find(\n            {\n                \"time\": {\"$gte\": start_time, \"$lte\": end_time},\n                \"date\": given_date,\n            }\n        )\n        # return the class_photo_url attribute of each row of the lectureimages that we found\n        lecs = []",
         "detail": "app.services.lecture_services",
         "documentation": {}
     },
@@ -2941,16 +2933,7 @@
         "kind": 2,
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
-        "peekOfCode": "def add_student(student):\n    try:\n        mongo_output = db[\"students\"].insert_one(student.dict())\n        student.set_id(str(mongo_output.inserted_id))\n        return student\n    except Exception as e:\n        print(f\"An error occurred while inserting the student: {e}\")\n        return None\ndef add_student_encoding(student_id, number_of_faces, encoding):\n    \"\"\"uploads the student encoding, and puts it in the students collection as well as the encoding collection. ",
-        "detail": "app.services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_student_encoding",
-        "kind": 2,
-        "importPath": "app.services.student_services",
-        "description": "app.services.student_services",
-        "peekOfCode": "def add_student_encoding(student_id, number_of_faces, encoding):\n    \"\"\"uploads the student encoding, and puts it in the students collection as well as the encoding collection. \n    Args:\n        student_id (str): id of the student whose encoding is to be added.\n        encoding (pkl): pkl serialized object. \n    Returns:\n        True if done well, else False\n    \"\"\"\n    # add encoding to firebase. \n    assist_firebase = AssistanceFirebase()",
+        "peekOfCode": "def add_student(student):\n    try:\n        mongo_output = db[\"students\"].insert_one(student.dict())\n        student.set_id(str(mongo_output.inserted_id))\n        return student\n    except Exception as e:\n        print(f\"An error occurred while inserting the student: {e}\")\n        return None\nasync def add_student_encoding(student_id, number_of_faces, encoding):\n    \"\"\"uploads the student encoding, and puts it in the students collection as well as the encoding collection.",
         "detail": "app.services.student_services",
         "documentation": {}
     },
@@ -2960,6 +2943,15 @@
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
         "peekOfCode": "def get_student_encodings_from_student_ids(student_ids):\n    \"\"\"\n    Get all student encodings from the panel id.\n    :param panel_id: The panel id.\n    :return: The student encodings.\n    \"\"\"\n    try:\n        print(\"trying to get student encodings\")\n        student_encodings = {}\n        no_faces = []",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_encoding_url_from_id",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def get_encoding_url_from_id(encoding_id):\n    \"\"\"\n    Get the encoding url from the encoding id.\n    :param encoding_id: The encoding id.\n    :return: The encoding url.\n    \"\"\"\n    try:\n        encoding = db[\"encodings\"].find_one({\"_id\": ObjectId(encoding_id)})\n        return encoding[\"encoding\"]\n    except Exception as e:",
         "detail": "app.services.student_services",
         "documentation": {}
     },

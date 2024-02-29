@@ -46,11 +46,6 @@ class StudentManager:
         # Create face encoding for the given images
         for image in self.student_faces_image_urls:
             image_np = self.get_image_from_url(image)
-            print(image_np)
-            # show the image
-            plt.imshow(
-                image_np
-            )  # You should see an image of the student whose face is to be recognized
             student_face_locations = face_recognition.face_locations(image_np)
             student_face_encoding = face_recognition.face_encodings(
                 image_np, student_face_locations
@@ -95,8 +90,9 @@ class StudentManager:
         self.serialized_student_face_encodings = pickle.dumps(
             self.student_face_encodings
         )
+        return self.serialized_student_face_encodings
 
-    def delete_face_encodings(self, student_id):
+    def delete_face_encodings(self):
         """
         Delete the face encoding of the student with the given id.
         student_id: id of the student whose face is to be deleted

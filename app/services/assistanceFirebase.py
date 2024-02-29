@@ -4,6 +4,8 @@ import uuid
 class AssistanceFirebase:
     def __init__(self):
         self.storage = firebaseStorage.fb_storage
+        self.image_url = None
+        self.encoding_url = None
 
     def upload_image(self, image):
         bucket = self.storage
@@ -20,13 +22,12 @@ class AssistanceFirebase:
 
         image_url = blob.public_url
 
-        return image_url
+        self.image_url = image_url
 
     def upload_encoding(self, encoding):
         """
         encoding is a serialized pickle object
         """
-        
         bucket = self.storage
 
         unique_name = str(uuid.uuid4())
@@ -41,7 +42,12 @@ class AssistanceFirebase:
 
         encoding_url = blob.public_url
 
-        return encoding_url
-
-
+        self.encoding_url = encoding_url
     
+    # getter methods
+    def get_image_url(self):
+        return self.image_url
+    
+    def get_encoding_url(self): 
+        return self.encoding_url
+

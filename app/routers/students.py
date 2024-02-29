@@ -20,7 +20,6 @@ from services.student_services import (
     add_student,
     get_student_encoding_from_student_id,
     get_all_students,
-    add_student_encoding,
 )
 
 from services.panel_services import get_student_by_panel_id
