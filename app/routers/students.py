@@ -110,29 +110,3 @@ def get_all_students_route():
         raise HTTPException(status_code=503, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-
-# route for adding student encoding
-@router.post(
-    "/add_student_encoding",
-    status_code=200,
-    summary="Add student encoding",
-    response_model=EncodingResponseModel,
-)
-def add_student_encoding_route(student_encoding: EncodingModel):
-    # get the student id and the encoding url
-    student_id = student_encoding.student_id
-    encoding_url = student_encoding.encoding_url
-    try:
-        # call the function from mongo service to add the student encoding
-        student_encoding_response = add_student_encoding(student_id, encoding_url)
-        encoding_response_model = EncodingResponseModel(
-            student_id=student_id,
-            number_of_faces=student_encoding_response["number_of_faces"],
-            encoding_url=student_encoding_response["encoding"],
-        )
-        return encoding_response_model
-    except PyMongoError as e:
-        raise HTTPException(status_code=503, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))

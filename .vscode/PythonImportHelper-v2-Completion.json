@@ -59,12 +59,72 @@
         "documentation": {}
     },
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
         "label": "face_recognition",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "face_recognition",
         "description": "face_recognition",
         "detail": "face_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
         "documentation": {}
     },
     {
@@ -461,14 +521,6 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -637,11 +689,27 @@
         "documentation": {}
     },
     {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
         "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "AssistanceFirebase",
+        "importPath": "services.assistanceFirebase",
+        "description": "services.assistanceFirebase",
+        "isExtraImport": true,
+        "detail": "services.assistanceFirebase",
         "documentation": {}
     },
     {
@@ -662,6 +730,14 @@
     },
     {
         "label": "add_class_photo_to_db",
+        "importPath": "services.lecture_services",
+        "description": "services.lecture_services",
+        "isExtraImport": true,
+        "detail": "services.lecture_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_lecture",
         "importPath": "services.lecture_services",
         "description": "services.lecture_services",
         "isExtraImport": true,
@@ -698,95 +774,6 @@
         "description": "services.lecture_services",
         "isExtraImport": true,
         "detail": "services.lecture_services",
-        "documentation": {}
-    },
-    {
-        "label": "services.panel_services",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_student_ids_from_panel_id",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_student_encodings_from_panel_id",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_panel",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_all_panels",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "set_current_sem_for_panel",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_semester_to_panel",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_student_to_panel",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_student_by_panel_id",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_semester",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_all_semesters",
-        "importPath": "services.panel_services",
-        "description": "services.panel_services",
-        "isExtraImport": true,
-        "detail": "services.panel_services",
         "documentation": {}
     },
     {
@@ -878,7 +865,104 @@
         "documentation": {}
     },
     {
+        "label": "services.panel_services",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_panel_id",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_sem_from_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_panels",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "set_current_sem_for_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester_to_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_to_panel",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_by_panel_id",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_semester",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_semesters",
+        "importPath": "services.panel_services",
+        "description": "services.panel_services",
+        "isExtraImport": true,
+        "detail": "services.panel_services",
+        "documentation": {}
+    },
+    {
         "label": "add_student_face_to_db",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_encoding",
         "importPath": "services.student_services",
         "description": "services.student_services",
         "isExtraImport": true,
@@ -1302,14 +1386,6 @@
         "documentation": {}
     },
     {
-        "label": "BytesIO",
-        "importPath": "io",
-        "description": "io",
-        "isExtraImport": true,
-        "detail": "io",
-        "documentation": {}
-    },
-    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
@@ -1610,14 +1686,6 @@
         "documentation": {}
     },
     {
-        "label": "CORSMiddleware",
-        "importPath": "fastapi.middleware.cors",
-        "description": "fastapi.middleware.cors",
-        "isExtraImport": true,
-        "detail": "fastapi.middleware.cors",
-        "documentation": {}
-    },
-    {
         "label": "cred",
         "kind": 5,
         "importPath": "app.data.firebaseStorage",
@@ -1649,241 +1717,7 @@
         "kind": 6,
         "importPath": "app.facial_recognition.FaceRec",
         "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "class FaceRec:\n\t\"\"\"\n\tContains methods for facial recognition of multiple students, being present in a single image. So basically if you\n\twanna get the attendance of a class, you have to instantiate this class, and then call the methods to get the\n\tattendance. It contains all the methods that will actually perform the facial recognition using multithreading.\n\tAfter you are done you can simply delete the object, and all the data will be cleaned up.\n\t\"\"\"\n\tdef __init__(self, student_face_encodings: dict, class_images: list, panel_id: str, student_ids: list, room_id: str):\n\t\t\"\"\"\n\t\t:param student_face_encodings: dictionary containing the face encodings of the students. The keys are the",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tstudent_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tstudent_face_encodings = {}\n\t\tprint(\"Init Face Recognition!\")\n\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.class_images",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.class_images = class_images\n\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. ",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.room_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.room_id = room_id\n\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.panel_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.panel_id = panel_id\n\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_present",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_present = []\n\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_absent",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_absent = []\n\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings\n\t\tfor student_id in self.student_face_encodings:",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_ids",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_ids = student_ids\n\tdef process_face_encodings(self):\n\t\t\"\"\"\n\t\tProcess the face encodings of the students.\n\t\t# student face encodings is a dictionary with student id as key and face encodings url as value. \n\t\tThe url is of a pickle file. we have to load the pickle file and get the face encodings.\n\t\t\"\"\"\n\t\t# load the face encodings\n\t\tfor student_id in self.student_face_encodings:\n\t\t\t# get the face encodings",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tface_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tface_encodings = pickle.loads(self.student_face_encodings[student_id])\n\t\t\t# replace the url with the face encodings\n\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tself.student_face_encodings[student_id]",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tself.student_face_encodings[student_id] = face_encodings\n\tdef find_attendance(self):\n\t\t\"\"\"\n\t\tPerform the facial recognition on the class images, and return the attendance.\n\t\t\"\"\"\n\t\t# check if the student face encodings are a string or a face encoding object. \n\t\tif isinstance(list(self.student_face_encodings.values())[0], str):\n\t\t\tself.process_face_encodings()\n\t\telse:\n\t\t\tprint(\"Face encodings are already loaded!\")",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tthreads",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tthreads = []\n\t\tfor image in self.class_images:\n\t\t\tt = threading.Thread(target=self.recognize_faces, args=(image,))\n\t\t\tthreads.append(t)\n\t\t\tt.start()\n\t\t# wait for all threads to finish\n\t\tfor t in threads:\n\t\t\tt.join()\n\t\t# filter the students_present list to remove duplicates\n\t\tself.students_present = list(set(self.students_present))",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tt",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tt = threading.Thread(target=self.recognize_faces, args=(image,))\n\t\t\tthreads.append(t)\n\t\t\tt.start()\n\t\t# wait for all threads to finish\n\t\tfor t in threads:\n\t\t\tt.join()\n\t\t# filter the students_present list to remove duplicates\n\t\tself.students_present = list(set(self.students_present))\n\t\t# get absent students\n\t\tself.students_absent = list(set(self.student_ids) - set(self.students_present))",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_present",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_present = list(set(self.students_present))\n\t\t# get absent students\n\t\tself.students_absent = list(set(self.student_ids) - set(self.students_present))\n\t\treturn self.students_present, self.students_absent\n\tdef recognize_faces(self, image):\n\t\t\"\"\"\n\t\tRecognize the faces in the given image, and update the attendance.\n\t\t\"\"\"\n\t\t# load the image\n\t\timage = face_recognition.load_image_file(image)",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_absent",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_absent = list(set(self.student_ids) - set(self.students_present))\n\t\treturn self.students_present, self.students_absent\n\tdef recognize_faces(self, image):\n\t\t\"\"\"\n\t\tRecognize the faces in the given image, and update the attendance.\n\t\t\"\"\"\n\t\t# load the image\n\t\timage = face_recognition.load_image_file(image)\n\t\t# get the face locations\n\t\tface_locations = face_recognition.face_locations(image)",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\timage",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\timage = face_recognition.load_image_file(image)\n\t\t# get the face locations\n\t\tface_locations = face_recognition.face_locations(image)\n\t\t# get the face encodings\n\t\tface_encodings = face_recognition.face_encodings(image, face_locations)\n\t\t# check if the face encodings match with the students' face encodings\n\t\tfor face_encoding in face_encodings:\n\t\t\t# compare the face encodings\n\t\t\tmatches = face_recognition.compare_faces(list(self.student_face_encodings.values()), face_encoding)\n\t\t\t# get the student id",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tface_locations",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tface_locations = face_recognition.face_locations(image)\n\t\t# get the face encodings\n\t\tface_encodings = face_recognition.face_encodings(image, face_locations)\n\t\t# check if the face encodings match with the students' face encodings\n\t\tfor face_encoding in face_encodings:\n\t\t\t# compare the face encodings\n\t\t\tmatches = face_recognition.compare_faces(list(self.student_face_encodings.values()), face_encoding)\n\t\t\t# get the student id\n\t\t\tstudent_id = list(self.student_face_encodings.keys())[matches.index(True)]\n\t\t\t# add the student to the present list",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tface_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tface_encodings = face_recognition.face_encodings(image, face_locations)\n\t\t# check if the face encodings match with the students' face encodings\n\t\tfor face_encoding in face_encodings:\n\t\t\t# compare the face encodings\n\t\t\tmatches = face_recognition.compare_faces(list(self.student_face_encodings.values()), face_encoding)\n\t\t\t# get the student id\n\t\t\tstudent_id = list(self.student_face_encodings.keys())[matches.index(True)]\n\t\t\t# add the student to the present list\n\t\t\tself.students_present.append(student_id)\n\tdef add_student_face_encodings(self, student_id, student_face_encodings):",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tmatches",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tmatches = face_recognition.compare_faces(list(self.student_face_encodings.values()), face_encoding)\n\t\t\t# get the student id\n\t\t\tstudent_id = list(self.student_face_encodings.keys())[matches.index(True)]\n\t\t\t# add the student to the present list\n\t\t\tself.students_present.append(student_id)\n\tdef add_student_face_encodings(self, student_id, student_face_encodings):\n\t\t\"\"\"\n\t\tAdd the face encodings of the student to the class face encodings.\n\t\t\"\"\"\n\t\tself.student_face_encodings[student_id] = student_face_encodings",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tstudent_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\t\tstudent_id = list(self.student_face_encodings.keys())[matches.index(True)]\n\t\t\t# add the student to the present list\n\t\t\tself.students_present.append(student_id)\n\tdef add_student_face_encodings(self, student_id, student_face_encodings):\n\t\t\"\"\"\n\t\tAdd the face encodings of the student to the class face encodings.\n\t\t\"\"\"\n\t\tself.student_face_encodings[student_id] = student_face_encodings\n\tdef add_class_images(self, class_images):\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings[student_id]",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_face_encodings[student_id] = student_face_encodings\n\tdef add_class_images(self, class_images):\n\t\t\"\"\"\n\t\tAdd the class images to the class images list.\n\t\t\"\"\"\n\t\tself.class_images.append(class_images)\n\t# clean up\n\tdef __del__(self):\n\t\t\"\"\"\n\t\tClean up the object.",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_present",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_present = students_present\n\tdef set_students_absent(self, students_absent):\n\t\t\"\"\"\n\t\tSet the students absent in the class.\n\t\t\"\"\"\n\t\tself.students_absent = students_absent\n\tdef set_student_face_encodings(self, student_face_encodings):\n\t\t\"\"\"\n\t\tSet the student face encodings.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.students_absent",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.students_absent = students_absent\n\tdef set_student_face_encodings(self, student_face_encodings):\n\t\t\"\"\"\n\t\tSet the student face encodings.\n\t\t\"\"\"\n\t\tself.student_face_encodings = student_face_encodings\n\tdef set_class_images(self, class_images):\n\t\t\"\"\"\n\t\tSet the class images.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\tdef set_class_images(self, class_images):\n\t\t\"\"\"\n\t\tSet the class images.\n\t\t\"\"\"\n\t\tself.class_images = class_images\n\tdef set_panel_id(self, panel_id):\n\t\t\"\"\"\n\t\tSet the panel id.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.class_images",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.class_images = class_images\n\tdef set_panel_id(self, panel_id):\n\t\t\"\"\"\n\t\tSet the panel id.\n\t\t\"\"\"\n\t\tself.panel_id = panel_id\n\tdef set_student_ids(self, student_ids):\n\t\t\"\"\"\n\t\tSet the student ids.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.panel_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.panel_id = panel_id\n\tdef set_student_ids(self, student_ids):\n\t\t\"\"\"\n\t\tSet the student ids.\n\t\t\"\"\"\n\t\tself.student_ids = student_ids",
-        "detail": "app.facial_recognition.FaceRec",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_ids",
-        "kind": 5,
-        "importPath": "app.facial_recognition.FaceRec",
-        "description": "app.facial_recognition.FaceRec",
-        "peekOfCode": "\t\tself.student_ids = student_ids",
+        "peekOfCode": "class FaceRec:\n    \"\"\"\n    Contains methods for facial recognition of multiple students, being present in a single image. So basically if you\n    wanna get the attendance of a class, you have to instantiate this class, and then call the methods to get the\n    attendance. It contains all the methods that will actually perform the facial recognition using multithreading.\n    After you are done you can simply delete the object, and all the data will be cleaned up.\n    \"\"\"\n    def __init__(\n        self,\n        student_face_encodings: dict,",
         "detail": "app.facial_recognition.FaceRec",
         "documentation": {}
     },
@@ -1892,160 +1726,7 @@
         "kind": 6,
         "importPath": "app.facial_recognition.StudentManager",
         "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "class StudentManager:\n\tdef __init__(self, student_id: str, student_face_image_urls: list, student_face_encodings: list = []):\n\t\t\"\"\"\n\t\tThis class should be instantiated when we want to not actually perform any facial Recognition, but create\n\t\tencodings for the students, and update them to and from the databases. :param student_id: id of the student\n\t\twhose faces are provided in the images list :param student_face_image_urls: list of image urls that contain\n\t\tonly one face, the face belonging to student with id 'student_id' :param student_face_encodings: list of face\n\t\tencodings of the student, note that these are not serialized, and are just the face encodings\n\t\t\"\"\"\n\t\tprint(\"Init Student Recognition Methods!\")",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_id = student_id\n\t\tself.student_face_encodings = student_face_encodings\n\t\tself.number_of_faces = 0\n\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\t\tself.number_of_faces = 0\n\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.number_of_faces",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.number_of_faces = 0\n\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.serialized_student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = None\n\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")\n\t\t# Create face encoding for the given images",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_faces_image_urls",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_faces_image_urls = student_face_image_urls\n\tdef create_face_encoding(self):\n\t\t\"\"\"\n\t\tCreate face encoding for the given image. Also create the serialized face encodings.\n\t\timages: list of image urls that contain only one face, the face belonging to student with id 'student_id'\n\t\tid: id of the student whose faces are provided in the images list\n\t\t\"\"\"\n\t\tprint(\"trying to create face encoding. \")\n\t\t# Create face encoding for the given images\n\t\tfor image in self.student_faces_image_urls:",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\t\tstudent_image",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\t\tstudent_image = face_recognition.load_image_file(image)\n\t\t\tself.student_face_encodings.append(\n\t\t\t\tface_recognition.face_encodings(student_image)[0]\n\t\t\t)\n\t\t# serialize student_face_encodings so that we can upload it using pickle\n\t\tself.serialized_student_face_encodings = pickle.dumps(self.student_face_encodings)\n\tdef update_face_encoding(self, new_face_url, student_id):\n\t\t\"\"\"\n\t\tUpdate the face encoding of the student with the new face.\n\t\tnew_face: image url of the new face of the student",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.serialized_student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = pickle.dumps(self.student_face_encodings)\n\tdef update_face_encoding(self, new_face_url, student_id):\n\t\t\"\"\"\n\t\tUpdate the face encoding of the student with the new face.\n\t\tnew_face: image url of the new face of the student\n\t\tstudent_id: id of the student whose face is to be updated\n\t\t\"\"\"\n\t\t# Create face encoding for the given image\n\t\tnew_student_image = face_recognition.load_image_file(new_face_url)\n\t\tstudent_face_encoding = face_recognition.face_encodings(new_student_image)[0]",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tnew_student_image",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tnew_student_image = face_recognition.load_image_file(new_face_url)\n\t\tstudent_face_encoding = face_recognition.face_encodings(new_student_image)[0]\n\t\t# append to the list of face encodings\n\t\tself.student_face_encodings.append(student_face_encoding)\n\t\t# serialize student_face_encoding so that we can upload it using pickle\n\t\tself.serialized_student_face_encodings = pickle.dumps(self.student_face_encodings)\n\tdef delete_face_encodings(self, student_id):\n\t\t\"\"\"\n\t\tDelete the face encoding of the student with the given id.\n\t\tstudent_id: id of the student whose face is to be deleted",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tstudent_face_encoding",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tstudent_face_encoding = face_recognition.face_encodings(new_student_image)[0]\n\t\t# append to the list of face encodings\n\t\tself.student_face_encodings.append(student_face_encoding)\n\t\t# serialize student_face_encoding so that we can upload it using pickle\n\t\tself.serialized_student_face_encodings = pickle.dumps(self.student_face_encodings)\n\tdef delete_face_encodings(self, student_id):\n\t\t\"\"\"\n\t\tDelete the face encoding of the student with the given id.\n\t\tstudent_id: id of the student whose face is to be deleted\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.serialized_student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = pickle.dumps(self.student_face_encodings)\n\tdef delete_face_encodings(self, student_id):\n\t\t\"\"\"\n\t\tDelete the face encoding of the student with the given id.\n\t\tstudent_id: id of the student whose face is to be deleted\n\t\t\"\"\"\n\t\t# clear all the face encodings\n\t\tself.student_face_encodings = []\n\t\tself.serialized_student_face_encodings = None\n\t# getter methods",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_face_encodings = []\n\t\tself.serialized_student_face_encodings = None\n\t# getter methods\n\tdef get_student_id(self):\n\t\t\"\"\"\n\t\tGet the student id.\n\t\t\"\"\"\n\t\treturn self.student_id\n\tdef get_student_face_encodings(self):\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.serialized_student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = None\n\t# getter methods\n\tdef get_student_id(self):\n\t\t\"\"\"\n\t\tGet the student id.\n\t\t\"\"\"\n\t\treturn self.student_id\n\tdef get_student_face_encodings(self):\n\t\t\"\"\"\n\t\tGet the student face encodings.",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_id",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_id = student_id\n\tdef set_student_face_encodings(self, student_face_encodings):\n\t\t\"\"\"\n\t\tSet the student face encodings.\n\t\t\"\"\"\n\t\tself.student_face_encodings = student_face_encodings\n\tdef set_number_of_faces(self, number_of_faces):\n\t\t\"\"\"\n\t\tSet the number of faces.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_face_encodings = student_face_encodings\n\tdef set_number_of_faces(self, number_of_faces):\n\t\t\"\"\"\n\t\tSet the number of faces.\n\t\t\"\"\"\n\t\tself.number_of_faces = number_of_faces\n\tdef set_serialized_student_face_encodings(self, serialized_student_face_encodings):\n\t\t\"\"\"\n\t\tSet the serialized student face encodings.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.number_of_faces",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.number_of_faces = number_of_faces\n\tdef set_serialized_student_face_encodings(self, serialized_student_face_encodings):\n\t\t\"\"\"\n\t\tSet the serialized student face encodings.\n\t\t\"\"\"\n\t\tself.serialized_student_face_encodings = serialized_student_face_encodings\n\tdef set_student_faces_image_urls(self, student_faces_image_urls):\n\t\t\"\"\"\n\t\tSet the student faces image urls.\n\t\t\"\"\"",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.serialized_student_face_encodings",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.serialized_student_face_encodings = serialized_student_face_encodings\n\tdef set_student_faces_image_urls(self, student_faces_image_urls):\n\t\t\"\"\"\n\t\tSet the student faces image urls.\n\t\t\"\"\"\n\t\tself.student_faces_image_urls = student_faces_image_urls",
-        "detail": "app.facial_recognition.StudentManager",
-        "documentation": {}
-    },
-    {
-        "label": "\t\tself.student_faces_image_urls",
-        "kind": 5,
-        "importPath": "app.facial_recognition.StudentManager",
-        "description": "app.facial_recognition.StudentManager",
-        "peekOfCode": "\t\tself.student_faces_image_urls = student_faces_image_urls",
+        "peekOfCode": "class StudentManager:\n    def __init__(\n        self,\n        student_id: str,\n        student_face_image_urls: list,\n        student_face_encodings: list = [],\n    ):\n        \"\"\"\n        This class should be instantiated when we want to not actually perform any facial Recognition, but create\n        encodings for the students, and update them to and from the dat abases. :param student_id: id of the student",
         "detail": "app.facial_recognition.StudentManager",
         "documentation": {}
     },
@@ -2405,7 +2086,7 @@
         "kind": 6,
         "importPath": "app.models.StudentModels",
         "description": "app.models.StudentModels",
-        "peekOfCode": "class EncodingModel(BaseModel):\n    student_id: str\nclass EncodingResponseModel(BaseModel):\n    _id: str\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
+        "peekOfCode": "class EncodingModel(BaseModel):\n    student_id: str\n    no_of_faces: int\nclass EncodingResponseModel(BaseModel):\n    _id: str\n    student_id: str\n    number_of_faces: int\n    encoding_url: str # this is the firebase url where the encoding is stored.",
         "detail": "app.models.StudentModels",
         "documentation": {}
     },
@@ -2774,16 +2455,7 @@
         "kind": 2,
         "importPath": "app.routers.students",
         "description": "app.routers.students",
-        "peekOfCode": "def get_all_students_route():\n    try:\n        # call the function from mongo service to get all students\n        students = get_all_students()\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=503, detail=str(e))\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))\n# route for adding student encoding",
-        "detail": "app.routers.students",
-        "documentation": {}
-    },
-    {
-        "label": "add_student_encoding_route",
-        "kind": 2,
-        "importPath": "app.routers.students",
-        "description": "app.routers.students",
-        "peekOfCode": "def add_student_encoding_route(student_encoding: EncodingModel):\n    # get the student id and the encoding url\n    student_id = student_encoding.student_id\n    encoding_url = student_encoding.encoding_url\n    try:\n        # call the function from mongo service to add the student encoding\n        student_encoding_response = add_student_encoding(student_id, encoding_url)\n        encoding_response_model = EncodingResponseModel(\n            student_id=student_id,\n            number_of_faces=student_encoding_response[\"number_of_faces\"],",
+        "peekOfCode": "def get_all_students_route():\n    try:\n        # call the function from mongo service to get all students\n        students = get_all_students()\n        return students\n    except PyMongoError as e:\n        raise HTTPException(status_code=503, detail=str(e))\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=str(e))",
         "detail": "app.routers.students",
         "documentation": {}
     },
@@ -2990,7 +2662,7 @@
         "kind": 2,
         "importPath": "app.services.panel_services",
         "description": "app.services.panel_services",
-        "peekOfCode": "def get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id\n    try:\n        # get all students in a panel.\n        student_ids = get_student_ids_from_panel_id(panel_id)\n        print(student_ids, \"are the students that are present in the panel \", panel_id)\n        student_encodings, student_faces, no_faces = get_student_encodings_from_student_ids(student_ids)",
+        "peekOfCode": "def get_student_encodings_from_panel_id(panel_id):\n    \"\"\"\n    Get all student encodings from a panel id.\n    \"\"\"\n    # get all the student encodings from a panel id\n    try:\n        # get all students in a panel.\n        student_ids = get_student_ids_from_panel_id(panel_id)\n        print(student_ids, \"are the students that are present in the panel \", panel_id)\n        student_encodings, student_faces, no_faces = (",
         "detail": "app.services.panel_services",
         "documentation": {}
     },
@@ -3035,7 +2707,16 @@
         "kind": 2,
         "importPath": "app.services.panel_services",
         "description": "app.services.panel_services",
-        "peekOfCode": "def set_current_sem_for_panel(panel_id, sem_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$set\": {\"current_sem\": ObjectId(sem_id)}}\n        )\n    except Exception as e:\n        print(\n            f\"An error occurred while setting the current semester for the panel: {e}\"\n        )\ndef add_semester_to_panel(panel_id, sem_id):",
+        "peekOfCode": "def set_current_sem_for_panel(panel_id, sem_id):\n    try:\n        db[\"panels\"].update_one(\n            {\"_id\": ObjectId(panel_id)}, {\"$set\": {\"current_sem\": ObjectId(sem_id)}}\n        )\n    except Exception as e:\n        print(\n            f\"An error occurred while setting the current semester for the panel: {e}\"\n        )\ndef get_current_sem_from_panel(panel_id):",
+        "detail": "app.services.panel_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_sem_from_panel",
+        "kind": 2,
+        "importPath": "app.services.panel_services",
+        "description": "app.services.panel_services",
+        "peekOfCode": "def get_current_sem_from_panel(panel_id):\n    try:\n        current_sem = db[\"panels\"].find_one({\"_id\": ObjectId(panel_id)})[\n            \"current_semester\"\n        ]\n        return current_sem\n    except Exception as e:\n        print(f\"An error occurred while getting the current semester: {e}\")\n        return None\ndef add_semester_to_panel(panel_id, sem_id):",
         "detail": "app.services.panel_services",
         "documentation": {}
     },
@@ -3260,7 +2941,7 @@
         "kind": 2,
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
-        "peekOfCode": "def add_student(student):\n    try:\n        mongo_output = db[\"students\"].insert_one(student.dict())\n        student.set_id(str(mongo_output.inserted_id))\n        return student\n    except Exception as e:\n        print(f\"An error occurred while inserting the student: {e}\")\n        return None\ndef add_student_encoding(student_id, encoding):\n    try:",
+        "peekOfCode": "def add_student(student):\n    try:\n        mongo_output = db[\"students\"].insert_one(student.dict())\n        student.set_id(str(mongo_output.inserted_id))\n        return student\n    except Exception as e:\n        print(f\"An error occurred while inserting the student: {e}\")\n        return None\ndef add_student_encoding(student_id, number_of_faces, encoding):\n    \"\"\"uploads the student encoding, and puts it in the students collection as well as the encoding collection. ",
         "detail": "app.services.student_services",
         "documentation": {}
     },
@@ -3269,7 +2950,7 @@
         "kind": 2,
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
-        "peekOfCode": "def add_student_encoding(student_id, encoding):\n    try:\n        mongo_output = db[\"encodings\"].insert_one(encoding)\n        encoding_id = str(mongo_output.inserted_id)\n        db[\"students\"].update_one(\n            {\"_id\": ObjectId(student_id)}, {\"$set\": {\"face_encoding\": encoding_id}}\n        )\n        return encoding_id\n    except Exception as e:\n        print(f\"An error occurred while adding the student encoding: {e}\")",
+        "peekOfCode": "def add_student_encoding(student_id, number_of_faces, encoding):\n    \"\"\"uploads the student encoding, and puts it in the students collection as well as the encoding collection. \n    Args:\n        student_id (str): id of the student whose encoding is to be added.\n        encoding (pkl): pkl serialized object. \n    Returns:\n        True if done well, else False\n    \"\"\"\n    # add encoding to firebase. \n    assist_firebase = AssistanceFirebase()",
         "detail": "app.services.student_services",
         "documentation": {}
     },
@@ -3865,24 +3546,6 @@
         "description": "drone.test",
         "peekOfCode": "test = test - 1",
         "detail": "drone.test",
-        "documentation": {}
-    },
-    {
-        "label": "index",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def index():\n    return {\"message\": \"Hello World\"}",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "app = FastAPI()\n# app.include_router(user_routes.router)\n# app.include_router(article_routes.router)\n# app.include_router(product_routes.router)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:3000\"],\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],",
-        "detail": "main",
         "documentation": {}
     }
 ]

@@ -152,7 +152,7 @@ This is not a very important collection, as teachers will not be authenticated u
 }
 ```
 
-## Classes
+## Lectures
 This is the most important collection. This will hold all the classes that are conducted. The students present and absent will be updated here. After each class is conducted, this collection is updated by adding a new entry with the present students. 
 ```json
 {

@@ -1,5 +1,6 @@
 from data.mongodb import connect_to_mongo
 from bson import ObjectId
+from services.assistanceFirebase import AssistanceFirebase
 db = connect_to_mongo()
 
 
@@ -64,10 +65,32 @@ def add_student(student):
         return None
 
 
-def add_student_encoding(student_id, encoding):
+def add_student_encoding(student_id, number_of_faces, encoding):
+    """uploads the student encoding, and puts it in the students collection as well as the encoding collection. 
+
+    Args:
+        student_id (str): id of the student whose encoding is to be added.
+        encoding (pkl): pkl serialized object. 
+
+    Returns:
+        True if done well, else False
+    """
+
+    # add encoding to firebase. 
+    assist_firebase = AssistanceFirebase()
+    encoding_url = assist_firebase.upload_encoding(encoding)
+    encoding = {
+        "student": student_id,
+        "encoding": encoding_url,
+        "number_of_faces": number_of_faces,
+    }
+
     try:
+        # add encoding to the encodings collection
         mongo_output = db["encodings"].insert_one(encoding)
         encoding_id = str(mongo_output.inserted_id)
+        
+        # add encoding id to the student row
         db["students"].update_one(
             {"_id": ObjectId(student_id)}, {"$set": {"face_encoding": encoding_id}}
         )
@@ -77,6 +100,7 @@ def add_student_encoding(student_id, encoding):
 
 
 def get_student_encodings_from_student_ids(student_ids):
+    
     """
     Get all student encodings from the panel id.
     :param panel_id: The panel id.

@@ -2,15 +2,12 @@
 This file contains the routes for uploading images and attendance information from the client side. So that means any route that sends data, and doesnt expect any data other than urls, from app or phones or websites, should be here. Not all functions are written for api use only, some can be called from the server side as well.
 """
 
-from fastapi import APIRouter, File, UploadFile, Response
+from fastapi import APIRouter, File, UploadFile
+from fastapi.responses import JSONResponse, Response
 from services.assistanceFirebase import AssistanceFirebase
 from datetime import datetime
 from services.lecture_services import get_lecture_images_between_time_on_date
 
-from services.panel_services import (
-    get_student_ids_from_panel_id,
-    get_student_encodings_from_panel_id,
-)
 from facial_recognition.StudentManager import StudentManager
 from facial_recognition.FaceRec import FaceRec
 
@@ -27,14 +24,17 @@ from models.ClientUploadModels import (
 
 
 # import services
+from services.panel_services import (
+    get_student_encodings_from_panel_id,
+    get_current_sem_from_panel,
+)
+
 from services.student_services import (
     add_student_face_to_db,
+    add_student_encoding,
 )
 
-from services.lecture_services import (
-    add_class_photo_to_db,
-)
-
+from services.lecture_services import add_class_photo_to_db, add_lecture
 
 fb_storage = AssistanceFirebase()
 
@@ -243,8 +243,6 @@ async def add_attendance_route(attModel: AttendanceModel):
         attModel.start_time, attModel.end_time, attModel.date
     )
 
-    # everything working till here. ------------------
-
     print(lecture_images)
     if not lecture_images:
         return Response(
@@ -252,87 +250,70 @@ async def add_attendance_route(attModel: AttendanceModel):
             content={"detail": f"No images found for the given time range"},
         )
 
+    # everything working till here. ------------------
     # return lecture_images
 
     # get all encodings of students in the panel but print error if even one student doesnt have faces. if any student has faces, but no encodings, then create encodings.
 
-    try:
-        student_encodings, student_faces, no_faces = (
-            get_student_encodings_from_panel_id(attModel.panel_id)
-        )
-        print(student_encodings)
-        if len(no_faces) > 0:
-            print("These students do not have faces: ", no_faces)
-            return Response(
-                status_code=500,
-                content={"detail": f"These students do not have faces: {no_faces}"}
-            )
-    except Exception as e:
-        # this should show the error if no face is found
-        return Response(status_code=500, content={"detail": f" {str(e)}"})
+    student_encodings, student_faces, no_faces = get_student_encodings_from_panel_id(
+        attModel.panel_id
+    )
+    print("student_encodings", student_encodings)
+    print("student_faces", student_faces)
+    print("no_faces", no_faces)
+
+    if len(no_faces) > 0:
+        print("These students do not have faces: ", no_faces)
+        # return an error, that these students do not have faces.
+        # return JSONResponse(
+        #     status_code=500,
+        #     content={"detail": f"Students {no_faces} do not have faces."}
+        # )
+
+    # remove no faces students from the student_encodings dict
+    for i in no_faces:
+        student_encodings.pop(i)
 
     # iterate through all encodings, and if they are empty, create an instance of the student manager class, and pass the faces.
-    
-    # get the encoding from the studentmanager class' create_encoding method. 
-    
-    # upload the newly created encoding to firebase
-    
-    # add encoding dictionary with number of faces, and student id to the encoding collection. 
-    
-    # add the encoding url to the student's row in the student collection in mongodb.
-    
-    # call the get attendance function from the face rec class, and pass the needed things. 
-    
+    for i, j in student_encodings.items():
+        if not j:
+            student_manager = StudentManager(i, student_faces[i], [])
+            # get the encoding from the studentmanager class' create_encoding method.
+            student_manager.create_face_encoding()
+            # get face encodings from the student manager class
+            face_encoding = student_manager.get_student_face_encodings()
+            add_student_encoding(i, len(student_faces[i]), face_encoding)
+
+    # call the get attendance function from the face rec class, and pass the needed things.
+    face_rec = FaceRec(
+        lecture_images, student_encodings, attModel.panel_id, attModel.room_id
+    )
     # get present and absent students from the attendance function. (id)
-    
+    present, absent = face_rec.get_attendance()
+
     # add the no faces people to the absent list.
-    
-    # create a new row in the lectures collection in the database, with the class_id, room_id, date, time, students_present, students_absent, and lecture_images, and teacher and subject id. 
-    
-    
-    
-    return []
-    # try:
-    #     # get all encodings of students in the panel
-    #     student_encodings = get_student_encodings_from_panel_id(attModel.panel_id)
-    #     print(student_encodings)
-    #     # iterate through all encodings, and if they are empty, create encodings. We can dothis because we did not have any errors regarding faces, that means faces exist but no encodings.
-    #     for student_id, encoding in student_encodings.items():
-    #         if not encoding:
-    #             # then create encodings
-    #             student_manager = StudentManager(student_id, student_faces, [])
-    #             face_encoding = student_manager.create_face_encoding()
-    #             # add the face encoding to the student's row in the student collection in mongodb.
-    #             await add_face_encoding(student_id, 1, face_encoding)
-    #             # add the face encoding to the student_encodings dictionary
-    #             student_encodings[student_id] = face_encoding
+    absent.extend(no_faces)
+    # create a new row in the lectures collection in the database, with the class_id, room_id, date, time, students_present, students_absent, and lecture_images, and teacher and subject id.
+    current_semester = get_current_sem_from_panel(attModel.panel_id)
+    new_lecture = {
+        "date": attModel.date,
+        "start_time": attModel.start_time,
+        "end_time": attModel.end_time,
+        "subject": attModel.subject,
+        "teacher": attModel.teacher,
+        "panel": attModel.panel_id,
+        "room": attModel.room_id,
+        "semester": current_semester,
+        "students_present": present,
+        "students_absent": absent,
+        "lecture_images": lecture_images,
+    }
+    add_lecture(new_lecture)
 
-    # except Exception as e:
-    #     return Response(status_code=500, content={"detail": f" {str(e)}"})
-
-    # student_ids = get_student_ids_from_panel_id(attModel.panel_id)
-
-    # # check encoding id is present for each student
-
-    # # if not present, return error
-    # # if present, add to the list of student encodings
-
-    # print("lecture images ", lecture_images)
-    # print("student encodings ", student_encodings)
-    # print("student ids ", student_ids)
-
-    # face_rec_obj = FaceRec(
-    #     lecture_images, student_encodings, attModel.panel_id, student_ids
-    # )
-
-    # # these attributes may change.
-    # output_attendance = AttendanceModel(
-    #     room_id=attModel.room_id,
-    #     date=attModel.date,
-    #     time=attModel.time,
-    #     students=attModel.students,
-    # )
-    # return Response(status_code=200, content=output_attendance)
+    return JSONResponse(
+        status_code=200,
+        content=new_lecture,
+    )
 
 
 # separating out this funciton to be called from within the server later on without triggering route.
