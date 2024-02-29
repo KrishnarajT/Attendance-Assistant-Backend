@@ -39,12 +39,11 @@ def get_all_class_photos():
 
 def add_lecture(lecture):
     try:
-        mongo_output = db["classes"].insert_one(lecture.dict())
-        lecture.set_id(str(mongo_output.inserted_id))
-        return lecture
+        mongo_obj = db["classes"].insert_one(lecture)
+        return str(mongo_obj.inserted_id)
     except Exception as e:
         print(f"An error occurred while adding the lecture: {e}")
-        return None
+        return False
 
 
 def get_lecture(lecture_id):
@@ -82,13 +81,11 @@ def get_lecture_images_between_time_on_date(start_time, end_time, given_date):
                 "date": given_date,
             }
         )
-        return [
-            {
-                "_id": str(lecture_image["_id"]),
-                **{key: value for key, value in lecture_image.items() if key != "_id"},
-            }
-            for lecture_image in lecture_images
-        ]
+        # return the class_photo_url attribute of each row of the lectureimages that we found
+        lecs = []
+        for lecture_image in lecture_images:
+            lecs.append(str(lecture_image["class_photo_url"]))
+        return lecs
     except Exception as e:
         print(f"An error occurred while getting the lecture images: {e}")
         return None

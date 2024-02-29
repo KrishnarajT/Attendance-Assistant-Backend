@@ -1,5 +1,7 @@
 from data.mongodb import connect_to_mongo
 from bson import ObjectId
+from services.assistanceFirebase import AssistanceFirebase
+
 db = connect_to_mongo()
 
 
@@ -64,10 +66,36 @@ def add_student(student):
         return None
 
 
-def add_student_encoding(student_id, encoding):
+async def add_student_encoding(student_id, number_of_faces, encoding):
+    """uploads the student encoding, and puts it in the students collection as well as the encoding collection.
+
+    Args:
+        student_id (str): id of the student whose encoding is to be added.
+        encoding (pkl): pkl serialized object.
+
+    Returns:
+        True if done well, else False
+    """
+    print(
+        "encoding in the add student encoding function in student services is ",
+        encoding,
+    )
+    # add encoding to firebase.
+    assist_firebase = AssistanceFirebase()
+    assist_firebase.upload_encoding(encoding)
+    encoding_url = assist_firebase.get_encoding_url()
+    encoding = {
+        "student": student_id,
+        "encoding": encoding_url,
+        "number_of_faces": number_of_faces,
+    }
+
     try:
+        # add encoding to the encodings collection
         mongo_output = db["encodings"].insert_one(encoding)
         encoding_id = str(mongo_output.inserted_id)
+
+        # add encoding id to the student row
         db["students"].update_one(
             {"_id": ObjectId(student_id)}, {"$set": {"face_encoding": encoding_id}}
         )
@@ -96,9 +124,25 @@ def get_student_encodings_from_student_ids(student_ids):
                 no_faces.append(student_id)
             else:
                 student_faces[str(student["_id"])] = student["faces"]
-            student_encodings[str(student["_id"])] = student["face_encoding"]
+            student_encodings[str(student["_id"])] = get_encoding_url_from_id(
+                student["face_encoding"]
+            )
 
         return (student_encodings, student_faces, no_faces)
     except Exception as e:
         print(f"An error occurred while getting the student encodings: {e}")
         return e
+
+
+def get_encoding_url_from_id(encoding_id):
+    """
+    Get the encoding url from the encoding id.
+    :param encoding_id: The encoding id.
+    :return: The encoding url.
+    """
+    try:
+        encoding = db["encodings"].find_one({"_id": ObjectId(encoding_id)})
+        return encoding["encoding"]
+    except Exception as e:
+        print(f"An error occurred while getting the encoding url: {e}")
+        return None

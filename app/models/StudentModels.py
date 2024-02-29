@@ -28,6 +28,7 @@ class StudentResponseModel(BaseModel):
 # used to store this encoding in firebase. The url is returned of the stored encoding, and is stored in mongodb.
 class EncodingModel(BaseModel):
     student_id: str
+    no_of_faces: int
 
 class EncodingResponseModel(BaseModel):
     _id: str

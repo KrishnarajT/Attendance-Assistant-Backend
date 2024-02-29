@@ -9,6 +9,7 @@ from services.student_services import (
     get_student_encodings_from_student_ids,
 )
 
+
 def get_student_encodings_from_panel_id(panel_id):
     """
     Get all student encodings from a panel id.
@@ -18,10 +19,12 @@ def get_student_encodings_from_panel_id(panel_id):
         # get all students in a panel.
         student_ids = get_student_ids_from_panel_id(panel_id)
         print(student_ids, "are the students that are present in the panel ", panel_id)
-        student_encodings, student_faces, no_faces = get_student_encodings_from_student_ids(student_ids)
+        student_encodings, student_faces, no_faces = (
+            get_student_encodings_from_student_ids(student_ids)
+        )
         if len(no_faces) > 0:
             print("These students do not have faces: ", no_faces)
-        return student_encodings, no_faces
+        return student_encodings, student_faces, no_faces
     except Exception as e:
         # handle exception
         print(e)
@@ -95,6 +98,17 @@ def set_current_sem_for_panel(panel_id, sem_id):
         )
 
 
+def get_current_sem_from_panel(panel_id):
+    try:
+        current_sem = db["panels"].find_one({"_id": ObjectId(panel_id)})[
+            "current_semester"
+        ]
+        return current_sem
+    except Exception as e:
+        print(f"An error occurred while getting the current semester: {e}")
+        return None
+
+
 def add_semester_to_panel(panel_id, sem_id):
     try:
         db["panels"].update_one(
@@ -102,6 +116,7 @@ def add_semester_to_panel(panel_id, sem_id):
         )
     except Exception as e:
         print(f"An error occurred while adding the semester to the panel: {e}")
+
 
 def add_semester(semester):
     try:
