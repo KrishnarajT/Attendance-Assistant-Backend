@@ -99,7 +99,7 @@ async def add_student_encoding(student_id, number_of_faces, encoding):
         db["students"].update_one(
             {"_id": ObjectId(student_id)}, {"$set": {"face_encoding": encoding_id}}
         )
-        return encoding_id
+        return encoding_url
     except Exception as e:
         print(f"An error occurred while adding the student encoding: {e}")
 
@@ -145,4 +145,17 @@ def get_encoding_url_from_id(encoding_id):
         return encoding["encoding"]
     except Exception as e:
         print(f"An error occurred while getting the encoding url: {e}")
+        return None
+
+def get_student_from_id(student_id):
+    """
+    Get the student from the id.
+    :param student_id: The student id.
+    :return: The student.
+    """
+    try:
+        student = db["students"].find_one({"_id": ObjectId(student_id)})
+        return student
+    except Exception as e:
+        print(f"An error occurred while getting the student: {e}")
         return None

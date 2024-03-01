@@ -162,7 +162,8 @@ async def add_class_photo_route(
 
     # upload image to firebase
     try:
-        class_photo_url = fb_storage.upload_image(class_photo)
+        fb_storage.upload_image(class_photo)
+        class_photo_url = fb_storage.get_image_url()
     except Exception as e:
         return Response(
             status_code=500,
@@ -245,7 +246,7 @@ async def add_attendance_route(attModel: AttendanceModel):
 
     print(lecture_images)
     if not lecture_images:
-        return Response(
+        return JSONResponse(
             status_code=500,
             content={"detail": f"No images found for the given time range"},
         )
@@ -285,8 +286,10 @@ async def add_attendance_route(attModel: AttendanceModel):
             face_encoding = student_manager.get_serialized_student_face_encodings()
             print(face_encoding)
             # return []
-            await add_student_encoding(i, len(student_faces[i]), face_encoding)
-
+            url = await add_student_encoding(i, len(student_faces[i]), face_encoding)
+            print(url)
+            student_encodings[i] = url
+    print(student_encodings)
     # everything working till here. ------------------
     # call the get attendance function from the face rec class, and pass the needed things.
     face_rec = FaceRec(
