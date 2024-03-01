@@ -7,6 +7,9 @@ import io
 from PIL import Image
 import numpy as np
 import face_recognition
+import cv2
+from services.student_services import get_student_from_id
+
 
 # import services
 
@@ -67,8 +70,9 @@ class FaceRec:
 
         # convert back from pickle to the face encodings
         face_encodings = pickle.load(bytes_io)
+        # print(face_encodings)
         return face_encodings
-    
+
     def process_face_encodings(self):
         """
         Process the face encodings of the students.
@@ -78,8 +82,10 @@ class FaceRec:
         # load the face encodings
         for student_id in self.student_face_encodings:
             # get the face encodings
-            face_encodings = self.get_encodings_from_url(self.student_face_encodings[student_id])
-            
+            face_encodings = self.get_encodings_from_url(
+                self.student_face_encodings[student_id]
+            )
+
             # replace the url with the face encodings
             self.student_face_encodings[student_id] = face_encodings
 
@@ -97,6 +103,7 @@ class FaceRec:
         # create threads for each image
         threads = []
         for image in self.class_images:
+            print("creating tread for image", image)
             t = threading.Thread(target=self.recognize_faces, args=(image,))
             threads.append(t)
             t.start()
@@ -119,22 +126,36 @@ class FaceRec:
         image = self.get_image_from_url(image)
         # get the face locations
         face_locations = face_recognition.face_locations(image)
+        image_cp = image.copy()
+        # save the face locations by drawing a rectangle around the face
+        for top, right, bottom, left in face_locations:
+            # draw a rectangle around the face
+            cv2.rectangle(image_cp, (left, top), (right, bottom), (0, 0, 255), 2)
 
+        # save the iamge
+        cv2.imwrite("face_locations_for_class.jpg", image_cp)
         # get the face encodings
-        face_encodings = face_recognition.face_encodings(image, face_locations)
+        face_encodings = face_recognition.face_encodings(image, face_locations, num_jitters=10)
 
         # check if the face encodings match with the students' face encodings
-        for face_encoding in face_encodings:
-            # compare the face encodings
-            matches = face_recognition.compare_faces(
-                list(self.student_face_encodings.values()), face_encoding
-            )
-
-            # get the student id
-            student_id = list(self.student_face_encodings.keys())[matches.index(True)]
-
-            # add the student to the present list
-            self.students_present.append(student_id)
+        for _, face_encoding in enumerate(face_encodings):
+            print("trying for encoding no. ", _)
+            # compare the face encodings for each element of the array for each student
+            for student_id in self.student_face_encodings:
+                student = get_student_from_id(student_id)
+                print("now testing for student:")
+                print(student['name'])
+                # print(self.student_face_encodings[student_id])
+                print(len(self.student_face_encodings[student_id]))
+                # compare the face encodings
+                matches = face_recognition.compare_faces(
+                    self.student_face_encodings[student_id], face_encoding
+                )
+                print("matches", matches)
+                # if the face encodings match
+                if True in matches:
+                    # add the student to the present list
+                    self.students_present.append(student_id)
 
     def add_student_face_encodings(self, student_id, student_face_encodings):
         """

@@ -119,6 +119,71 @@
         "documentation": {}
     },
     {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_from_id",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_face_to_db",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student_encoding",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "add_student",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encoding_from_student_id",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_students",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_encodings_from_student_ids",
+        "importPath": "services.student_services",
+        "description": "services.student_services",
+        "isExtraImport": true,
+        "detail": "services.student_services",
+        "documentation": {}
+    },
+    {
         "label": "matplotlib.pyplot",
         "kind": 6,
         "isExtraImport": true,
@@ -954,54 +1019,6 @@
         "documentation": {}
     },
     {
-        "label": "add_student_face_to_db",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_student_encoding",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "add_student",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_student_encoding_from_student_id",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_all_students",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
-        "label": "get_student_encodings_from_student_ids",
-        "importPath": "services.student_services",
-        "description": "services.student_services",
-        "isExtraImport": true,
-        "detail": "services.student_services",
-        "documentation": {}
-    },
-    {
         "label": "PyMongoError",
         "importPath": "pymongo.errors",
         "description": "pymongo.errors",
@@ -1660,15 +1677,6 @@
         "documentation": {}
     },
     {
-        "label": "cv2",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "cv2",
-        "description": "cv2",
-        "detail": "cv2",
-        "documentation": {}
-    },
-    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -2267,7 +2275,7 @@
         "kind": 2,
         "importPath": "app.routers.lectures",
         "description": "app.routers.lectures",
-        "peekOfCode": "def get_lecture_images_between_time_route(start_time: str, end_time: str):\n    \"\"\"\n    Get all lecture images between a start and end time.\n    \"\"\"\n    # call the function from lecture services to get all the lecture images between the start and end time\n    lecture_response = get_lecture_images_between_time_on_date(start_time, end_time)\n    return lecture_response",
+        "peekOfCode": "def get_lecture_images_between_time_route(start_time: str, end_time: str, given_date: str):\n    \"\"\"\n    Get all lecture images between a start and end time.\n    \"\"\"\n    # call the function from lecture services to get all the lecture images between the start and end time\n    lecture_response = get_lecture_images_between_time_on_date(start_time, end_time, given_date)\n    return lecture_response",
         "detail": "app.routers.lectures",
         "documentation": {}
     },
@@ -2952,6 +2960,15 @@
         "importPath": "app.services.student_services",
         "description": "app.services.student_services",
         "peekOfCode": "def get_encoding_url_from_id(encoding_id):\n    \"\"\"\n    Get the encoding url from the encoding id.\n    :param encoding_id: The encoding id.\n    :return: The encoding url.\n    \"\"\"\n    try:\n        encoding = db[\"encodings\"].find_one({\"_id\": ObjectId(encoding_id)})\n        return encoding[\"encoding\"]\n    except Exception as e:",
+        "detail": "app.services.student_services",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_from_id",
+        "kind": 2,
+        "importPath": "app.services.student_services",
+        "description": "app.services.student_services",
+        "peekOfCode": "def get_student_from_id(student_id):\n    \"\"\"\n    Get the student from the id.\n    :param student_id: The student id.\n    :return: The student.\n    \"\"\"\n    try:\n        student = db[\"students\"].find_one({\"_id\": ObjectId(student_id)})\n        return student\n    except Exception as e:",
         "detail": "app.services.student_services",
         "documentation": {}
     },
