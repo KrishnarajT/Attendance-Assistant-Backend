@@ -1,0 +1,16 @@
+version: '3.10'
+services:
+  web:
+    build: .
+    image: attendance-backend
+    container_name: AttendanceBackend
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        cd app &&
+        uvicorn main:app --reload
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
