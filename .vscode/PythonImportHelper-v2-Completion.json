@@ -119,6 +119,15 @@
         "documentation": {}
     },
     {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
         "label": "get_student_from_id",
         "importPath": "services.student_services",
         "description": "services.student_services",
@@ -1665,15 +1674,6 @@
         "description": "djitellopy",
         "isExtraImport": true,
         "detail": "djitellopy",
-        "documentation": {}
-    },
-    {
-        "label": "cv2",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "cv2",
-        "description": "cv2",
-        "detail": "cv2",
         "documentation": {}
     },
     {

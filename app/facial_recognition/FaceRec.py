@@ -7,7 +7,7 @@ import io
 from PIL import Image
 import numpy as np
 import face_recognition
-# import cv2
+import cv2
 from services.student_services import get_student_from_id
 
 
@@ -128,12 +128,12 @@ class FaceRec:
         face_locations = face_recognition.face_locations(image)
         image_cp = image.copy()
         # save the face locations by drawing a rectangle around the face
-        # for top, right, bottom, left in face_locations:
-        #     # draw a rectangle around the face
-        #     cv2.rectangle(image_cp, (left, top), (right, bottom), (0, 0, 255), 2)
+        for top, right, bottom, left in face_locations:
+            # draw a rectangle around the face
+            cv2.rectangle(image_cp, (left, top), (right, bottom), (0, 0, 255), 2)
 
-        # # save the iamge
-        # cv2.imwrite("face_locations_for_class.jpg", image_cp)
+        # save the iamge
+        cv2.imwrite("face_locations_for_class.jpg", image_cp)
         # get the face encodings
         face_encodings = face_recognition.face_encodings(image, face_locations, num_jitters=10)
 

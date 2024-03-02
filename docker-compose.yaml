@@ -2,14 +2,14 @@ version: '3.10'
 services:
   web:
     build: .
-    image: attendance-backend
+    image: attendance_backend:1.0
     container_name: AttendanceBackend
     command: 
       - /bin/sh
       - -c
       - |
         cd app &&
-        uvicorn main:app --reload
+        uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
       - .:/code
     ports:
