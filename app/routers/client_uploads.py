@@ -32,6 +32,7 @@ from services.panel_services import (
 from services.student_services import (
     add_student_face_to_db,
     add_student_encoding,
+    get_student_from_id,
 )
 
 from services.lecture_services import add_class_photo_to_db, add_lecture
@@ -304,6 +305,10 @@ async def add_attendance_route(attModel: AttendanceModel):
     print(present, absent)
     # add the no faces people to the absent list.
     absent.extend(no_faces)
+    # get present and absent students from id
+    present = [get_student_from_id(i)["name"] for i in present]
+    absent = [get_student_from_id(i)["name"] for i in absent]
+    print(present, absent)
     # create a new row in the lectures collection in the database, with the class_id, room_id, date, time, students_present, students_absent, and lecture_images, and teacher and subject id.
     current_semester = get_current_sem_from_panel(attModel.panel)
     new_lecture = {
@@ -331,9 +336,10 @@ async def add_attendance_route(attModel: AttendanceModel):
     return JSONResponse(
         status_code=200,
         content={
-            "detail": f"Lecture added successfully. Present: {present}, Absent: {absent}. id is: {lec_id}"
+            "detail": f"Lecture added successfully. Present: {present}, Absent: {absent}. id is: {lec_id}, class image is: {face_rec.get_last_scanned_class_image()}"
         },
     )
+
 
 # separating out this funciton to be called from within the server later on without triggering route.
 async def add_face_encoding(student_id: str, number_of_faces: int, face_encoding):

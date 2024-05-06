@@ -9,6 +9,7 @@ import numpy as np
 import face_recognition
 import cv2
 from services.student_services import get_student_from_id
+from services.assistanceFirebase import AssistanceFirebase
 
 
 # import services
@@ -48,6 +49,10 @@ class FaceRec:
         self.students_present = []
         self.students_absent = []
         self.student_ids = student_ids
+        self.last_class_image_url = None
+
+    def get_last_scanned_class_image(self):
+        return self.last_class_image_url
 
     def get_image_from_url(self, image_url):
         print("now doing", image_url)
@@ -134,8 +139,17 @@ class FaceRec:
 
         # save the iamge
         cv2.imwrite("face_locations_for_class.jpg", image_cp)
+        fb_storage = AssistanceFirebase()
+
+        with open("face_locations_for_class.jpg", "rb") as f:
+            image_cp = f.read()
+            fb_storage.upload_image(image_cp)
+            self.last_class_image_url = fb_storage.get_image_url()
+
         # get the face encodings
-        face_encodings = face_recognition.face_encodings(image, face_locations, num_jitters=10)
+        face_encodings = face_recognition.face_encodings(
+            image, face_locations, num_jitters=10
+        )
 
         # check if the face encodings match with the students' face encodings
         for _, face_encoding in enumerate(face_encodings):
@@ -144,7 +158,7 @@ class FaceRec:
             for student_id in self.student_face_encodings:
                 student = get_student_from_id(student_id)
                 print("now testing for student:")
-                print(student['name'])
+                print(student["name"])
                 # print(self.student_face_encodings[student_id])
                 print(len(self.student_face_encodings[student_id]))
                 # compare the face encodings
