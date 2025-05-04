@@ -1,5 +1,5 @@
 """
-This includes routes for getting and setting data about rooms and buildings. 
+This includes routes for getting and setting data about rooms and buildings.
 """
 
 # import fastapi stuff
@@ -7,10 +7,22 @@ from fastapi import APIRouter, Response, HTTPException
 
 # importing db
 from pymongo.errors import PyMongoError
-from services.room_services import (get_all_rooms, add_room, add_building, get_all_buildings, get_rooms_from_building_id, add_room_to_building)
+from services.room_services import (
+    get_all_rooms,
+    add_room,
+    add_building,
+    get_all_buildings,
+    get_rooms_from_building_id,
+    add_room_to_building,
+)
 
 # importing models
-from models.CollegeModels import RoomModel, BuildingModel, RoomResponseModel, BuildingResponseModel
+from models.CollegeModels import (
+    RoomModel,
+    BuildingModel,
+    RoomResponseModel,
+    BuildingResponseModel,
+)
 
 
 router = APIRouter(prefix="/college", tags=["Rooms and Buildings"])
@@ -59,6 +71,7 @@ def add_room_route(roomModel: RoomModel):
         room_id=room._id,
     )
 
+
 @router.post("/add_building", status_code=201, summary="Add a building")
 def add_building_route(buildingModel: BuildingModel):
     """
@@ -75,12 +88,13 @@ def add_building_route(buildingModel: BuildingModel):
             )
     except PyMongoError as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+
     return BuildingResponseModel(
         name=building.name,
         building_id=building._id,
         rooms=building.rooms,
     )
+
 
 @router.get("/get_all_buildings", status_code=200, summary="Get all buildings")
 def get_all_buildings_route():

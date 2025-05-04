@@ -7,6 +7,7 @@ from pymongo.errors import PyMongoError
 
 db = connect_to_mongo()
 
+
 def add_teacher(teacher):
     try:
         db["teachers"].insert_one(teacher.dict())
@@ -15,6 +16,7 @@ def add_teacher(teacher):
         print(f"An error occurred while inserting the teacher: {e}")
         return None
 
+
 def add_subject(subject):
     try:
         db["subjects"].insert_one(subject.dict())
@@ -22,6 +24,7 @@ def add_subject(subject):
     except Exception as e:
         print(f"An error occurred while inserting the subject: {e}")
         return None
+
 
 def get_all_teachers(self):
     try:
@@ -38,6 +41,7 @@ def get_all_teachers(self):
         print(f"An error occurred while getting all teachers: {e}")
         return None
 
+
 def get_all_subjects(self):
     try:
         subjects = db["subjects"].find()
@@ -52,6 +56,7 @@ def get_all_subjects(self):
         print(f"An error occurred while getting all subjects: {e}")
         return None
 
+
 def add_panel(panel):
     try:
         db["panels"].insert_one(panel.dict())
@@ -59,6 +64,7 @@ def add_panel(panel):
     except Exception as e:
         print(f"An error occurred while inserting the panel: {e}")
         return None
+
 
 def get_all_panels(self):
     try:
@@ -76,6 +82,7 @@ def get_all_panels(self):
         print(f"An error occurred while getting all panels: {e}")
         return None
 
+
 def get_teacher_by_id(teacher_id):
     try:
         teacher = db["teachers"].find_one({"_id": ObjectId(teacher_id)})
@@ -89,4 +96,3 @@ def get_teacher_by_id(teacher_id):
     except Exception as e:
         print(f"An error occurred while getting the teacher: {e}")
         return None
-

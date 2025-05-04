@@ -1,12 +1,19 @@
 from fastapi import FastAPI
 
-
-
-
 app = FastAPI()
 
 # Include routers here
-from routers import client_uploads, test_route, face_rec, college, subjects, students, teachers, panels, lectures
+from routers import (
+    client_uploads,
+    test_route,
+    face_rec,
+    college,
+    subjects,
+    students,
+    teachers,
+    panels,
+    lectures,
+)
 
 app.include_router(client_uploads.router)
 app.include_router(students.router)
@@ -17,4 +24,3 @@ app.include_router(subjects.router)
 app.include_router(teachers.router)
 app.include_router(lectures.router)
 app.include_router(test_route.router)
-

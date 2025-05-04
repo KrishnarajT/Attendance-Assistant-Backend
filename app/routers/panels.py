@@ -1,5 +1,5 @@
 """
-This file will have routes for getting and setting panel data, school data, and specialization data. 
+This file will have routes for getting and setting panel data, school data, and specialization data.
 """
 
 # import fastapi stuff

@@ -1,6 +1,8 @@
 from data import firebaseStorage
 from io import BytesIO
 import uuid
+
+
 class AssistanceFirebase:
     def __init__(self):
         self.storage = firebaseStorage.fb_storage
@@ -9,7 +11,7 @@ class AssistanceFirebase:
 
     def upload_image(self, image):
         bucket = self.storage
-        
+
         unique_name = str(uuid.uuid4())
 
         blob = bucket.blob(unique_name + ".jpg")
@@ -43,11 +45,10 @@ class AssistanceFirebase:
         encoding_url = blob.public_url
 
         self.encoding_url = encoding_url
-    
+
     # getter methods
     def get_image_url(self):
         return self.image_url
-    
-    def get_encoding_url(self): 
-        return self.encoding_url
 
+    def get_encoding_url(self):
+        return self.encoding_url

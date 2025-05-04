@@ -48,7 +48,8 @@ class StudentManager:
             image_np = self.get_image_from_url(image)
             student_face_locations = face_recognition.face_locations(image_np)
             student_face_encoding = face_recognition.face_encodings(
-                image_np, student_face_locations, num_jitters=10)[0]
+                image_np, student_face_locations, num_jitters=10
+            )[0]
             self.student_face_encodings.append(student_face_encoding)
 
         # serialize student_face_encodings so that we can upload it using pickle

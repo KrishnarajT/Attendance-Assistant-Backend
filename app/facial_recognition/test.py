@@ -25,29 +25,31 @@ image_files = []
 # cycle through the known_faces directory and load each image
 
 for filename in os.listdir(os.path.join(images_directory, "known_faces")):
-	image_files.append(filename)
+    image_files.append(filename)
 
 known_face_encodings = []
 
 # Load the known images (create face encodings) for all image_files
 for filename in image_files:
-	image = face_recognition.load_image_file(os.path.join(images_directory, "known_faces", filename))
-	known_face_encodings.append(face_recognition.face_encodings(image)[0])
+    image = face_recognition.load_image_file(
+        os.path.join(images_directory, "known_faces", filename)
+    )
+    known_face_encodings.append(face_recognition.face_encodings(image)[0])
 
 # Load all images in the test directory
 test_image_files = []
 
 for filename in os.listdir(testing_images_directory):
-	test_image_files.append(filename)
+    test_image_files.append(filename)
 
 unknown_face_encodings = {}
 
 # create face encodings for all test images
 for filename in test_image_files:
-	image = face_recognition.load_image_file(os.path.join(testing_images_directory, filename))
-	unknown_face_encodings[filename] = face_recognition.face_encodings(image)
-
-
+    image = face_recognition.load_image_file(
+        os.path.join(testing_images_directory, filename)
+    )
+    unknown_face_encodings[filename] = face_recognition.face_encodings(image)
 
 
 import face_recognition
@@ -60,10 +62,7 @@ image_of_person_2 = face_recognition.load_image_file("person_2.jpg")
 person_2_face_encoding = face_recognition.face_encodings(image_of_person_2)[0]
 
 # Create list of known face encodings
-known_face_encodings = [
-    person_1_face_encoding,
-    person_2_face_encoding
-]
+known_face_encodings = [person_1_face_encoding, person_2_face_encoding]
 
 # Load the image we want to check
 unknown_image = face_recognition.load_image_file("unknown.jpg")
@@ -72,7 +71,9 @@ unknown_face_encodings = face_recognition.face_encodings(unknown_image)
 # There might be more than one person in the photo, so we need to check each face encoding
 for unknown_face_encoding in unknown_face_encodings:
     # Test if this unknown face encoding matches any of the known face encodings
-    results = face_recognition.compare_faces(known_face_encodings, unknown_face_encoding)
+    results = face_recognition.compare_faces(
+        known_face_encodings, unknown_face_encoding
+    )
 
     name = "Unknown"
 

@@ -23,7 +23,7 @@ class lectureModel(BaseModel):
 
     #     if "end_time" in values and v > values["end_time"]:
     #         raise ValueError("start_time must be before end_time")
-        
+
     # @field_validator("end_time")
     # def end_time_must_be_after_start_time(cls, v, values):
     #     if "start_time" in values and v < values["start_time"]:
@@ -38,5 +38,6 @@ class lectureModel(BaseModel):
     #     except ValueError:
     #         raise ValueError("Incorrect date format, should be YYYY-MM-DD HH:MM:SS")
 
+
 class lectureModelId(BaseModel):
-    lec_id : str
+    lec_id: str

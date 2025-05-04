@@ -147,6 +147,7 @@ def get_encoding_url_from_id(encoding_id):
         print(f"An error occurred while getting the encoding url: {e}")
         return None
 
+
 def get_student_from_id(student_id):
     """
     Get the student from the id.

@@ -1,6 +1,7 @@
 from data.mongodb import connect_to_mongo
 from bson import ObjectId
 from pymongo.errors import PyMongoError
+
 db = connect_to_mongo()
 
 

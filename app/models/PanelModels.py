@@ -51,6 +51,7 @@ from typing import Optional, List
 #     "panels": ["Panel ID 1", "Panel ID 2"],
 # }
 
+
 class PanelModel(BaseModel):
     panel_letter: str
     school: str
@@ -65,6 +66,7 @@ class PanelModel(BaseModel):
 
 class PanelID(BaseModel):
     panel_id: str
+
 
 class SchoolModel(BaseModel):
     name: str
@@ -95,6 +97,7 @@ class SpecializationModel(BaseModel):
 
     def set_id(self, _id):
         self._id = _id
+
 
 class SpecializationResponseModel(BaseModel):
     specialization_id: str

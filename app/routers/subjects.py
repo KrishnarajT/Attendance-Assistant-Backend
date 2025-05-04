@@ -1,5 +1,5 @@
 """
-This file contains routes for getting and setting data about subjects and semesters. 
+This file contains routes for getting and setting data about subjects and semesters.
 """
 
 from pymongo.errors import PyMongoError
